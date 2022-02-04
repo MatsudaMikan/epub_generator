@@ -1,0 +1,162 @@
+2021-12-03 16:26:36,078- test.py - INFO - --------------------------------------------------
+2021-12-03 16:26:36,079- test.py - INFO - Test 処理開始
+2021-12-03 16:26:36,084- test.py - INFO - Test 正常終了
+2021-12-03 16:27:11,399- test.py - INFO - --------------------------------------------------
+2021-12-03 16:27:11,401- test.py - INFO - Test 処理開始
+2021-12-03 16:27:11,403- test.py - INFO - Test 正常終了
+2021-12-03 16:27:24,330- test.py - INFO - --------------------------------------------------
+2021-12-03 16:27:24,331- test.py - INFO - Test 処理開始
+2021-12-03 16:27:24,334- test.py - INFO - Test 正常終了
+2021-12-03 17:31:04,147- test.py - INFO - --------------------------------------------------
+2021-12-03 17:31:04,152- test.py - INFO - Test 処理開始
+2021-12-03 17:31:04,153- test.py - INFO - Test 正常終了
+2021-12-03 17:31:20,903- test.py - INFO - --------------------------------------------------
+2021-12-03 17:31:20,905- test.py - INFO - Test 処理開始
+2021-12-03 17:31:20,907- test.py - INFO - Test 正常終了
+2021-12-03 17:32:58,023- test.py - INFO - --------------------------------------------------
+2021-12-03 17:32:58,024- test.py - INFO - Test 処理開始
+2021-12-03 17:32:58,029- test.py - INFO - Test 正常終了
+2021-12-03 17:33:55,758- test.py - INFO - --------------------------------------------------
+2021-12-03 17:33:55,760- test.py - INFO - Test 処理開始
+2021-12-03 17:33:55,762- test.py - INFO - Test 正常終了
+2021-12-03 17:35:51,955- test.py - INFO - --------------------------------------------------
+2021-12-03 17:35:51,956- test.py - INFO - Test 処理開始
+2021-12-03 17:35:51,958- test.py - INFO - Test 正常終了
+2021-12-03 17:37:53,309- test.py - INFO - --------------------------------------------------
+2021-12-03 17:37:53,310- test.py - INFO - Test 処理開始
+2021-12-03 17:37:53,315- test.py - INFO - Test 正常終了
+2021-12-03 17:38:14,671- test.py - INFO - --------------------------------------------------
+2021-12-03 17:38:14,672- test.py - INFO - Test 処理開始
+2021-12-03 17:38:37,244- test.py - INFO - Test 正常終了
+2021-12-03 17:38:44,633- test.py - INFO - --------------------------------------------------
+2021-12-03 17:38:44,634- test.py - INFO - Test 処理開始
+2021-12-03 17:38:44,641- test.py - INFO - Test 正常終了
+2021-12-03 17:38:52,987- test.py - INFO - --------------------------------------------------
+2021-12-03 17:38:52,989- test.py - INFO - Test 処理開始
+2021-12-03 17:38:52,994- test.py - INFO - Test 正常終了
+2021-12-03 17:39:10,493- test.py - INFO - --------------------------------------------------
+2021-12-03 17:39:10,494- test.py - INFO - Test 処理開始
+2021-12-03 17:39:10,500- test.py - INFO - Test 正常終了
+2021-12-03 17:39:25,040- test.py - INFO - --------------------------------------------------
+2021-12-03 17:39:25,042- test.py - INFO - Test 処理開始
+2021-12-03 17:40:09,724- test.py - INFO - Test 正常終了
+2021-12-03 17:40:14,439- test.py - INFO - --------------------------------------------------
+2021-12-03 17:40:14,441- test.py - INFO - Test 処理開始
+2021-12-03 17:40:14,446- test.py - INFO - Test 正常終了
+2021-12-05 09:45:06,226- test.py - INFO - --------------------------------------------------
+2021-12-05 09:45:06,227- test.py - INFO - Test 処理開始
+2021-12-05 09:45:06,228- test.py - INFO - Test 正常終了
+2021-12-05 09:45:21,033- test.py - INFO - --------------------------------------------------
+2021-12-05 09:45:21,034- test.py - INFO - Test 処理開始
+2021-12-05 09:45:21,039- test.py - INFO - Test 正常終了
+2021-12-05 09:45:34,305- test.py - INFO - --------------------------------------------------
+2021-12-05 09:45:34,306- test.py - INFO - Test 処理開始
+2021-12-05 09:45:34,310- test.py - INFO - Test 正常終了
+2021-12-05 09:46:04,166- test.py - INFO - --------------------------------------------------
+2021-12-05 09:46:04,167- test.py - INFO - Test 処理開始
+2021-12-05 09:46:04,172- test.py - INFO - Test 正常終了
+2021-12-08 17:06:09,028- test.py - INFO - --------------------------------------------------
+2021-12-08 17:06:09,030- test.py - INFO - Test 処理開始
+2021-12-08 17:06:09,169- test.py - INFO - Test 正常終了
+2021-12-08 17:10:22,517- test.py - INFO - --------------------------------------------------
+2021-12-08 17:10:22,518- test.py - INFO - Test 処理開始
+2021-12-08 17:10:22,628- test.py - INFO - Test 正常終了
+2021-12-08 17:11:02,979- test.py - INFO - --------------------------------------------------
+2021-12-08 17:11:02,979- test.py - INFO - Test 処理開始
+2021-12-08 17:14:25,959- test.py - INFO - Test 正常終了
+2021-12-08 17:14:31,579- test.py - INFO - --------------------------------------------------
+2021-12-08 17:14:31,579- test.py - INFO - Test 処理開始
+2021-12-08 17:14:31,695- test.py - ERROR - can only concatenate list (not "str") to list
+2021-12-08 17:14:31,696- test.py - INFO - Test 異常終了
+2021-12-08 17:14:31,697- test.py - INFO - Traceback (most recent call last):
+  File "C:\cpswork\tool\create_epub\batch.py", line 88, in execute
+    self.main(self.parser.parse_args())
+  File "C:\cpswork\tool\create_epub\test.py", line 21, in main
+    self.convert_yaml_to_list('', settings, resources)
+  File "C:\cpswork\tool\create_epub\test.py", line 31, in convert_yaml_to_list
+    self.convert_yaml_to_list(source[key], data, dest)
+  File "C:\cpswork\tool\create_epub\test.py", line 33, in convert_yaml_to_list
+    dest[parent_data + key] = source[key]
+TypeError: can only concatenate list (not "str") to list
+
+2021-12-08 17:14:53,881- test.py - INFO - --------------------------------------------------
+2021-12-08 17:14:53,881- test.py - INFO - Test 処理開始
+2021-12-08 17:15:42,464- test.py - ERROR - can only concatenate list (not "str") to list
+2021-12-08 17:15:42,464- test.py - INFO - Test 異常終了
+2021-12-08 17:15:42,467- test.py - INFO - Traceback (most recent call last):
+  File "C:\cpswork\tool\create_epub\batch.py", line 88, in execute
+    self.main(self.parser.parse_args())
+  File "C:\cpswork\tool\create_epub\test.py", line 21, in main
+    self.convert_yaml_to_list('', settings, resources)
+  File "C:\cpswork\tool\create_epub\test.py", line 31, in convert_yaml_to_list
+    self.convert_yaml_to_list(source[key], data, dest)
+  File "C:\cpswork\tool\create_epub\test.py", line 33, in convert_yaml_to_list
+    dest[parent_data + key] = source[key]
+TypeError: can only concatenate list (not "str") to list
+
+2021-12-08 17:15:48,550- test.py - INFO - --------------------------------------------------
+2021-12-08 17:15:48,551- test.py - INFO - Test 処理開始
+2021-12-08 17:15:51,636- test.py - ERROR - can only concatenate list (not "str") to list
+2021-12-08 17:15:51,637- test.py - INFO - Test 異常終了
+2021-12-08 17:15:51,639- test.py - INFO - Traceback (most recent call last):
+  File "C:\cpswork\tool\create_epub\batch.py", line 88, in execute
+    self.main(self.parser.parse_args())
+  File "C:\cpswork\tool\create_epub\test.py", line 21, in main
+    self.convert_yaml_to_list('', settings, resources)
+  File "C:\cpswork\tool\create_epub\test.py", line 31, in convert_yaml_to_list
+    self.convert_yaml_to_list(source[key], data, dest)
+  File "C:\cpswork\tool\create_epub\test.py", line 33, in convert_yaml_to_list
+    dest[parent_data + key] = source[key]
+TypeError: can only concatenate list (not "str") to list
+
+2021-12-08 17:15:59,114- test.py - INFO - --------------------------------------------------
+2021-12-08 17:15:59,114- test.py - INFO - Test 処理開始
+2021-12-08 17:16:23,362- test.py - ERROR - can only concatenate list (not "str") to list
+2021-12-08 17:16:23,363- test.py - INFO - Test 異常終了
+2021-12-08 17:16:23,365- test.py - INFO - Traceback (most recent call last):
+  File "C:\cpswork\tool\create_epub\batch.py", line 88, in execute
+    self.main(self.parser.parse_args())
+  File "C:\cpswork\tool\create_epub\test.py", line 21, in main
+    self.convert_yaml_to_list('', settings, resources)
+  File "C:\cpswork\tool\create_epub\test.py", line 31, in convert_yaml_to_list
+    self.convert_yaml_to_list(source[key], data, dest)
+  File "C:\cpswork\tool\create_epub\test.py", line 33, in convert_yaml_to_list
+    dest[parent_data + key] = source[key]
+TypeError: can only concatenate list (not "str") to list
+
+2021-12-08 17:16:28,114- test.py - INFO - --------------------------------------------------
+2021-12-08 17:16:28,115- test.py - INFO - Test 処理開始
+2021-12-08 17:17:02,388- test.py - ERROR - can only concatenate list (not "str") to list
+2021-12-08 17:17:02,388- test.py - INFO - Test 異常終了
+2021-12-08 17:17:02,391- test.py - INFO - Traceback (most recent call last):
+  File "C:\cpswork\tool\create_epub\batch.py", line 88, in execute
+    self.main(self.parser.parse_args())
+  File "C:\cpswork\tool\create_epub\test.py", line 21, in main
+    self.convert_yaml_to_list('', settings, resources)
+  File "C:\cpswork\tool\create_epub\test.py", line 31, in convert_yaml_to_list
+    self.convert_yaml_to_list(key, data, dest)
+  File "C:\cpswork\tool\create_epub\test.py", line 33, in convert_yaml_to_list
+    dest[parent_data + key] = source[key]
+TypeError: can only concatenate list (not "str") to list
+
+2021-12-08 17:17:08,710- test.py - INFO - --------------------------------------------------
+2021-12-08 17:17:08,710- test.py - INFO - Test 処理開始
+2021-12-08 17:17:08,828- test.py - INFO - Test 正常終了
+2021-12-08 17:18:10,247- test.py - INFO - --------------------------------------------------
+2021-12-08 17:18:10,248- test.py - INFO - Test 処理開始
+2021-12-08 17:18:10,368- test.py - INFO - Test 正常終了
+2021-12-08 17:19:02,007- test.py - INFO - --------------------------------------------------
+2021-12-08 17:19:02,008- test.py - INFO - Test 処理開始
+2021-12-08 17:19:02,188- test.py - INFO - Test 正常終了
+2021-12-08 17:19:40,220- test.py - INFO - --------------------------------------------------
+2021-12-08 17:19:40,220- test.py - INFO - Test 処理開始
+2021-12-08 17:19:40,331- test.py - INFO - Test 正常終了
+2021-12-08 17:22:40,571- test.py - INFO - --------------------------------------------------
+2021-12-08 17:22:40,571- test.py - INFO - Test 処理開始
+2021-12-08 17:22:40,697- test.py - INFO - Test 正常終了
+2021-12-08 17:23:00,891- test.py - INFO - --------------------------------------------------
+2021-12-08 17:23:00,892- test.py - INFO - Test 処理開始
+2021-12-08 17:23:01,013- test.py - INFO - Test 正常終了
+2021-12-08 17:23:39,341- test.py - INFO - --------------------------------------------------
+2021-12-08 17:23:39,342- test.py - INFO - Test 処理開始
+2021-12-08 17:23:39,467- test.py - INFO - Test 正常終了

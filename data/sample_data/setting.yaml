@@ -1,0 +1,125 @@
+# 注意: このファイルは文字コードUTF-8、改行コードLFで保存してください。それ以外の場合、プログラムが動かない可能性があります。
+
+# ------------------------------
+# 基本情報
+# ------------------------------
+bookId: ead92671-5748-56ed-9d26-5666305f8a89
+language: ja-JP
+modified: "2022-01-31T00:00:00Z"
+title:  Pilots
+authorName: 松田未完
+authorRole: aut
+authorCopyRight: (C) 松田未完 2022
+otherAuthors:
+pageProgressionDirection: rtl
+# ------------------------------
+# リソース情報
+# ------------------------------
+resources:
+  # スタイルシート
+  styleSheets:
+    - filePath: .\template\style.css
+  # 画像
+  images:
+    - filePath: .\resource\image\cover.png
+      isCover: true
+  # チャプター
+  chapters:
+    replaces:
+      - type: regex
+        placeHolder: (！？)
+        replaceContent: <span class="tcu">!?</span>
+      - type: regex
+        placeHolder: (！！)
+        replaceContent: <span class="tcu">!!</span>
+      - type: regex
+        placeHolder: (？？)
+        replaceContent: <span class="tcu">??</span>
+      - type: regex
+        placeHolder: \n
+        replaceContent: <br />\n
+      - type: regex
+        placeHolder: \{ruby\:(\w+)\{(\w+)\}\}
+        replaceContent: <ruby>\1<rt>\2</rt></ruby>
+    files:
+      - title: はじめに
+        filePath: .\resource\content\00はじめに.txt
+      - title: 避けろ！
+        filePath: .\resource\content\01避けろ！.txt
+      - title: あとがき
+        filePath: .\resource\content\01避けろ！_あとがき.txt
+      - title: 誰も信じられない
+        filePath: .\resource\content\02誰も信じられない.txt
+      - title: あとがき
+        filePath: .\resource\content\02誰も信じられない_あとがき.txt
+      - title: ヒカゲノナシ
+        filePath: .\resource\content\03ヒカゲノナシ.txt
+      - title: あとがき
+        filePath: .\resource\content\03ヒカゲノナシ_あとがき.txt
+      - title: インヘリターズ
+        filePath: .\resource\content\04インヘリターズ.txt
+        replaces:
+          - type: regex
+            placeHolder: ([0-9]{1,2})号
+            replaceContent: <span class="tcu">\1</span>号
+      - title: あとがき
+        filePath: .\resource\content\04インヘリターズ_あとがき.txt
+        replaces:
+          - type: regex
+            placeHolder: ([0-9]{1,2})号
+            replaceContent: <span class="tcu">\1</span>号
+      - title: それでも生きていく
+        filePath: .\resource\content\05それでも生きていく.txt
+      - title: あとがき
+        filePath: .\resource\content\05それでも生きていく_あとがき.txt
+# ------------------------------
+# コンテンツ情報
+# ------------------------------
+contents:
+  # カバー
+  - filePath: .\template\cover.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+  # タイトル
+  - filePath: .\template\title.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+  # 目次
+  - filePath: .\template\navigation.xhtml
+    isNavigationContent: true
+    createByChaptersCount: false
+    replaces:
+      - type: simple
+        placeHolder: "{navigation}"
+        replaceContent: |-
+          <li><a href="{$setting.resources.chapters.files.1.filePath}">{$setting.resources.chapters.files.1.title}</a></li>
+          <li><a href="{$setting.resources.chapters.files.2.filePath}">{$setting.resources.chapters.files.2.title}</a></li>
+          <li><a href="{$setting.resources.chapters.files.4.filePath}">{$setting.resources.chapters.files.4.title}</a></li>
+          <li><a href="{$setting.resources.chapters.files.6.filePath}">{$setting.resources.chapters.files.6.title}</a></li>
+          <li><a href="{$setting.resources.chapters.files.8.filePath}">{$setting.resources.chapters.files.8.title}</a></li>
+          <li><a href="{$setting.resources.chapters.files.10.filePath}">{$setting.resources.chapters.files.10.title}</a></li>
+  # はじめに
+  - filePath: .\template\readme.xhtml
+    isNavigationContent: false
+    createByChaptersCount: true
+    useChapters:
+      - chapterIndex: 1
+  # チャプター
+  - filePath: .\template\chapter.xhtml
+    isNavigationContent: false
+    createByChaptersCount: true
+    useChapters:
+      - chapterIndex: 2
+      - chapterIndex: 3
+      - chapterIndex: 4
+      - chapterIndex: 5
+      - chapterIndex: 6
+      - chapterIndex: 7
+      - chapterIndex: 8
+      - chapterIndex: 9
+      - chapterIndex: 10
+      - chapterIndex: 11
+  # 著作権
+  - filePath: .\template\rights.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false

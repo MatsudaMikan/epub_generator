@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body.vertical {
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-epub-writing-mode: vertical-rl;
+}
+
+body.horizontal {
+	writing-mode: horizontal-tb;
+	-epub-writing-mode: horizontal-tb;
+	-webkit-writing-mode: horizontal-tb;
+}
+
+body.fix {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	text-align: center
+}
+
+div.title {
+	margin-top: 30%;
+	margin-bottom: auto;
+	height: 100%;
+}
+
+div.center {
+	margin-top: 50%;
+	margin-bottom: auto;
+	height: 100%;
+}
+
+div.rights {
+	margin-top: 30%;
+	margin-left: 10%;
+	margin-bottom: auto;
+	text-align: left;
+	height: 100%;
+}
+
+hr.under-title {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	display: inline;
+	margin-block: 0;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 1.3em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+h4.page_break {
+	page-break-before: always;
+}
+
+div.cover {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+div.artwork {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	page-break-before: always;
+}
+
+span.tcu {
+	-webkit-text-combine: horizontal;
+	-ms-text-combine-horizontal: all;
+	text-combine-upright: all
+}
