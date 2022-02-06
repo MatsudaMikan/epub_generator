@@ -1,6 +1,6 @@
 # encoding: utf-8
 import unittest
-import create_epub
+import epub_generator
 
 class TestBatch(unittest.TestCase):
  
@@ -14,6 +14,6 @@ class TestBatch(unittest.TestCase):
     # 他にもたくさんあると思う
 
     def test_xxx(self):
-        create_epub.Batch().execute()
+        epub_generator.Batch().execute()
         self.assertEqual(10, calc.add_num(6, 4)) 
 

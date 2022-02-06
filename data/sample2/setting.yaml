@@ -1,0 +1,78 @@
+# 注意: このファイルは文字コードUTF-8、改行コードLFで保存してください。それ以外の場合、プログラムが動かない可能性があります。
+
+# ------------------------------
+# 基本情報
+# ------------------------------
+bookId: f66fd2ea-02d9-b449-10f1-215c6a891743
+language: ja-JP
+modified: "2022-01-31T00:00:00Z"
+title: サンプル
+authorName: サンプル著者
+authorRole: aut
+authorCopyRight: (C) サンプル著者 2022
+pageProgressionDirection: ltr
+# ------------------------------
+# リソース情報
+# ------------------------------
+resources:
+  # スタイルシート
+  styleSheets:
+    - filePath: .\template\style.css
+  # 画像
+  images:
+    - filePath: .\resource\image\cover.png
+      isCover: true
+  # チャプター
+  chapters:
+    files:
+      - title: 
+        filePath: .\resource\content\00000.png
+      - title: 
+        filePath: .\resource\content\00001.png
+      - title: 
+        filePath: .\resource\content\00002.png
+      - title: 
+        filePath: .\resource\content\00003.png
+      - title: 
+        filePath: .\resource\content\00004.png
+      - title: 
+        filePath: .\resource\content\00005.png
+      - title: 
+        filePath: .\resource\content\00006.png
+      - title: 
+        filePath: .\resource\content\00007.png
+      - title: 
+        filePath: .\resource\content\00008.png
+      - title: 
+        filePath: .\resource\content\00009.png
+# ------------------------------
+# コンテンツ情報
+# ------------------------------
+contents:
+  # カバー
+  - filePath: .\template\cover.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+  # タイトル
+  - filePath: .\template\title.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+  # チャプター
+  - filePath: .\template\chapter.xhtml
+    isNavigationContent: false
+    createByChaptersCount: true
+    useChapters:
+      - chapterIndex: 1
+      - chapterIndex: 2
+      - chapterIndex: 3
+      - chapterIndex: 4
+      - chapterIndex: 5
+      - chapterIndex: 6
+      - chapterIndex: 7
+      - chapterIndex: 8
+      - chapterIndex: 9
+      - chapterIndex: 10
+  # 著作権
+  - filePath: .\template\rights.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
