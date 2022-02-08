@@ -26,25 +26,20 @@ resources:
   chapters:
     files:
       - title: 
-        filePath: .\resource\content\00000.png
+        fileType: image
+        filePath: .\resource\content\0001_illust_hyoshi-1.png
       - title: 
-        filePath: .\resource\content\00001.png
+        fileType: image
+        filePath: .\resource\content\0002_cut25.png
       - title: 
-        filePath: .\resource\content\00002.png
+        fileType: image
+        filePath: .\resource\content\0003_cut26.png
       - title: 
-        filePath: .\resource\content\00003.png
+        fileType: image
+        filePath: .\resource\content\0004_cut30.png
       - title: 
-        filePath: .\resource\content\00004.png
-      - title: 
-        filePath: .\resource\content\00005.png
-      - title: 
-        filePath: .\resource\content\00006.png
-      - title: 
-        filePath: .\resource\content\00007.png
-      - title: 
-        filePath: .\resource\content\00008.png
-      - title: 
-        filePath: .\resource\content\00009.png
+        fileType: image
+        filePath: .\resource\content\0005_cut15A.png
 # ------------------------------
 # コンテンツ情報
 # ------------------------------
@@ -67,11 +62,6 @@ contents:
       - chapterIndex: 3
       - chapterIndex: 4
       - chapterIndex: 5
-      - chapterIndex: 6
-      - chapterIndex: 7
-      - chapterIndex: 8
-      - chapterIndex: 9
-      - chapterIndex: 10
   # 著作権
   - filePath: .\template\rights.xhtml
     isNavigationContent: false

@@ -122,34 +122,45 @@ resources:
         replaceContent: <ruby>\1<rt>\2</rt></ruby>
     files:      # 電子書籍に使用する本文データの含まれたファイルを指定します。
       - title: はじめに     # 本文データのタイトルを指定します。
+        fileType: text    # 本文データのファイルタイプを指定します。（text: テキストファイル／image: 画像ファイル）
         filePath: .\resource\content\00はじめに.txt     #　本文データのファイルパスを指定します。
       - title: 避けろ！
+        fileType: text
         filePath: .\resource\content\01避けろ！.txt
       - title: あとがき
+        fileType: text
         filePath: .\resource\content\01避けろ！_あとがき.txt
       - title: 誰も信じられない
+        fileType: text
         filePath: .\resource\content\02誰も信じられない.txt
       - title: あとがき
+        fileType: text
         filePath: .\resource\content\02誰も信じられない_あとがき.txt
       - title: ヒカゲノナシ
+        fileType: text
         filePath: .\resource\content\03ヒカゲノナシ.txt
       - title: あとがき
+        fileType: text
         filePath: .\resource\content\03ヒカゲノナシ_あとがき.txt
       - title: インヘリターズ
+        fileType: text
         filePath: .\resource\content\04インヘリターズ.txt
         replaces:   # 本文データ共通の置換設定とは別に、この本文データファイルにだけ適用する置換設定を指定します。
           - type: regex
             placeHolder: ([0-9]{1,2})号
             replaceContent: <span class="tcu">\1</span>号
       - title: あとがき
+        fileType: text
         filePath: .\resource\content\04インヘリターズ_あとがき.txt
         replaces:
           - type: regex
             placeHolder: ([0-9]{1,2})号
             replaceContent: <span class="tcu">\1</span>号
       - title: それでも生きていく
+        fileType: text
         filePath: .\resource\content\05それでも生きていく.txt
       - title: あとがき
+        fileType: text
         filePath: .\resource\content\05それでも生きていく_あとがき.txt
 # ------------------------------
 # コンテンツ情報

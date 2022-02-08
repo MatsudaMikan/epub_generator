@@ -1,0 +1,856 @@
+2022-02-07 12:29:05,147- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:29:05,148- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:29:05,183- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:29:05,193- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:29:05,195- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:29:05,197- epub_generator.py - ERROR - チャプターファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 654 "lines = f.read().splitlines()"): 'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte
+2022-02-07 12:29:05,198- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-07 12:39:58,546- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:39:58,547- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:39:58,591- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:39:58,604- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:39:58,606- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:39:58,607- epub_generator.py - ERROR - local variable 'body' referenced before assignment
+2022-02-07 12:39:58,608- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-07 12:39:58,609- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 503, in main
+    self.load_chapter_files()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 674, in load_chapter_files
+    'body': body,
+UnboundLocalError: local variable 'body' referenced before assignment
+
+2022-02-07 12:41:24,353- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:41:24,354- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:41:24,397- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:41:24,410- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:41:24,413- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:41:24,413- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-07 12:41:24,414- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-07 12:41:24,414- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-07 12:41:24,414- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-07 12:41:24,415- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-07 12:41:24,415- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-07 12:41:24,416- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-07 12:41:24,416- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-07 12:41:24,417- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-07 12:41:24,418- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-07 12:41:24,423- epub_generator.py - ERROR - replace() argument 2 must be str, not None
+2022-02-07 12:41:24,424- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-07 12:41:24,426- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 506, in main
+    self.create_oebps_contents()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 827, in create_oebps_contents
+    content_data = self.content_replace(content_data, self.chapters[chapter_index - 1]['replaces'])
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1080, in content_replace
+    content = content.replace(replace['placeHolder'], replace['replaceContent'])
+TypeError: replace() argument 2 must be str, not None
+
+2022-02-07 12:45:18,218- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:45:18,218- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:45:18,265- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:45:18,276- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:45:18,278- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:45:18,279- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-07 12:45:18,279- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-07 12:45:18,280- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-07 12:45:18,280- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-07 12:45:18,281- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-07 12:45:18,281- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-07 12:45:18,282- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-07 12:45:18,282- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-07 12:45:18,283- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-07 12:45:18,283- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-07 12:45:18,287- epub_generator.py - ERROR - replace() argument 2 must be str, not None
+2022-02-07 12:45:18,288- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-07 12:45:18,289- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 506, in main
+    self.create_oebps_contents()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 827, in create_oebps_contents
+    content_data = self.content_replace(content_data, self.chapters[chapter_index - 1]['replaces'])
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1085, in content_replace
+    content = content.replace(replace['placeHolder'], replace['replaceContent'])
+TypeError: replace() argument 2 must be str, not None
+
+2022-02-07 12:45:42,902- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:45:42,903- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:45:42,950- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:45:42,961- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:45:42,964- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:45:42,964- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-07 12:45:42,965- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-07 12:45:42,965- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-07 12:45:42,966- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-07 12:45:42,966- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-07 12:45:42,966- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-07 12:45:42,967- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-07 12:45:42,967- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-07 12:45:42,968- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-07 12:45:42,968- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-07 12:45:59,621- epub_generator.py - ERROR - replace() argument 2 must be str, not None
+2022-02-07 12:45:59,622- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-07 12:45:59,623- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 506, in main
+    self.create_oebps_contents()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 827, in create_oebps_contents
+    content_data = self.content_replace(content_data, self.chapters[chapter_index - 1]['replaces'])
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1085, in content_replace
+    content = content.replace(replace['placeHolder'], replace['replaceContent'])
+TypeError: replace() argument 2 must be str, not None
+
+2022-02-07 12:46:13,113- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:46:13,113- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:46:13,162- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:46:13,172- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:46:13,174- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:46:13,175- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-07 12:46:13,175- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-07 12:46:13,176- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-07 12:46:13,176- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-07 12:46:13,177- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-07 12:46:13,177- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-07 12:46:13,177- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-07 12:46:13,178- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-07 12:46:13,178- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-07 12:46:13,179- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-07 12:48:52,854- epub_generator.py - ERROR - replace() argument 2 must be str, not None
+2022-02-07 12:48:52,854- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-07 12:48:52,855- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 506, in main
+    self.create_oebps_contents()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 827, in create_oebps_contents
+    content_data = self.content_replace(content_data, self.chapters[chapter_index - 1]['replaces'])
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1085, in content_replace
+    for replace in regex_replaces:
+TypeError: replace() argument 2 must be str, not None
+
+2022-02-07 12:49:00,320- epub_generator.py - INFO - --------------------------------------------------
+2022-02-07 12:49:00,321- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-07 12:49:00,365- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-07 12:49:00,381- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-07 12:49:00,383- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-07 12:49:00,384- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-07 12:49:00,385- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-07 12:49:00,385- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-07 12:49:00,386- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-07 12:49:00,387- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-07 12:49:00,388- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-07 12:49:00,389- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-07 12:49:00,389- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-07 12:49:00,390- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-07 12:49:00,391- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-07 12:49:00,435- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-07 12:49:00,436- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-07 12:49:05,460- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 07:52:31,364- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 07:52:31,365- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 07:52:31,404- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 07:52:31,415- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 07:52:31,417- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 07:52:31,420- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 07:52:31,422- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 07:52:31,424- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 07:52:31,426- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 07:52:31,428- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 07:52:31,430- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 07:52:31,433- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 07:52:31,435- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 07:52:31,438- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 07:52:31,440- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 07:52:31,441- epub_generator.py - ERROR - チャプターファイルが見つかりません。: ./contents/00000.png
+2022-02-08 07:52:31,441- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-08 07:54:05,582- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 07:54:05,583- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 07:54:05,627- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 07:54:05,641- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 07:54:05,643- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 07:56:42,205- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 07:56:42,206- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 07:56:42,257- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 07:58:49,574- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 07:58:49,576- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 07:59:53,732- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 07:59:53,733- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 07:59:53,775- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 07:59:53,786- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 07:59:53,788- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 07:59:53,790- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 07:59:53,793- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 07:59:53,795- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 07:59:53,798- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 07:59:53,800- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 07:59:53,802- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 07:59:53,804- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 07:59:53,806- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 07:59:53,808- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 07:59:53,811- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 07:59:53,811- epub_generator.py - ERROR - チャプターファイルが見つかりません。: ./contents/00000.png
+2022-02-08 07:59:53,812- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-08 08:00:09,308- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:00:09,309- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:00:09,350- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:00:09,361- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:00:09,363- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:00:09,365- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 08:00:09,367- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 08:00:09,369- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 08:00:09,371- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 08:00:09,374- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 08:00:09,376- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 08:00:09,379- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 08:00:09,381- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 08:00:09,383- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 08:00:09,384- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 08:01:34,375- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:01:34,377- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:01:34,421- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:01:34,435- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:01:34,438- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:01:34,440- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 08:01:34,443- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 08:01:34,446- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 08:01:34,449- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 08:01:34,451- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 08:01:34,455- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 08:01:34,457- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 08:01:34,459- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 08:01:34,462- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 08:01:34,464- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 08:01:34,464- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00000.png
+2022-02-08 08:01:34,465- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00001.png
+2022-02-08 08:01:34,465- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00002.png
+2022-02-08 08:01:34,465- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00003.png
+2022-02-08 08:01:34,465- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00004.png
+2022-02-08 08:01:34,466- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00005.png
+2022-02-08 08:01:34,466- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00006.png
+2022-02-08 08:01:34,466- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00007.png
+2022-02-08 08:01:34,467- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00008.png
+2022-02-08 08:01:34,467- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00009.png
+2022-02-08 08:01:34,492- epub_generator.py - ERROR - [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+2022-02-08 08:01:34,493- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 08:01:34,494- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 516, in main
+    self.create_epub()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1050, in create_epub
+    FileSystem.remove_file(self.args.output_file)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 102, in remove_file
+    os.remove(filepath)
+PermissionError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+
+2022-02-08 08:01:54,613- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:01:54,614- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:01:54,656- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:01:54,669- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:01:54,671- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:01:54,673- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 08:01:54,676- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 08:01:54,678- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 08:01:54,680- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 08:01:54,683- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 08:01:54,685- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 08:01:54,688- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 08:01:54,691- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 08:01:54,693- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 08:01:54,695- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 08:01:54,695- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00000.png
+2022-02-08 08:01:54,696- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00001.png
+2022-02-08 08:01:54,696- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00002.png
+2022-02-08 08:01:54,696- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00003.png
+2022-02-08 08:01:54,697- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00004.png
+2022-02-08 08:01:54,697- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00005.png
+2022-02-08 08:01:54,698- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00006.png
+2022-02-08 08:01:54,698- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00007.png
+2022-02-08 08:01:54,698- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00008.png
+2022-02-08 08:01:54,699- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00009.png
+2022-02-08 08:01:54,727- epub_generator.py - ERROR - [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+2022-02-08 08:01:54,728- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 08:01:54,729- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 516, in main
+    self.create_epub()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1050, in create_epub
+    FileSystem.remove_file(self.args.output_file)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 102, in remove_file
+    os.remove(filepath)
+PermissionError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+
+2022-02-08 08:02:27,128- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:02:27,129- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:02:27,174- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:02:27,185- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:02:27,187- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:02:27,189- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 08:02:27,192- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 08:02:27,194- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 08:02:27,197- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 08:02:27,199- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 08:02:27,201- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 08:02:27,204- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 08:02:27,206- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 08:02:27,209- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 08:02:27,211- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 08:02:27,212- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00000.png
+2022-02-08 08:02:27,212- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00001.png
+2022-02-08 08:02:27,213- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00002.png
+2022-02-08 08:02:27,213- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00003.png
+2022-02-08 08:02:27,214- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00004.png
+2022-02-08 08:02:27,214- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00005.png
+2022-02-08 08:02:27,214- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00006.png
+2022-02-08 08:02:27,215- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00007.png
+2022-02-08 08:02:27,215- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00008.png
+2022-02-08 08:02:27,215- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00009.png
+2022-02-08 08:02:27,242- epub_generator.py - ERROR - [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+2022-02-08 08:02:27,242- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 08:02:27,243- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 516, in main
+    self.create_epub()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 1050, in create_epub
+    FileSystem.remove_file(self.args.output_file)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 102, in remove_file
+    os.remove(filepath)
+PermissionError: [WinError 32] プロセスはファイルにアクセスできません。別のプロセスが使用中です。: 'C:\\Users\\kenic\\Dropbox\\Novels\\tools\\epub_generator\\data\\sample2\\Sample2.epub'
+
+2022-02-08 08:03:15,401- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:03:15,401- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:03:15,466- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:03:15,479- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:03:15,482- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:03:15,484- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00000.png
+2022-02-08 08:03:15,486- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00001.png
+2022-02-08 08:03:15,488- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00002.png
+2022-02-08 08:03:15,491- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00003.png
+2022-02-08 08:03:15,493- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00004.png
+2022-02-08 08:03:15,495- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00005.png
+2022-02-08 08:03:15,498- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00006.png
+2022-02-08 08:03:15,500- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00007.png
+2022-02-08 08:03:15,503- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00008.png
+2022-02-08 08:03:15,505- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\00009.png
+2022-02-08 08:03:15,505- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00000.png
+2022-02-08 08:03:15,506- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00001.png
+2022-02-08 08:03:15,506- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00002.png
+2022-02-08 08:03:15,507- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00003.png
+2022-02-08 08:03:15,507- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00004.png
+2022-02-08 08:03:15,507- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00005.png
+2022-02-08 08:03:15,508- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00006.png
+2022-02-08 08:03:15,508- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00007.png
+2022-02-08 08:03:15,508- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00008.png
+2022-02-08 08:03:15,508- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/00009.png
+2022-02-08 08:03:15,635- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-08 08:03:15,642- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-08 08:03:20,650- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 08:08:05,409- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:08:05,410- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:08:05,450- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:08:05,464- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:08:05,466- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:08:05,468- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 08:08:05,471- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 08:08:05,474- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 08:08:05,477- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 08:08:05,479- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 08:08:05,480- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 08:08:05,480- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 08:08:05,481- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 08:08:05,481- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 08:08:05,481- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 08:08:05,491- epub_generator.py - ERROR - list index out of range
+2022-02-08 08:08:05,491- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 08:08:05,493- epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 510, in main
+    self.create_oebps_content_files()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 877, in create_oebps_content_files
+    content_data = self.content_replace(content_data, self.chapters[chapter_index - 1]['replaces'])
+IndexError: list index out of range
+
+2022-02-08 08:10:10,669- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:10:10,670- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:10:10,714- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:10:10,729- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:10:10,732- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:10:10,736- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 08:10:10,740- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 08:10:10,743- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 08:10:10,746- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 08:10:10,749- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 08:10:10,749- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 08:10:10,750- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 08:10:10,750- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 08:10:10,751- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 08:10:10,751- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 08:10:10,913- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-08 08:10:10,919- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-08 08:10:15,930- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 08:11:14,838- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:11:14,838- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:11:14,870- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:11:14,884- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:11:14,886- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:11:14,889- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 08:11:14,892- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 08:11:14,894- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 08:11:14,897- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 08:11:14,899- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 08:12:20,331- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:12:20,332- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:12:20,362- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:12:20,373- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:12:20,375- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:12:20,378- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 08:12:20,380- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 08:12:20,384- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 08:12:20,387- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 08:12:20,389- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 08:12:23,118- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 08:12:23,119- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 08:12:23,119- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 08:12:23,120- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 08:12:23,120- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 08:12:23,279- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-08 08:12:23,283- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-08 08:12:28,297- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 08:15:02,168- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 08:15:02,169- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 08:15:02,215- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 08:15:02,236- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\template\style.css
+2022-02-08 08:15:02,238- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\image\cover.png
+2022-02-08 08:15:02,241- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 08:15:02,244- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 08:15:02,247- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 08:15:02,251- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 08:15:02,253- epub_generator.py - INFO - リソースファイルの読み込み - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 08:15:02,254- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 08:15:02,254- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 08:15:02,254- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 08:15:02,255- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 08:15:02,255- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 08:15:02,411- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-08 08:15:02,414- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-08 08:15:07,426- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 12:39:42,810- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 12:39:42,815- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 12:39:42,893- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 12:39:42,894- epub_generator.py - ERROR - local variable 'type' referenced before assignment
+2022-02-08 12:39:42,894- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 12:39:42,896- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 363, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 486, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 618, in load_setting_file
+    if type(settings['resources']['styleSheets']) is list:
+UnboundLocalError: local variable 'type' referenced before assignment
+
+2022-02-08 12:44:53,303- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 12:44:53,306- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 12:44:53,431- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 12:45:18,616- epub_generator.py - ERROR - local variable 'type' referenced before assignment
+2022-02-08 12:45:18,617- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 12:45:18,619- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 363, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 486, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 618, in load_setting_file
+    if type(settings['resources']['styleSheets']) is list:
+UnboundLocalError: local variable 'type' referenced before assignment
+
+2022-02-08 12:51:02,380- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 12:51:02,387- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 12:51:02,465- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 12:55:31,162- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 12:55:31,166- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 12:55:31,247- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 12:55:39,738- epub_generator.py - ERROR - local variable 'type' referenced before assignment
+2022-02-08 12:55:45,052- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 12:55:45,055- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 610, in load_setting_file
+    if type(settings['resources']['styleSheets']) is list:
+UnboundLocalError: local variable 'type' referenced before assignment
+
+2022-02-08 12:58:39,000- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 12:58:39,002- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 12:58:39,067- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 12:58:45,066- epub_generator.py - ERROR - local variable 'type' referenced before assignment
+2022-02-08 12:58:45,067- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 12:58:45,069- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 610, in load_setting_file
+    if type(settings['resources']['styleSheets']) is list:
+UnboundLocalError: local variable 'type' referenced before assignment
+
+2022-02-08 13:02:08,484- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:02:08,484- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:02:08,513- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:02:08,514- epub_generator.py - ERROR - local variable 'type' referenced before assignment
+2022-02-08 13:02:08,514- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 13:02:08,514- epub_generator.py - INFO - Traceback (most recent call last):
+  File "epub_generator.py", line 362, in execute
+    self.main(args)
+  File "epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "epub_generator.py", line 610, in load_setting_file
+    if type(settings['resources']['styleSheets']) is list:
+UnboundLocalError: local variable 'type' referenced before assignment
+
+2022-02-08 13:06:34,956- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:06:34,960- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:06:35,052- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:06:35,053- epub_generator.py - ERROR - 'resources'
+2022-02-08 13:06:35,054- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 13:06:35,056- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 621, in load_setting_file
+    if 'images' in self.settings['resources']:
+KeyError: 'resources'
+
+2022-02-08 13:08:11,755- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:08:11,756- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:08:11,854- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:08:11,855- epub_generator.py - ERROR - 'contents'
+2022-02-08 13:08:11,856- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 13:08:11,858- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 683, in load_setting_file
+    if type(settings['resources']['contents']) is list:
+KeyError: 'contents'
+
+2022-02-08 13:09:37,084- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:09:37,085- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:09:37,207- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:10:00,168- epub_generator.py - ERROR - 'contents'
+2022-02-08 13:10:00,169- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 13:10:00,170- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 683, in load_setting_file
+    if type(settings['resources']['contents']) is list:
+KeyError: 'contents'
+
+2022-02-08 13:10:32,954- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:10:32,956- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:10:33,080- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:11:18,390- epub_generator.py - ERROR - 指定されたファイルが見つかりません。 .\template\style.css
+2022-02-08 13:11:18,392- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-08 13:12:16,748- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:12:16,749- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:12:16,942- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:12:17,053- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:12:17,139- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:12:20,682- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:12:20,779- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:12:20,873- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:12:20,942- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:12:25,030- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:12:25,104- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:41:26,466- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:41:26,467- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:41:26,568- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:41:26,679- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:41:26,746- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:41:26,810- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:41:26,880- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:41:26,936- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:41:26,970- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:41:27,407- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:41:27,493- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:41:43,037- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:41:43,039- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:41:43,140- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:41:43,259- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:41:43,305- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:41:43,354- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:41:43,419- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:41:43,486- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:41:43,531- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:41:44,087- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:41:44,179- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:41:59,400- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:41:59,402- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:41:59,518- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:41:59,631- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:41:59,703- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:41:59,779- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:41:59,844- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:41:59,907- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:41:59,952- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:42:19,830- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:42:19,915- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:42:40,463- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:42:40,464- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:42:40,558- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:45:14,659- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:45:14,661- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:45:14,778- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:45:14,871- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:45:14,954- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:45:15,029- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:45:15,086- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:45:15,150- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:45:15,202- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:45:15,203- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:45:15,205- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:45:15,209- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:45:15,210- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:45:15,212- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:46:32,624- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:46:32,746- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:51:39,906- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:51:39,909- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:51:40,005- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:51:40,108- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:51:40,176- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:51:40,250- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:51:40,309- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:51:40,382- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:51:40,423- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:51:40,425- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:51:40,426- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:51:40,427- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:51:40,428- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:51:40,429- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:51:40,481- epub_generator.py - ERROR - コンテンツファイル作成中にエラーが発生しました。 Exception in (f:\tool\epub_generator\epub_generator.py, line 1004 "with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:"): [Errno 2] No such file or directory: './data\\tmpz3pjozu4\\OEBPS\\'
+2022-02-08 13:51:40,483- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-08 13:52:26,303- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:52:26,305- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:52:26,414- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:52:26,535- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:52:26,605- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:52:26,669- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:52:26,730- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:52:26,779- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:52:26,828- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:52:26,829- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:52:26,830- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:52:26,831- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:52:26,834- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:52:26,835- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:53:49,202- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:53:49,204- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:53:49,307- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:54:24,973- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:54:24,975- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:54:25,072- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:54:25,177- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:54:25,231- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:54:25,287- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:54:25,345- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:54:25,390- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:54:25,437- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:54:25,439- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 13:54:25,440- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 13:54:25,442- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 13:54:25,443- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 13:54:25,444- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 13:54:29,737- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:54:29,880- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 13:59:08,764- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 13:59:08,766- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 13:59:08,860- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 13:59:08,976- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 13:59:09,042- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 13:59:09,118- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 13:59:09,195- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 13:59:09,259- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 13:59:09,295- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 13:59:09,297- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:59:09,298- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:59:09,300- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:59:09,301- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:59:09,302- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/
+2022-02-08 13:59:10,260- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 13:59:10,515- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 14:00:03,976- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:00:04,016- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:00:04,277- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:00:04,374- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 14:00:04,440- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 14:00:04,507- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 14:00:04,573- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 14:00:04,630- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 14:00:04,676- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 14:00:04,678- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 14:00:04,679- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 14:00:04,680- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 14:00:04,681- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 14:00:04,682- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 14:00:05,554- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 14:00:05,689- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 14:16:16,765- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:16:16,767- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:16:16,851- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:27:22,067- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:27:22,068- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:27:22,136- epub_generator.py - ERROR - 'str' object is not callable
+2022-02-08 14:27:22,137- epub_generator.py - INFO - Epub generator 異常終了
+2022-02-08 14:27:22,140- epub_generator.py - INFO - Traceback (most recent call last):
+  File "f:\tool\epub_generator\epub_generator.py", line 362, in execute
+    self.main(args)
+  File "f:\tool\epub_generator\epub_generator.py", line 485, in main
+    self.load_setting_file()
+  File "f:\tool\epub_generator\epub_generator.py", line 558, in load_setting_file
+    os.curdir(self.setting_yaml_dirpath)
+TypeError: 'str' object is not callable
+
+2022-02-08 14:28:00,265- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:28:00,266- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:28:00,342- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:28:12,471- epub_generator.py - ERROR - mimetypeファイル作成中にエラーが発生しました。 Exception in (f:\tool\epub_generator\epub_generator.py, line 874 "with open(self.mimetype_filepath, 'w', encoding='utf-8') as f:"): [Errno 2] No such file or directory: './data\\tmph8d90to8\\mimetype'
+2022-02-08 14:28:12,472- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-08 14:33:39,078- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:33:39,079- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:34:54,123- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:34:54,124- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:35:06,023- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:35:06,131- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\template\style.css
+2022-02-08 14:35:06,208- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0001_illust_hyoshi-1.png
+2022-02-08 14:35:06,288- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0002_cut25.png
+2022-02-08 14:35:06,366- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0003_cut26.png
+2022-02-08 14:35:06,439- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0004_cut30.png
+2022-02-08 14:35:06,491- epub_generator.py - INFO - リソースファイルの読み込み - F:\tool\epub_generator\data\sample2\resource\content\0005_cut15A.png
+2022-02-08 14:35:06,493- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 14:35:06,494- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 14:35:06,495- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 14:35:06,496- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 14:35:06,497- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 14:35:07,350- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 14:35:07,501- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 14:38:36,538- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:38:36,540- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:38:36,654- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:38:36,674- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-08 14:38:36,683- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-08 14:38:36,716- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-08 14:38:36,724- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-08 14:38:36,739- epub_generator.py - INFO - ディレクトリ作成 - /META-INF/resources
+2022-02-08 14:38:36,751- epub_generator.py - INFO - ディレクトリ作成 - /META-INF/contents
+2022-02-08 14:38:36,795- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-08 14:38:36,867- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-08 14:38:36,948- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-08 14:38:37,048- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-08 14:38:37,112- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-08 14:38:37,176- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-08 14:38:37,186- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0001_illust_hyoshi-1.png
+2022-02-08 14:38:37,190- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0002_cut25.png
+2022-02-08 14:38:37,196- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0003_cut26.png
+2022-02-08 14:38:37,199- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0004_cut30.png
+2022-02-08 14:38:37,200- epub_generator.py - INFO - リソースファイルの読み込み - ./contents/0005_cut15A.png
+2022-02-08 14:38:37,240- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-08 14:38:37,314- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-08 14:38:37,338- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-08 14:38:37,377- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-08 14:38:37,419- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-08 14:38:37,467- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-08 14:38:37,494- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-08 14:38:37,522- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-08 14:38:37,584- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-08 14:38:38,337- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 14:38:38,500- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 14:39:18,291- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:39:18,292- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:39:18,385- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:39:18,414- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-08 14:39:18,422- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-08 14:39:18,444- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-08 14:39:18,459- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-08 14:39:18,461- epub_generator.py - INFO - ディレクトリ作成 - /META-INF/resources
+2022-02-08 14:39:18,469- epub_generator.py - INFO - ディレクトリ作成 - /META-INF/contents
+2022-02-08 14:39:18,507- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-08 14:39:18,583- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-08 14:39:18,651- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-08 14:39:18,729- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-08 14:39:18,811- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-08 14:39:18,855- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-08 14:39:18,876- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-08 14:39:18,907- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-08 14:39:18,928- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-08 14:39:18,963- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-08 14:39:18,986- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-08 14:39:19,018- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-08 14:39:19,042- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-08 14:39:19,067- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-08 14:39:19,107- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-08 14:39:19,663- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 14:39:19,824- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-08 14:41:17,314- epub_generator.py - INFO - --------------------------------------------------
+2022-02-08 14:41:17,315- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-08 14:41:17,434- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-08 14:41:17,454- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-08 14:41:17,471- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-08 14:41:17,498- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-08 14:41:17,507- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-08 14:41:17,524- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-08 14:41:17,526- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-08 14:41:17,557- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-08 14:41:17,629- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-08 14:41:17,698- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-08 14:41:17,775- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-08 14:41:17,843- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-08 14:41:17,884- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-08 14:41:17,900- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-08 14:41:17,922- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-08 14:41:17,949- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-08 14:41:17,984- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-08 14:41:18,011- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-08 14:41:18,033- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-08 14:41:18,062- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-08 14:41:18,084- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-08 14:41:18,122- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-08 14:41:18,687- epub_generator.py - INFO - ファイル作成 - F:\tool\epub_generator\data\sample2\Sample2.epub
+2022-02-08 14:41:18,846- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-09 06:29:52,054- epub_generator.py - INFO - --------------------------------------------------
+2022-02-09 06:29:52,055- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-09 06:29:52,088- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-09 06:29:52,092- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-09 06:29:52,093- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-09 06:29:52,099- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-09 06:29:52,100- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-09 06:29:52,101- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-09 06:29:52,102- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-09 06:29:52,105- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-09 06:29:52,108- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-09 06:29:52,111- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-09 06:29:52,115- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-09 06:29:52,118- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-09 06:29:52,121- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-09 06:29:52,123- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-09 06:29:52,125- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-09 06:29:52,127- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-09 06:29:52,129- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-09 06:29:52,131- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-09 06:29:52,132- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-09 06:29:52,134- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-09 06:29:52,136- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-09 06:29:52,145- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-09 06:29:52,280- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-09 06:29:52,286- epub_generator.py - INFO - Epub generator 正常終了
