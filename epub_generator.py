@@ -8,7 +8,7 @@ import pathlib
 from enum import Enum, IntEnum
 import zipfile
 from numpy import place
-import yaml     # NOTE: pyyamlは5.4.1でしか動作確認していない（python -m pip install pyyaml==5.4.1）
+import yaml
 import traceback
 import mimetypes
 import logging
@@ -24,6 +24,24 @@ import time
 SCRIPT_DIR = os.path.split(__file__)[0]
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
 LOG_DIR = os.path.join(DATA_DIR, 'log')
+
+
+class Utility(object):
+    '''
+    ユーティリティクラス
+    '''
+
+    @classmethod
+    def is_empty(cls, value):
+        '''
+        空かどうか
+        '''
+        if value == '':
+            return True
+        elif value == None:
+            return True
+        else:
+            return False
 
 
 class FileSystem(object):
@@ -59,15 +77,6 @@ class FileSystem(object):
     def create_directory(cls, dirpath):
         '''
         ディレクトリ作成
-        '''
-        if os.path.exists(dirpath):
-            shutil.rmtree(dirpath)
-        os.makedirs(dirpath)
-
-    @classmethod
-    def create_directory_tree(cls, dirpath):
-        '''
-        ディレクトリツリー作成
         '''
         pathlib.Path(dirpath).mkdir(parents=True, exist_ok=True)
 
@@ -119,21 +128,19 @@ class Convert(object):
         '''
         パラメータ値を適切にフォーマットして返す
         '''
-        if format == '':
+        if Utility.is_empty(format):
             return html.escape(str(value))
 
         if format == 'date':
             if len(value) == 8:
-                d = DateTimeHelper(int(value[0:4]), int(
-                    value[4:6]), int(value[6:8]))
+                d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]))
                 return (d.to_yyyymmdd())
             else:
                 return value
 
         elif format == 'datetime':
             if len(value) == 14:
-                d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(
-                    value[6:8]), int(value[8:10]), int(value[10:12]), int(value[12:14]))
+                d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]), int(value[8:10]), int(value[10:12]), int(value[12:14]))
                 return (d.to_yyyymmddhhmmss())
             else:
                 return value
@@ -146,7 +153,7 @@ class Convert(object):
         '''
         パラメータ値を適切にパースして返す
         '''
-        if value == '':
+        if Utility.is_empty(value):
             return value
 
         if format == 'date':
@@ -278,14 +285,18 @@ class BatchBase(object):
         コンストラクタ
         '''
         # パラメータチェック
-        if batch_name == '':
+        if Utility.is_empty(batch_name):
             batch_name = 'Unknown batch'
-        if description == '':
+        if Utility.is_empty(description):
             description = 'Nothing'
         self.debug = debug
 
         keys = [
-            'short_name','long_name','destination','default_value','help'
+            'short_name',
+            'long_name',
+            'destination',
+            'default_value',
+            'help'
         ]
         for argument_setting in argument_settings:
             for key in keys:
@@ -319,11 +330,11 @@ class BatchBase(object):
             self.parser.add_argument(short_name, long_name, dest=destination, required=required, default=default_value, help=help)
 
         # ログファイル名決定
-        if log_file_name == '':
+        if Utility.is_empty(log_file_name):
             frame = inspect.stack()[1]
             module = inspect.getmodule(frame[0])
             log_file_name = os.path.basename(module.__file__) + '.log'
-        FileSystem.create_directory_tree(LOG_DIR)
+        FileSystem.create_directory(LOG_DIR)
         log_file_path = os.path.join(LOG_DIR, log_file_name)
 
         # ログ設定
@@ -353,7 +364,7 @@ class BatchBase(object):
         '''
         バッチ実行
         '''
-        self.info_log('{0}'.format('-' * 50))
+        self.info_log('-' * 50)
         self.info_log('{0} 処理開始'.format(self.batch_name))
 
         try:
@@ -412,7 +423,6 @@ class BatchBase(object):
         '''
         例外情報取得
         '''
-
         exc_type, exc_obj, tb = sys.exc_info()
         f = tb.tb_frame
         lineno = tb.tb_lineno
@@ -464,7 +474,7 @@ class Batch(BatchBase):
             self.debug = True
 
         # ファイルチェック
-        if self.args.input_setting_file == '':
+        if Utility.is_empty(self.args.input_setting_file):
             raise BatchBase.BatchException('設定ファイルを指定してください。')
         if not FileSystem.exists_file(self.args.input_setting_file):
             raise BatchBase.BatchException('設定ファイルが見つかりません。')
@@ -475,7 +485,7 @@ class Batch(BatchBase):
             try:
                 FileSystem.remove_directory(self.work_dir)
                 self.info_log('作業ディレクトリのファイルを削除しました。 {0}'.format(self.work_dir))
-                FileSystem.create_directory_tree(self.work_dir)
+                FileSystem.create_directory(self.work_dir)
             except Exception as e:
                 raise BatchBase.BatchException('作業ディレクトリのファイル削除／作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
         FileSystem.create_directory(self.work_dir)
@@ -546,7 +556,7 @@ class Batch(BatchBase):
             raise BatchBase.BatchException('設定ファイルが見つかりません。 {0}'.format(self.exception_info()))
         try:
             with open(self.args.input_setting_file, 'r', encoding='utf-8') as f:
-                settings = yaml.load(f)
+                settings = yaml.load(f, Loader=yaml.SafeLoader)
         except Exception as e:
             raise BatchBase.BatchException('設定ファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1064,7 +1074,7 @@ class Batch(BatchBase):
         # UUID設定
         # ------------------------------
         # UUIDがない場合は作成
-        if replace_hash['bookId'] == '':
+        if Utility.is_empty(replace_hash['bookId']):
             replace_hash['bookId'] = uuid4()
             # TODO: setting.yamlに反映
 
@@ -1273,7 +1283,7 @@ class Batch(BatchBase):
         コンテンツ置換
         '''
 
-        if content == '':
+        if Utility.is_empty(content):
             return content
         if replaces == None or len(replaces) == 0:
             return content

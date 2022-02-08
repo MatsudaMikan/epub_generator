@@ -854,3 +854,61 @@ TypeError: 'str' object is not callable
 2022-02-09 06:29:52,145- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
 2022-02-09 06:29:52,280- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
 2022-02-09 06:29:52,286- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-09 06:54:21,977- epub_generator.py - INFO - --------------------------------------------------
+2022-02-09 06:54:21,978- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-09 06:54:22,010- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-09 06:54:22,013- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-09 06:54:22,014- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-09 06:54:22,020- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-09 06:54:22,021- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-09 06:54:22,023- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-09 06:54:22,024- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-09 06:54:22,029- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-09 06:54:22,033- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-09 06:54:22,036- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-09 06:54:22,040- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-09 06:54:22,044- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-09 06:54:22,046- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-09 06:54:22,048- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-09 06:54:22,051- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-09 06:54:22,052- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-09 06:54:22,054- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-09 06:54:22,057- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-09 06:54:22,060- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-09 06:54:22,062- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-09 06:54:22,065- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-09 06:54:22,072- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-09 06:54:22,203- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-09 06:54:22,208- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-09 06:54:27,214- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-09 07:07:44,292- epub_generator.py - INFO - --------------------------------------------------
+2022-02-09 07:07:44,293- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-09 07:07:44,296- epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 559 "settings = yaml.load(f)"): load() missing 1 required positional argument: 'Loader'
+2022-02-09 07:07:44,297- epub_generator.py - INFO - Epub generator 警告終了
+2022-02-09 07:09:17,918- epub_generator.py - INFO - --------------------------------------------------
+2022-02-09 07:09:17,919- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-09 07:09:17,951- epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-09 07:09:17,955- epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-09 07:09:17,956- epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-09 07:09:17,961- epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-09 07:09:17,962- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-09 07:09:17,963- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-09 07:09:17,964- epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-09 07:09:17,968- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/style.css
+2022-02-09 07:09:17,973- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0001_illust_hyoshi-1.png
+2022-02-09 07:09:17,976- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0002_cut25.png
+2022-02-09 07:09:17,981- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0003_cut26.png
+2022-02-09 07:09:17,984- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0004_cut30.png
+2022-02-09 07:09:17,988- epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/0005_cut15A.png
+2022-02-09 07:09:17,990- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-09 07:09:17,992- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-09 07:09:17,994- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_3.xhtml
+2022-02-09 07:09:17,996- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_4.xhtml
+2022-02-09 07:09:17,998- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_5.xhtml
+2022-02-09 07:09:18,000- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_6.xhtml
+2022-02-09 07:09:18,002- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_7.xhtml
+2022-02-09 07:09:18,003- epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_8.xhtml
+2022-02-09 07:09:18,009- epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-09 07:09:18,136- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
+2022-02-09 07:09:18,139- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-09 07:09:23,150- epub_generator.py - INFO - Epub generator 正常終了
