@@ -7,7 +7,6 @@ import shutil
 import pathlib
 from enum import Enum, IntEnum
 import zipfile
-from numpy import place
 import yaml
 import traceback
 import mimetypes
@@ -50,7 +49,7 @@ class FileSystem(object):
     '''
 
     @classmethod
-    def collect_filepaths(cls, p, filepatharr, name_filter='', collect_file_func=None):
+    def collect_filepaths(cls, p, filepatharr, name_filter_regex=''):
         '''
         指定されたパス以下の条件にマッチするファイルを収集し、配列で返す
         '''
@@ -58,18 +57,15 @@ class FileSystem(object):
         if os.path.isdir(p):
             filepatharr.append(p + os.sep)
             for file in os.listdir(path=p):
-                FileSystem.collect_filepaths(os.path.join(
-                    p, file), filepatharr, name_filter, collect_file_func)
+                FileSystem.collect_filepaths(os.path.join(p, file), filepatharr, name_filter_regex)
         else:
             can_collect = False
-            if name_filter == "":
+            if Utility.is_empty(name_filter_regex):
                 can_collect = True
             else:
-                can_collect = re.match(name_filter, p)
+                can_collect = re.match(name_filter_regex, p)
             if can_collect != None:
                 filepatharr.append(p)
-                if collect_file_func != None:
-                    collect_file_func(p)
 
         return filepatharr
 
@@ -129,24 +125,44 @@ class Convert(object):
         パラメータ値を適切にフォーマットして返す
         '''
         if Utility.is_empty(format):
-            return html.escape(str(value))
+            return value
 
-        if format == 'date':
-            if len(value) == 8:
-                d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]))
-                return (d.to_yyyymmdd())
+        if not(type(value) is str) and not(type(value) is int) and not(type(value) is float):
+            return value
+
+        if type(value) is int:
+            value = str(value)
+
+        if format == 'number':
+            if type(value) is int or type(value) is float:
+                return '{:,}'.format(value)
+            elif type(value) is str:
+                try:
+                    return '{:,}'.format(int(value))
+                except:
+                    return value                    
             else:
                 return value
-
+        elif format == 'date':
+            if len(value) == 8:
+                try:
+                    d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]))
+                    return (d.to_yyyymmdd())
+                except:
+                    return value
+            else:
+                return value
         elif format == 'datetime':
             if len(value) == 14:
-                d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]), int(value[8:10]), int(value[10:12]), int(value[12:14]))
-                return (d.to_yyyymmddhhmmss())
+                try:
+                    d = DateTimeHelper(int(value[0:4]), int(value[4:6]), int(value[6:8]), int(value[8:10]), int(value[10:12]), int(value[12:14]))
+                    return (d.to_yyyymmddhhmiss())
+                except:
+                    return value
             else:
                 return value
-
         else:
-            return html.escape(str(value))
+            return value
 
     @classmethod
     def parse(cls, value, format=''):
@@ -156,11 +172,33 @@ class Convert(object):
         if Utility.is_empty(value):
             return value
 
-        if format == 'date':
+        if not(type(value) is str) and not(type(value) is int) and not(type(value) is float):
+            return value
+
+        if format == 'number':
+            if type(value) is str:
+                if value.find('.') > -1:
+                    return float(value.replace(',', ''))
+                else:
+                    return int(value.replace(',', ''))
+            else:
+                return value
+        elif format == 'date':
             if len(value) == 10:
-                d = DateTimeHelper(int(value[0:4]), int(
-                    value[5:7]), int(value[8:10]))
-                return (d.to_yyyymmdd(''))
+                try:
+                    d = DateTimeHelper(int(value[0:4]), int(value[5:7]), int(value[8:10]))
+                    return (d.to_yyyymmdd(datesep=''))
+                except:
+                    return value
+            else:
+                return value
+        elif format == 'datetime':
+            if len(value) == 19:
+                try:
+                    d = DateTimeHelper(int(value[0:4]), int(value[5:7]), int(value[8:10]), int(value[11:13]), int(value[14:16]), int(value[17:20]))
+                    return (d.to_yyyymmddhhmiss(datesep='', timesep='', datetimesep=''))
+                except:
+                    return value
             else:
                 return value
         else:
@@ -182,7 +220,7 @@ class DateTimeHelper(datetime):
         now = datetime.now()
         return DateTimeHelper(now.year, now.month, now.day, now.hour, now.minute, now.second, now.microsecond, now.tzinfo)
 
-    def to_yyyy(self, monthsep='-'):
+    def to_yyyy(self):
         return self.strftime('%Y')
 
     def to_yyyymm(self, monthsep='-'):
@@ -194,8 +232,8 @@ class DateTimeHelper(datetime):
     def to_yyyymmddhhmiss(self, datesep='-', timesep=':', datetimesep=' '):
         return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S')
 
-    def to_yyyymmddhhmissffffff(self, datesep='-', timesep=':', datetimesep=' ', floatsep='.'):
-        return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S' + floatsep + '%f')
+    # def to_yyyymmddhhmissfffff(self, datesep='-', timesep=':', datetimesep=' ', microsecondsep='.'):
+    #     return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S' + microsecondsep + '%f')
 
     def add_years(self, num):
         if type(num) != int:

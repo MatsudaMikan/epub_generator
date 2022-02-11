@@ -912,3 +912,5 @@ TypeError: 'str' object is not callable
 2022-02-09 07:09:18,136- epub_generator.py - INFO - ファイル作成 - C:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\sample2\Sample2.epub
 2022-02-09 07:09:18,139- epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
 2022-02-09 07:09:23,150- epub_generator.py - INFO - Epub generator 正常終了
+2022-02-11 08:15:31,664- epub_generator.py - INFO - --------------------------------------------------
+2022-02-11 08:15:31,665- epub_generator.py - INFO - Epub generator 処理開始
