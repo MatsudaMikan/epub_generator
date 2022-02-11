@@ -9,6 +9,7 @@ import pathlib
 import shutil
 from epub_generator import Utility, FileSystem, Convert, DateTimeHelper, BatchBase, Batch
 
+
 class TestUtility(unittest.TestCase):
     def test_is_empty(self):
         # 空文字
@@ -23,6 +24,7 @@ class TestUtility(unittest.TestCase):
         # 数値
         value = 1
         self.assertEqual(False, Utility.is_empty(value))
+
 
 class TestFileSystem(unittest.TestCase):
 
@@ -140,6 +142,7 @@ class TestFileSystem(unittest.TestCase):
 
         temp.cleanup()
         
+
 class TestConvert(unittest.TestCase):
     def test_format(self):
 
@@ -305,7 +308,6 @@ class TestDateTimeHelper(unittest.TestCase):
         self.assertEqual('20220228', d.add_days(-1).strftime('%Y%m%d'))
 
 
-
 class TestBatch(unittest.TestCase):
  
     # TODO: テストケースはだいたい以下みたいなヤツで
@@ -317,10 +319,9 @@ class TestBatch(unittest.TestCase):
     # - 置換が使用されないケース
     # 他にもたくさんあると思う
 
-    def test_xxx(self):
-        # epub_generator.Batch().execute()
-        # self.assertEqual(10, calc.add_num(6, 4)) 
-        pass
+    def test_invalid_parameter(self):
+        argv = None
+        Batch().execute(argv)
 
 if __name__ == '__main__':
     unittest.main()

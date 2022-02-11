@@ -345,7 +345,7 @@ class BatchBase(object):
         self.batch_name = batch_name
 
         # パラメータ
-        self.parser = ArgumentParser(description=description)
+        self.parser = ArgumentParser(description=description, exit_on_error=False)
         for argument_setting in argument_settings:
             short_name = None
             if 'short_name' in argument_setting:
@@ -398,16 +398,19 @@ class BatchBase(object):
 
         raise NotImplementedError()
 
-    def execute(self):
+    def execute(self, argv=[]):
         '''
         バッチ実行
         '''
+        if Utility.is_empty(argv):
+            argv = []
+
         self.info_log('-' * 50)
         self.info_log('{0} 処理開始'.format(self.batch_name))
 
         try:
             # メイン処理呼び出し
-            args = self.parser.parse_args()
+            args = self.parser.parse_args(args=argv)
             self.main(args)
             self.info_log('{0} 正常終了'.format(self.batch_name))
 
@@ -1379,4 +1382,4 @@ class Batch(BatchBase):
 
 
 if __name__ == '__main__':
-    exit(Batch().execute())
+    exit(Batch().execute(sys.argv))
