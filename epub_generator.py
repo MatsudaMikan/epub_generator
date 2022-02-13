@@ -113,6 +113,10 @@ class FileSystem(object):
         '''
         return os.path.exists(filepath)
 
+    @classmethod
+    def get_file_size(cls, filepath):
+        return os.path.getsize(filepath)
+
 
 class Convert(object):
     '''
@@ -465,14 +469,17 @@ class BatchBase(object):
         例外情報取得
         '''
         exc_type, exc_obj, tb = sys.exc_info()
-        f = tb.tb_frame
-        lineno = tb.tb_lineno
-        filename = f.f_code.co_filename
+        if tb != None:
+            f = tb.tb_frame
+            lineno = tb.tb_lineno
+            filename = f.f_code.co_filename
+            
+            linecache.checkcache(filename)
+            line = linecache.getline(filename, lineno, f.f_globals)
         
-        linecache.checkcache(filename)
-        line = linecache.getline(filename, lineno, f.f_globals)
-        
-        return 'Exception in ({0}, line {1} "{2}"): {3}'.format(filename, lineno, line.strip(), exc_obj)
+            return 'Exception in ({0}, line {1} "{2}"): {3}'.format(filename, lineno, line.strip(), exc_obj)
+        else:
+            return 'Exception in unknown'
 
 class Batch(BatchBase):
     '''
@@ -501,7 +508,7 @@ class Batch(BatchBase):
         set_argument_settings = []
         set_argument_settings.append({'short_name': '-i', 'long_name': '--input_setting_file', 'destination': 'input_setting_file', 'required': True, 'default_value': '', 'help': '設定ファイルのパス'})
         set_argument_settings.append({'short_name': '-o', 'long_name': '--output_file', 'destination': 'output_file', 'required': True, 'default_value': '', 'help': '出力ファイルのパス'})
-        set_argument_settings.append({'short_name': '-d', 'long_name': '--debug', 'destination': 'debug', 'default_value': 0, 'help': 'デバッグ'})
+        set_argument_settings.append({'short_name': '-d', 'long_name': '--debug', 'destination': 'debug', 'default_value': '0', 'help': 'デバッグ'})
         super(Batch, self).__init__(batch_name, description, set_argument_settings)
 
     def main(self, args):
@@ -510,8 +517,14 @@ class Batch(BatchBase):
         '''
         self.args = args
 
+        # パラメータ出力
+        self.info_log('設定ファイル: {0}'.format(self.args.input_setting_file))
+        self.info_log('出力ファイル: {0}'.format(self.args.output_file))
+        if self.args.debug == '1':
+            self.info_log('デバッグ: ON')
+
         # デバッグ
-        if self.args.debug == 1:
+        if self.args.debug == '1':
             self.debug = True
 
         # ファイルチェック
@@ -595,6 +608,8 @@ class Batch(BatchBase):
         # 設定ファイル読み込み
         if not FileSystem.exists_file(self.args.input_setting_file):
             raise BatchBase.BatchException('設定ファイルが見つかりません。 {0}'.format(self.exception_info()))
+        if FileSystem.get_file_size(self.args.input_setting_file) == 0:
+            raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
         try:
             with open(self.args.input_setting_file, 'r', encoding='utf-8') as f:
                 settings = yaml.load(f, Loader=yaml.SafeLoader)

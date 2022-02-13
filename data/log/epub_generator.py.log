@@ -932,3 +932,311 @@ TypeError: 'str' object is not callable
 2022-02-12 08:47:35,606- test_epub_generator.py - INFO - Epub generator 処理開始
 2022-02-12 08:48:47,158- test_epub_generator.py - INFO - --------------------------------------------------
 2022-02-12 08:48:47,159- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-12 08:54:56,519- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-12 08:54:56,520- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-12 08:55:49,008- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-12 08:55:49,010- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-12 09:11:32,217- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-12 09:11:32,218- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-12 09:12:30,766- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-12 09:12:30,766- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-12 09:12:40,539- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-12 09:12:40,540- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:12:57,447- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:12:57,447- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:12:57,452- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:12:57,452- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:37:18,083- epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:37:18,084- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:37:27,769- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:37:27,769- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:37:27,776- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp5ecznmpn\test.yaml
+2022-02-14 07:37:27,777- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp5ecznmpn\test.epub
+2022-02-14 07:37:27,778- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:37:27,778- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:37:47,031- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:37:47,032- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:38:28,864- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpl6xwlq29\test.yaml
+2022-02-14 07:38:28,865- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpl6xwlq29\test.epub
+2022-02-14 07:38:28,866- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:38:28,866- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:38:33,886- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:38:33,887- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:38:33,889- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpnmtu7fwk\test.yaml
+2022-02-14 07:38:33,890- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpnmtu7fwk\test.epub
+2022-02-14 07:38:33,890- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:38:33,891- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:38:33,891- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:43:40,322- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:43:40,323- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:43:40,324- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmph_a4ao9y\test.yaml
+2022-02-14 07:43:40,325- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmph_a4ao9y\test.epub
+2022-02-14 07:43:40,325- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:43:40,326- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:43:40,326- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:43:40,343- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:43:40,343- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:43:40,344- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:43:40,344- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:43:40,346- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmprjq0i9q2\test.yaml
+2022-02-14 07:43:40,346- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmprjq0i9q2\test.yaml
+2022-02-14 07:43:40,347- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmprjq0i9q2\test.epub
+2022-02-14 07:43:40,347- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmprjq0i9q2\test.epub
+2022-02-14 07:43:40,348- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:43:40,348- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:43:40,353- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:43:40,353- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:43:40,354- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:43:40,354- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:43:40,356- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:43:40,356- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:43:40,358- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:43:40,358- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:44:32,628- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:44:32,629- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:44:32,630- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp8ufefx_k\test.yaml
+2022-02-14 07:44:32,631- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp8ufefx_k\test.epub
+2022-02-14 07:44:32,631- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:44:32,633- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:44:32,633- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:44:32,646- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:44:32,646- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:44:32,647- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:44:32,647- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:44:32,648- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpjc9wu3z0\test.yaml
+2022-02-14 07:44:32,648- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpjc9wu3z0\test.yaml
+2022-02-14 07:44:32,649- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpjc9wu3z0\test.epub
+2022-02-14 07:44:32,649- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpjc9wu3z0\test.epub
+2022-02-14 07:44:32,651- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:44:32,651- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:44:32,655- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:44:32,655- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:44:32,657- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:44:32,657- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:44:32,659- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:44:32,659- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:44:32,660- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:44:32,660- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:45:13,960- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:13,962- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:13,962- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp829gaz4o\test.yaml
+2022-02-14 07:45:13,963- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp829gaz4o\test.epub
+2022-02-14 07:45:13,964- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:13,965- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:45:13,965- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:45:13,980- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:13,980- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:13,981- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:13,981- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:13,981- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpy9ys1dco\test.yaml
+2022-02-14 07:45:13,981- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpy9ys1dco\test.yaml
+2022-02-14 07:45:13,982- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpy9ys1dco\test.epub
+2022-02-14 07:45:13,982- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpy9ys1dco\test.epub
+2022-02-14 07:45:13,984- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:13,984- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:13,989- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:45:13,989- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:45:13,990- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:45:13,990- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:45:13,991- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:45:13,991- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:45:13,993- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:45:13,993- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:45:52,879- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:52,884- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:52,885- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpc_ublx6z\test.yaml
+2022-02-14 07:45:52,886- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpc_ublx6z\test.epub
+2022-02-14 07:45:52,887- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:52,887- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:45:52,887- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:45:52,901- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:52,901- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:45:52,902- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:52,902- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:45:52,903- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp_95urlvo\test.yaml
+2022-02-14 07:45:52,903- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp_95urlvo\test.yaml
+2022-02-14 07:45:52,904- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp_95urlvo\test.epub
+2022-02-14 07:45:52,904- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp_95urlvo\test.epub
+2022-02-14 07:45:52,904- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:52,904- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:45:52,910- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:45:52,910- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-14 07:45:52,911- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:45:52,911- test_epub_generator.py - ERROR - argument of type 'NoneType' is not iterable
+2022-02-14 07:45:52,912- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:45:52,912- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:45:52,914- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:45:52,914- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 414, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 541, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 624, in load_setting_file
+    if not 'bookId' in settings:
+TypeError: argument of type 'NoneType' is not iterable
+
+2022-02-14 07:50:50,867- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:50:50,868- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:50:50,869- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpiu1dtvg2\test.yaml
+2022-02-14 07:50:50,870- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpiu1dtvg2\test.epub
+2022-02-14 07:50:50,870- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:50:50,871- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:50:50,871- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:50:50,888- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:50:50,888- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:50:50,890- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:50:50,890- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:50:50,891- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp91ctpy_f\test.yaml
+2022-02-14 07:50:50,891- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp91ctpy_f\test.yaml
+2022-02-14 07:50:50,892- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp91ctpy_f\test.epub
+2022-02-14 07:50:50,892- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp91ctpy_f\test.epub
+2022-02-14 07:50:50,893- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:50:50,893- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:50:50,897- test_epub_generator.py - ERROR - 'NoneType' object has no attribute 'tb_frame'
+2022-02-14 07:50:50,897- test_epub_generator.py - ERROR - 'NoneType' object has no attribute 'tb_frame'
+2022-02-14 07:50:50,898- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:50:50,898- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:50:50,901- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 418, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 545, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 609, in load_setting_file
+    raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 472, in exception_info
+    f = tb.tb_frame
+AttributeError: 'NoneType' object has no attribute 'tb_frame'
+
+2022-02-14 07:50:50,901- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 418, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 545, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 609, in load_setting_file
+    raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 472, in exception_info
+    f = tb.tb_frame
+AttributeError: 'NoneType' object has no attribute 'tb_frame'
+
+2022-02-14 07:51:42,124- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:51:42,125- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:51:42,126- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpr6khtnpv\test.yaml
+2022-02-14 07:51:42,127- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpr6khtnpv\test.epub
+2022-02-14 07:51:42,128- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:51:42,128- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:51:42,129- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:51:42,144- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:51:42,144- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:51:42,145- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:51:42,145- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:51:42,146- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmptpqswan7\test.yaml
+2022-02-14 07:51:42,146- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmptpqswan7\test.yaml
+2022-02-14 07:51:42,147- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmptpqswan7\test.epub
+2022-02-14 07:51:42,147- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmptpqswan7\test.epub
+2022-02-14 07:51:42,148- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:51:42,148- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:52:09,735- test_epub_generator.py - ERROR - 'NoneType' object has no attribute 'tb_frame'
+2022-02-14 07:52:09,735- test_epub_generator.py - ERROR - 'NoneType' object has no attribute 'tb_frame'
+2022-02-14 07:52:09,735- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:52:09,735- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-14 07:52:09,738- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 418, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 545, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 609, in load_setting_file
+    raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 472, in exception_info
+    f = tb.tb_frame
+AttributeError: 'NoneType' object has no attribute 'tb_frame'
+
+2022-02-14 07:52:09,738- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 418, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 545, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 609, in load_setting_file
+    raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 472, in exception_info
+    f = tb.tb_frame
+AttributeError: 'NoneType' object has no attribute 'tb_frame'
+
+2022-02-14 07:53:08,924- epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:53:08,924- epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:53:14,763- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:53:14,764- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:53:14,765- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp48t46euv\test.yaml
+2022-02-14 07:53:14,766- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmp48t46euv\test.epub
+2022-02-14 07:53:14,766- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:53:14,767- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-14 07:53:14,768- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:53:14,783- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:53:14,783- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-14 07:53:14,784- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:53:14,784- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-14 07:53:14,785- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpi_4s3e6v\test.yaml
+2022-02-14 07:53:14,785- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpi_4s3e6v\test.yaml
+2022-02-14 07:53:14,786- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpi_4s3e6v\test.epub
+2022-02-14 07:53:14,786- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpi_4s3e6v\test.epub
+2022-02-14 07:53:14,787- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:53:14,787- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-14 07:53:14,792- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-14 07:53:14,792- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-14 07:53:14,793- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-14 07:53:14,793- test_epub_generator.py - INFO - Epub generator 警告終了

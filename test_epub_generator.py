@@ -320,8 +320,48 @@ class TestBatch(unittest.TestCase):
     # 他にもたくさんあると思う
 
     def test_invalid_parameter(self):
-        argv = None
-        Batch().execute(argv)
+        # TODO: パラメータがない
+        # argv = None
+        # Batch().execute(argv)
+        pass
+
+    def test_invalid_setting_file(self):
+        # 設定ファイルがない
+        temp = tempfile.TemporaryDirectory(dir=os.path.join(os.path.dirname(__file__), 'data'))
+        temp_dir = temp.name
+        pathlib.Path(temp_dir).mkdir(parents=True, exist_ok=True)
+
+        return_code = Batch().execute([
+            '-i=' + os.path.join(temp_dir, 'test.yaml'),
+            '-o=' + os.path.join(temp_dir, 'test.epub'),
+            '-d=1'
+        ])
+        temp.cleanup()
+
+        self.assertEqual(1, return_code)
+
+
+        # 設定ファイルはあるけど空
+        temp = tempfile.TemporaryDirectory(dir=os.path.join(os.path.dirname(__file__), 'data'))
+        temp_dir = temp.name
+        pathlib.Path(temp_dir).mkdir(parents=True, exist_ok=True)
+
+        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
+            f.write('''''')
+        return_code = Batch().execute([
+            '-i=' + os.path.join(temp_dir, 'test.yaml'),
+            '-o=' + os.path.join(temp_dir, 'test.epub'),
+            '-d=1'
+        ])
+        temp.cleanup()
+        
+        self.assertEqual(1, return_code)
+
+        # TODO: 設定ファイルはあるけどYAMLフォーマットじゃない
+        # TODO: 設定ファイルはあってYAMLフォーマットだけど設定なし
+        # TODO: 設定ファイル中のパスが空
+        # TODO: 設定ファイル中のパスが無効
+        # TODO: 設定ファイル中のパスのファイルが存在しない
 
 if __name__ == '__main__':
     unittest.main()
