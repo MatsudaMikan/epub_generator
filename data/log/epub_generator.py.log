@@ -1240,3 +1240,52 @@ AttributeError: 'NoneType' object has no attribute 'tb_frame'
 2022-02-14 07:53:14,792- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
 2022-02-14 07:53:14,793- test_epub_generator.py - INFO - Epub generator 警告終了
 2022-02-14 07:53:14,793- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:25:05,394- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:25:05,396- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:25:05,397- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpju8qb9lk\test.yaml
+2022-02-17 08:25:05,397- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpju8qb9lk\test.epub
+2022-02-17 08:25:05,398- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:25:05,399- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-17 08:25:05,399- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:25:05,413- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:25:05,413- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:25:05,414- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:25:05,414- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:25:05,415- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpog4t4erf\test.yaml
+2022-02-17 08:25:05,415- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpog4t4erf\test.yaml
+2022-02-17 08:25:05,416- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpog4t4erf\test.epub
+2022-02-17 08:25:05,416- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpog4t4erf\test.epub
+2022-02-17 08:25:05,417- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:25:05,417- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:25:05,421- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-17 08:25:05,421- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-17 08:25:05,422- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:25:05,422- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:47:44,046- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:47:44,048- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:47:44,049- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpq4wgpa33\test.yaml
+2022-02-17 08:47:44,049- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpq4wgpa33\test.epub
+2022-02-17 08:47:44,050- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:47:44,054- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-17 08:47:44,055- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:50:58,583- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:50:58,583- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:50:58,588- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpg09sk9oh\test.yaml
+2022-02-17 08:50:58,589- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpg09sk9oh\test.epub
+2022-02-17 08:50:58,590- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:50:58,593- test_epub_generator.py - ERROR - 設定ファイルが空です。 Exception in unknown
+2022-02-17 08:50:58,594- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:50:58,609- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:50:58,609- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-17 08:50:58,610- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:50:58,610- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-17 08:50:58,612- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpn19ujc6x\test.yaml
+2022-02-17 08:50:58,612- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpn19ujc6x\test.yaml
+2022-02-17 08:50:58,613- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpn19ujc6x\test.epub
+2022-02-17 08:50:58,613- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\tmpn19ujc6x\test.epub
+2022-02-17 08:50:58,613- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:50:58,613- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-17 08:50:58,614- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-17 08:50:58,614- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-17 08:50:58,615- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-17 08:50:58,615- test_epub_generator.py - INFO - Epub generator 警告終了
