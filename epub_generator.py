@@ -17,8 +17,8 @@ from uuid import uuid4
 from datetime import datetime, timedelta
 import xml.dom.minidom
 import linecache
-import tempfile
 import time
+import uuid
 
 SCRIPT_DIR = os.path.split(__file__)[0]
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
@@ -117,6 +117,13 @@ class FileSystem(object):
     def get_file_size(cls, filepath):
         return os.path.getsize(filepath)
 
+    @classmethod
+    def create_temp_directory(cls, base_dir=''):
+        if Utility.is_empty(base_dir):
+            base_dir = os.path.dirname(__file__)
+        temp_dir = os.path.join(base_dir, str(uuid.uuid4().int))
+        pathlib.Path(temp_dir).mkdir(parents=True, exist_ok=True)
+        return temp_dir
 
 class Convert(object):
     '''
@@ -349,7 +356,8 @@ class BatchBase(object):
         self.batch_name = batch_name
 
         # パラメータ
-        self.parser = ArgumentParser(description=description, exit_on_error=False)
+        # self.parser = ArgumentParser(description=description, exit_on_error=False)
+        self.parser = ArgumentParser(description=description)
         for argument_setting in argument_settings:
             short_name = None
             if 'short_name' in argument_setting:
@@ -386,14 +394,14 @@ class BatchBase(object):
         log_format = '%(asctime)s- %(name)s - %(levelname)s - %(message)s'
         self.log0 = logging.getLogger(self.parser.prog)
         self.log0.setLevel(log_level)
-        sh = logging.StreamHandler()
-        sh.setLevel(log_level)
-        sh.setFormatter(logging.Formatter(log_format))
-        self.log0.addHandler(sh)
-        fh = logging.FileHandler(filename=log_file_path, encoding='utf-8')
-        fh.setLevel(log_level)
-        fh.setFormatter(logging.Formatter(log_format))
-        self.log0.addHandler(fh)
+        self.sh = logging.StreamHandler()
+        self.sh.setLevel(log_level)
+        self.sh.setFormatter(logging.Formatter(log_format))
+        self.log0.addHandler(self.sh)
+        self.fh = logging.FileHandler(filename=log_file_path, encoding='utf-8')
+        self.fh.setLevel(log_level)
+        self.fh.setFormatter(logging.Formatter(log_format))
+        self.log0.addHandler(self.fh)
 
     def main(self, args):
         '''
@@ -481,6 +489,12 @@ class BatchBase(object):
         else:
             return 'Exception in unknown'
 
+    def __del__(self):
+        self.sh.close()
+        self.log0.removeHandler(self.sh)
+        self.fh.close()
+        self.log0.removeHandler(self.fh)
+
 class Batch(BatchBase):
     '''
     バッチクラス
@@ -493,6 +507,7 @@ class Batch(BatchBase):
     chapters = []
     contents_bind_chapter_indexes = {}
     contents = []
+    work_dir_obj = None
     work_dir = ''
     mimetype_filepath = ''
     oebps_dirpath = ''
@@ -534,15 +549,7 @@ class Batch(BatchBase):
             raise BatchBase.BatchException('設定ファイルが見つかりません。')
 
         # 作業ディレクトリ作成
-        self.work_dir = tempfile.TemporaryDirectory(dir=os.path.join(os.path.dirname(__file__), 'data')).name
-        if FileSystem.exists_file(self.work_dir):
-            try:
-                FileSystem.remove_directory(self.work_dir)
-                self.info_log('作業ディレクトリのファイルを削除しました。 {0}'.format(self.work_dir))
-                FileSystem.create_directory(self.work_dir)
-            except Exception as e:
-                raise BatchBase.BatchException('作業ディレクトリのファイル削除／作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
-        FileSystem.create_directory(self.work_dir)
+        self.work_dir = FileSystem.create_temp_directory()
 
         # 設定ファイル読み込み
         self.load_setting_file()
@@ -578,6 +585,8 @@ class Batch(BatchBase):
         # epubファイル作成
         self.create_epub()
 
+        FileSystem.remove_directory(self.work_dir)
+
     def set_chapter_index_in_contents(self):
         '''
         コンテンツを考慮したチャプターのインデックスをセット
@@ -607,9 +616,9 @@ class Batch(BatchBase):
 
         # 設定ファイル読み込み
         if not FileSystem.exists_file(self.args.input_setting_file):
-            raise BatchBase.BatchException('設定ファイルが見つかりません。 {0}'.format(self.exception_info()))
+            raise BatchBase.BatchException('設定ファイルが見つかりません。 {0}'.format(self.args.input_setting_file))
         if FileSystem.get_file_size(self.args.input_setting_file) == 0:
-            raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.exception_info()))
+            raise BatchBase.BatchException('設定ファイルが空です。 {0}'.format(self.args.input_setting_file))
         try:
             with open(self.args.input_setting_file, 'r', encoding='utf-8') as f:
                 settings = yaml.load(f, Loader=yaml.SafeLoader)
@@ -626,40 +635,40 @@ class Batch(BatchBase):
 
         # ファイルパス補正（相対パス→絶対パス）
         self.reclusive_setting_callback(settings, self.convert_absolute_filepath)
-        
+
         # ------------------------------
         # ルート設定値補正
         # ------------------------------
-        if not 'bookId' in settings:
+        if not 'bookId' in settings or Utility.is_empty(settings['bookId']):
             settings['bookId'] = ''
-        if not 'language' in settings:
+        if not 'language' in settings or Utility.is_empty(settings['language']):
             settings['language'] = ''
-        if not 'modified' in settings:
+        if not 'modified' in settings or Utility.is_empty(settings['modified']):
             settings['modified'] = ''
-        if not 'title' in settings:
+        if not 'title' in settings or Utility.is_empty(settings['title']):
             settings['title'] = ''
-        if not 'authorName' in settings:
+        if not 'authorName' in settings or Utility.is_empty(settings['authorName']):
             settings['authorName'] = ''
-        if not 'authorRole' in settings:
+        if not 'authorRole' in settings or Utility.is_empty(settings['authorRole']):
             settings['authorRole'] = ''
-        if not 'authorCopyRight' in settings:
+        if not 'authorCopyRight' in settings or Utility.is_empty(settings['authorCopyRight']):
             settings['authorCopyRight'] = ''
-        if not 'otherAuthors' in settings:
+        if not 'otherAuthors' in settings or Utility.is_empty(settings['otherAuthors']):
             settings['otherAuthors'] = []
         for other_author in settings['otherAuthors']:
-            if not 'authorName' in other_author:
+            if not 'authorName' in other_author or Utility.is_empty(settings['authorName']):
                 other_author['authorName'] = ''
-            if not 'authorRole' in other_author:
+            if not 'authorRole' in other_author or Utility.is_empty(settings['authorRole']):
                 other_author['authorRole'] = ''
-            if not 'authorCopyRight' in other_author:
+            if not 'authorCopyRight' in other_author or Utility.is_empty(settings['authorCopyRight']):
                 other_author['authorCopyRight'] = ''
-        if not 'pageProgressionDirection' in settings:
+        if not 'pageProgressionDirection' in settings or Utility.is_empty(settings['pageProgressionDirection']):
             settings['pageProgressionDirection'] = ''
         
         # ------------------------------
         # リソース設定値補正
         # ------------------------------
-        if not 'resources' in settings:
+        if not 'resources' in settings or Utility.is_empty(settings['resources']):
             settings['resources'] = {
                 'styleSheets': [],
                 'images': [],
@@ -671,7 +680,7 @@ class Batch(BatchBase):
         if 'styleSheets' in settings['resources']:
             if type(settings['resources']['styleSheets']) is list:
                 for stylesheet in settings['resources']['styleSheets']:
-                    if 'filePath' in stylesheet:
+                    if 'filePath' in stylesheet and not Utility.is_empty(stylesheet['filePath']):
                         # /OEBPS/resourcesへファイルをコピーした後、コンテンツから参照させるためパスを補正する
                         stylesheet['absoluteFilePath'] = stylesheet['filePath']
                         stylesheet['filePath'] = './resources/' + os.path.basename(stylesheet['absoluteFilePath'])
@@ -683,7 +692,7 @@ class Batch(BatchBase):
         if 'images' in settings['resources']:
             if type(settings['resources']['images']) is list:
                 for image in settings['resources']['images']:
-                    if 'filePath' in image:
+                    if 'filePath' in image and not Utility.is_empty(image['filePath']):
                         # /OEBPS/resourcesへファイルをコピーした後、コンテンツから参照させるためパスを補正する
                         image['absoluteFilePath'] = image['filePath']
                         image['filePath'] = './resources/' + os.path.basename(image['absoluteFilePath'])
@@ -700,13 +709,13 @@ class Batch(BatchBase):
                 if type(settings['resources']['chapters']['replaces']) is list:
                     for replace in settings['resources']['chapters']['replaces']:
                         replace_type = ''
-                        if 'type' in replace:
+                        if 'type' in replace and not Utility.is_empty(replace['type']):
                             replace_type = replace['type']
                         place_holder = ''
-                        if 'placeHolder' in replace:
+                        if 'placeHolder' in replace and not Utility.is_empty(replace['placeHolder']):
                             place_holder = replace['placeHolder']
                         replace_content = ''
-                        if 'replaceContent' in replace:
+                        if 'replaceContent' in replace and not Utility.is_empty(replace['replaceContent']):
                             replace_content = replace['replaceContent']
                         if type != '' and place_holder != '' and replace_content != '':
                             replaces.append({
@@ -745,14 +754,14 @@ class Batch(BatchBase):
             if type(settings['contents']) is list:
                 for file in settings['contents']:
                     filepath = ''
-                    if 'filePath' in file:
+                    if 'filePath' in file and not Utility.is_empty(file['filePath']):
                         filepath = file['filePath']
                     is_navigation_content = False
-                    if 'isNavigationContent' in file:
+                    if 'isNavigationContent' in file and not Utility.is_empty(file['isNavigationContent']):
                         if type(file['isNavigationContent']) is bool:
                             is_navigation_content = file['isNavigationContent']
                     create_by_chapters_count = False
-                    if 'createByChaptersCount' in file:
+                    if 'createByChaptersCount' in file and not Utility.is_empty(file['createByChaptersCount']):
                         if type(file['createByChaptersCount']) is bool:
                             create_by_chapters_count = file['createByChaptersCount']
                     replaces = []
@@ -760,13 +769,13 @@ class Batch(BatchBase):
                         if type(file['replaces']) is list:
                             for replace in file['replaces']:
                                 replace_type = ''
-                                if 'type' in replace:
+                                if 'type' in replace and not Utility.is_empty(replace['type']):
                                     replace_type = replace['type']
                                 place_holder = ''
-                                if 'placeHolder' in replace:
+                                if 'placeHolder' in replace and not Utility.is_empty(replace['placeHolder']):
                                     place_holder = replace['placeHolder']
                                 replace_content = ''
-                                if 'replaceContent' in replace:
+                                if 'replaceContent' in replace and not Utility.is_empty(replace['replaceContent']):
                                     replace_content = replace['replaceContent']
                                 if type != '' and place_holder != '' and replace_content != '':
                                     replaces.append({
@@ -778,7 +787,7 @@ class Batch(BatchBase):
                     if 'useChapters' in file:
                         if type(file['useChapters']) is list:
                             for use_chapter in file['useChapters']:
-                                if 'chapterIndex' in use_chapter:
+                                if 'chapterIndex' in use_chapter and not Utility.is_empty(use_chapter['chapterIndex']):
                                     use_chapters.append({
                                         'chapterIndex': use_chapter['chapterIndex']
                                     })
@@ -792,6 +801,15 @@ class Batch(BatchBase):
                     })
         settings['contents'] = contents
 
+        # ------------------------------
+        # 設定ファイルのチェック
+        # ------------------------------
+        if len(settings['contents']) == 0:
+            raise BatchBase.BatchException('コンテンツがありません。{0}'.format(self.args.input_setting_file))
+
+        # ------------------------------
+        # データ変換
+        # ------------------------------
         self.settings = settings
 
         # コンテンツを考慮したチャプターのインデックスをセット
