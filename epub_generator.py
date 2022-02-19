@@ -120,7 +120,7 @@ class FileSystem(object):
     @classmethod
     def create_temp_directory(cls, base_dir=''):
         if Utility.is_empty(base_dir):
-            base_dir = os.path.dirname(__file__)
+            base_dir = os.path.join(os.path.dirname(__file__), 'data')
         temp_dir = os.path.join(base_dir, str(uuid.uuid4().int))
         pathlib.Path(temp_dir).mkdir(parents=True, exist_ok=True)
         return temp_dir
@@ -551,41 +551,64 @@ class Batch(BatchBase):
         # 作業ディレクトリ作成
         self.work_dir = FileSystem.create_temp_directory()
 
-        # 設定ファイル読み込み
-        self.load_setting_file()
+        try:
+            # 設定ファイル読み込み
+            self.load_setting_file()
 
-        # mimetypeファイル作成
-        self.create_mimetype()
+            # mimetypeファイル作成
+            self.create_mimetype()
 
-        # META-INFディレクトリ作成
-        self.create_meta_inf()
-        self.create_meta_inf_container_xml()
+            # META-INFディレクトリ作成
+            self.create_meta_inf()
+            self.create_meta_inf_container_xml()
 
-        # OEBPSディレクトリ作成
-        self.create_oebps()
+            # OEBPSディレクトリ作成
+            self.create_oebps()
 
-        # リソースディレクトリ作成
-        self.create_oebps_resources()
+            # リソースディレクトリ作成
+            self.create_oebps_resources()
 
-        # コンテンツディレクトリ作成
-        self.create_oebps_contents()
+            # コンテンツディレクトリ作成
+            self.create_oebps_contents()
 
-        # リソースファイルの配置
-        self.deploy_resource_files()
+            # リソースファイルの配置
+            self.deploy_resource_files()
 
-        # チャプターファイルの読み込み
-        self.load_chapter_files()
+            # チャプターファイルの読み込み
+            self.load_chapter_files()
 
-        # OEPBSコンテンツファイル作成
-        self.create_oebps_content_files()
+            # OEPBSコンテンツファイル作成
+            self.create_oebps_content_files()
 
-        # opfファイル作成
-        self.create_oebps_book_opf()
+            # opfファイル作成
+            self.create_oebps_book_opf()
 
-        # epubファイル作成
-        self.create_epub()
+            # epubファイル作成
+            self.create_epub()
+        except Exception as e:
+            self.delete_work_dir()
+            raise e
+        finally:
+            self.delete_work_dir()
 
-        FileSystem.remove_directory(self.work_dir)
+    def delete_work_dir(self):
+        if not self.debug:
+            retry_count = 0
+            while (True):
+                retry_count += 1
+                has_error = False
+                try:
+                    if FileSystem.exists_file(self.work_dir):
+                        FileSystem.remove_directory(self.work_dir)
+                except Exception as e:
+                    has_error = True
+                    self.info_log('一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。')
+                    if retry_count >= 5:
+                        raise BatchBase.BatchException('一時ファイル／ディレクトリ削除中にエラーが発生しました。 {0}'.format(self.exception_info()))
+                    time.sleep(5)
+                if not has_error:
+                    break
+
 
     def set_chapter_index_in_contents(self):
         '''
@@ -1307,26 +1330,6 @@ class Batch(BatchBase):
             raise BatchBase.BatchException('epubファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
         self.info_log('ファイル作成 - ' + self.args.output_file)
-
-        # ------------------------------
-        # 作業ディレクトリ削除
-        # ------------------------------
-        if not self.debug:
-            retry_count = 0
-            while (True):
-                retry_count += 1
-                has_error = False
-                try:
-                    if FileSystem.exists_file(self.work_dir):
-                        FileSystem.remove_directory(self.work_dir)
-                except Exception as e:
-                    has_error = True
-                    self.info_log('一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。')
-                    if retry_count >= 5:
-                        raise BatchBase.BatchException('一時ファイル／ディレクトリ削除中にエラーが発生しました。 {0}'.format(self.exception_info()))
-                    time.sleep(5)
-                if not has_error:
-                    break
 
     def reclusive_setting_callback(self, data, callback):
         '''

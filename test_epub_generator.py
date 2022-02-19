@@ -1,20 +1,72 @@
 # encoding: utf-8
 from calendar import month
 from datetime import datetime
+from imp import find_module
 import os
 from this import d
 import unittest
-import tempfile
 import pathlib
 import shutil
 import time
 import uuid
+import subprocess
+import re
+import platform
 from epub_generator import Utility, FileSystem, Convert, DateTimeHelper, BatchBase, Batch
 
-def create_temp_directory(append_dir=''):
-    # temp = tempfile.TemporaryDirectory(dir=os.path.join(os.path.dirname(__file__), append_dir), ignore_cleanup_errors=True)
-    # return temp
-    dir = os.path.join(os.path.dirname(__file__), str(uuid.uuid4().int), append_dir)
+EPUB_CHECKER_PATH = r'..\epub-checker\epubcheck.jar'
+
+def exist_epub_errors(epub_filepath):
+
+    result = {'check_skipped': False, 'status': False}
+
+    os.chdir(os.path.dirname(__file__))
+    path = os.path.abspath(EPUB_CHECKER_PATH)
+    if not os.path.exists(path):
+        print('電子書籍チェックツールが見つからないためスキップします')
+        result['check_skipped'] = True
+        return result
+
+    command = 'java -Xss1024k -jar {0} {1}'.format(path, epub_filepath)
+    proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+    find_message = 'メッセージ'
+    status = True
+    while True:
+        line = proc.stdout.readline()
+        if not line and proc.poll() is not None:
+            break
+        needs_check = False
+        if platform.system() == 'Windows':
+            print(line.decode('sjis'))
+            if re.match('^メッセージ:', line.decode('sjis')):
+                needs_check = True
+        else:
+            print(line.decode('utf8'))
+            if re.match('^メッセージ:', line.decode('utf8')):
+                needs_check = True
+        if needs_check:
+            # メッセージ: 0 件の致命的エラー / 0 件のエラー / 0 件の警告 / 0 件の情報
+            matched = None
+            if platform.system() == 'Windows':
+                matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('sjis'))
+            else:
+                matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('utf8'))
+            if matched and len(matched.groups()) == 2:
+                if int(matched.group(1)) > 0 or int(matched.group(2)) > 0:
+                    status = False
+            status = False
+
+    result['status'] = status
+
+    return result
+
+def create_file(filepath, data):
+    with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(data)
+
+def create_temp_directory():
+    dir = os.path.join(os.path.dirname(__file__), 'data', str(uuid.uuid4().int))
     pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
     return dir
 
@@ -61,7 +113,7 @@ class TestUtility(unittest.TestCase):
 class TestFileSystem(unittest.TestCase):
 
     def test_collect_filepaths(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -103,7 +155,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
 
     def test_create_directory(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
         # ------------------------------
         # ディレクトリツリーを作成できるか
@@ -117,7 +169,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
 
     def test_create_directory(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
 
         # ------------------------------
         # ディレクトリツリーを削除できるか
@@ -143,7 +195,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
         
     def test_move_file(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -161,7 +213,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
         
     def test_copy_file(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -179,7 +231,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
         
     def test_remove_file(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
 
@@ -195,7 +247,7 @@ class TestFileSystem(unittest.TestCase):
         remove_temp_directory(temp_dir)
         
     def test_remove_file(self):
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
 
@@ -447,11 +499,11 @@ class TestBatch(unittest.TestCase):
         # ------------------------------
         # 設定ファイルがない
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         remove_temp_directory(temp_dir)
@@ -461,13 +513,12 @@ class TestBatch(unittest.TestCase):
         # ------------------------------
         # 設定ファイルはあるけど空
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''''')
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''''')
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         remove_temp_directory(temp_dir)
@@ -477,16 +528,15 @@ class TestBatch(unittest.TestCase):
         # ------------------------------
         # 設定ファイルはあるけどYAMLフォーマットじゃない
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 [xxxx]
 yyyy = zzzz
-            ''')
+        ''')
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         remove_temp_directory(temp_dir)
@@ -496,15 +546,14 @@ yyyy = zzzz
         # ------------------------------
         # 設定ファイルがYAMLフォーマットだけど設定なし
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 xxxx: yyyy
-            ''')
+        ''')
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         remove_temp_directory(temp_dir)
@@ -514,20 +563,19 @@ xxxx: yyyy
         # ------------------------------
         # 設定ファイル中のパスが空
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
 contents:
   - filePath: 
     isNavigationContent: false
     createByChaptersCount: false
-            ''')
+        ''')
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -537,20 +585,19 @@ contents:
         # ------------------------------
         # 設定ファイル中のパスが無効
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
 contents:
   - filePath: .\/////.xhtml
     isNavigationContent: false
     createByChaptersCount: false
-            ''')
+        ''')
         return_code = -1
         try:
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -561,10 +608,9 @@ contents:
         # ------------------------------
         # 設定ファイル中のパスのファイルが存在しない
         # ------------------------------
-        temp_dir = create_temp_directory('data')
+        temp_dir = create_temp_directory()
         
-        with open(os.path.join(temp_dir, 'test.yaml'), 'w', encoding='utf-8') as f:
-            f.write(r'''
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
   styleSheets:
@@ -581,11 +627,11 @@ contents:
   - filePath: .\test.xhtml
     isNavigationContent: false
     createByChaptersCount: false
-            ''')
+        ''')
         return_code = -1
         try:
             # 全てのファイルがない
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -594,7 +640,7 @@ contents:
         try:
             # test.css作成
             pathlib.Path(os.path.join(temp_dir, 'test.css')).touch()
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -603,7 +649,7 @@ contents:
         try:
             # test.png作成
             pathlib.Path(os.path.join(temp_dir, 'test.png')).touch()
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -612,7 +658,7 @@ contents:
         try:
             # test1.png作成
             pathlib.Path(os.path.join(temp_dir, 'test1.png')).touch()
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(1, return_code)
@@ -621,7 +667,7 @@ contents:
         try:
             # test1.xhtml作成
             pathlib.Path(os.path.join(temp_dir, 'test.xhtml')).touch()
-            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub'), '-d=1'])
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
         self.assertEqual(0, return_code)
@@ -629,7 +675,55 @@ contents:
         remove_temp_directory(temp_dir)
 
     def test_create_epub(self):
-        pass
+
+        temp_dir = create_temp_directory()
+        
+        # ------------------------------
+        # TODO: 最小限のepubファイルを作成、epub_checkerでのチェックも行う
+        # ------------------------------
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+title: サンプル
+contents:
+  - filePath: .\test.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+        ''')
+        create_file(os.path.join(temp_dir, 'test.xhtml'), r'''
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<title>サンプル</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+    サンプルコンテンツ
+</body>
+</html>
+        ''')
+        return_code = -1
+        epub_filepath = os.path.join(temp_dir, 'test.epub')
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + epub_filepath])
+        except Exception as e:
+            print(e)
+
+        self.assertEqual(0, return_code)
+
+        result = exist_epub_errors(epub_filepath)
+
+
+
+
+        # TODO: 
+        # TODO: 
+        # TODO: 
+        # TODO: 
+        # TODO: 
+
+        remove_temp_directory(temp_dir)
+
+
 
 if __name__ == '__main__':
     unittest.main()
