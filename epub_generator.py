@@ -19,6 +19,7 @@ import xml.dom.minidom
 import linecache
 import time
 import uuid
+from xml.etree.ElementTree import *
 
 SCRIPT_DIR = os.path.split(__file__)[0]
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
@@ -1164,16 +1165,39 @@ class Batch(BatchBase):
         '''
         ファイル作成 - /OEBPS/book.opf
         '''
+        # TODO: 言語のところはsettingsから持ってくる
+        xml = Element('data', {'version':'1.0' ,'encoding':'utf-8'})
+        xml_opf = SubElement(xml, 'package', {
+            'xmlns': 'http://www.idpf.org/2007/opf',
+            'unique-identifier': 'BookID',
+            'version': '3.0',
+            'xml': 'lang="ja"'
+        })
+        xml_opf_metadata = SubElement(xml_opf, 'metadata', {
+            'xmlns:dc': 'http://purl.org/dc/elements/1.1/'
+        })
 
         replace_hash = self.settings
 
-        # ------------------------------
-        # UUID設定
-        # ------------------------------
         # UUIDがない場合は作成
         if Utility.is_empty(replace_hash['bookId']):
             replace_hash['bookId'] = uuid4()
             # TODO: setting.yamlに反映
+        if not Utility.is_empty(replace_hash['bookId']):
+            dc_identifier = SubElement(xml_opf_metadata, 'dc:identifier', {'id': 'BookID'})
+            dc_identifier.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
+            meta_identifier = SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:identifier', 'id': 'uuid'})
+            meta_identifier.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
+
+        # 言語
+        if not Utility.is_empty(replace_hash['language']):
+            dc_language = SubElement(xml_opf_metadata, 'dc:language')
+            dc_language.text = replace_hash['language']
+            meta_language = SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:language', 'id': 'pub-lang'})
+            meta_language.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
+
+        # TODO: 更新日時
+
 
         # ------------------------------
         # その他著者設定
