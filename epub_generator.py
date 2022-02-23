@@ -19,7 +19,7 @@ import xml.dom.minidom
 import linecache
 import time
 import uuid
-from xml.etree.ElementTree import *
+import xml.etree.ElementTree as ET
 
 SCRIPT_DIR = os.path.split(__file__)[0]
 DATA_DIR = os.path.join(SCRIPT_DIR, 'data')
@@ -417,6 +417,8 @@ class BatchBase(object):
         '''
         if Utility.is_empty(argv):
             argv = []
+        else:
+            del argv[0]
 
         self.info_log('-' * 50)
         self.info_log('{0} 処理開始'.format(self.batch_name))
@@ -1165,17 +1167,9 @@ class Batch(BatchBase):
         '''
         ファイル作成 - /OEBPS/book.opf
         '''
-        # TODO: 言語のところはsettingsから持ってくる
-        xml = Element('data', {'version':'1.0' ,'encoding':'utf-8'})
-        xml_opf = SubElement(xml, 'package', {
-            'xmlns': 'http://www.idpf.org/2007/opf',
-            'unique-identifier': 'BookID',
-            'version': '3.0',
-            'xml': 'lang="ja"'
-        })
-        xml_opf_metadata = SubElement(xml_opf, 'metadata', {
-            'xmlns:dc': 'http://purl.org/dc/elements/1.1/'
-        })
+        xml = ET.Element('data', {'version':'1.0' ,'encoding':'utf-8'})
+        xml_opf = ET.SubElement(xml, 'package', {'xmlns': 'http://www.idpf.org/2007/opf', 'unique-identifier': 'BookID', 'version': '3.0', 'xml': 'lang="ja"'})
+        xml_opf_metadata = ET.SubElement(xml_opf, 'metadata', {'xmlns:dc': 'http://purl.org/dc/elements/1.1/'})
 
         replace_hash = self.settings
 
@@ -1184,67 +1178,91 @@ class Batch(BatchBase):
             replace_hash['bookId'] = uuid4()
             # TODO: setting.yamlに反映
         if not Utility.is_empty(replace_hash['bookId']):
-            dc_identifier = SubElement(xml_opf_metadata, 'dc:identifier', {'id': 'BookID'})
+            dc_identifier = ET.SubElement(xml_opf_metadata, 'dc:identifier', {'id': 'BookID'})
             dc_identifier.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
-            meta_identifier = SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:identifier', 'id': 'uuid'})
+            meta_identifier = ET.SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:identifier', 'id': 'uuid'})
             meta_identifier.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
 
         # 言語
         if not Utility.is_empty(replace_hash['language']):
-            dc_language = SubElement(xml_opf_metadata, 'dc:language')
+            dc_language = ET.SubElement(xml_opf_metadata, 'dc:language')
             dc_language.text = replace_hash['language']
-            meta_language = SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:language', 'id': 'pub-lang'})
-            meta_language.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])
+            meta_language = ET.SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:language', 'id': 'pub-lang'})
+            meta_language.text = replace_hash['language']
 
-        # TODO: 更新日時
+        # 更新日時
+        if not Utility.is_empty(replace_hash['modified']):
+            dc_modified = ET.SubElement(xml_opf_metadata, 'dc:date')
+            dc_modified.text = replace_hash['modified']
+            meta_modified = ET.SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:modified'})
+            meta_modified.text = replace_hash['modified']
 
+        # タイトル
+        if not Utility.is_empty(replace_hash['title']):
+            dc_title = ET.SubElement(xml_opf_metadata, 'dc:title')
+            dc_title.text = replace_hash['title']
+            meta_title = ET.SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:title', 'id': 'dcterm-title'})
+            meta_title.text = replace_hash['title']
 
-        # ------------------------------
-        # その他著者設定
-        # ------------------------------
-        # その他著者作成
-        other_authors = []
+        # 著者
+        if not Utility.is_empty(replace_hash['authorName']):
+            dc_author = ET.SubElement(xml_opf_metadata, 'dc:creator', {'id': 'creatorMain'})
+            dc_author.text = replace_hash['authorName']
+            meta_author = ET.SubElement(xml_opf_metadata, 'meta', {'refines': '#creatorMain', 'property': 'role', 'scheme': 'marc:relators', 'id': 'roleMain'})
+            meta_author.text = replace_hash['authorName']
+
+        # 著者／寄与者
+        other_author_count = 0
         for other_author in replace_hash['otherAuthors']:
-            other_author['otherAuthorCount'] = str(len(other_authors) + 1)
-            author = '''
-		<!-- Other authors -->
-		<dc:creator id="creator{otherAuthorCount}">{authorName}</dc:creator>
-		<meta refines="#creator{otherAuthorCount}" property="role" scheme="marc:relators" id="role">{authorRole}</meta>
-                '''
-            author = self.content_replace(author, [
-                {'type': 'simple', 'placeHolder': '{otherAuthorCount}', 'replaceContent': str(len(other_authors) + 1), },
-                {'type': 'simple', 'placeHolder': '{authorName}', 'replaceContent': other_author['authorName'], },
-                {'type': 'simple', 'placeHolder': '{authorRole}', 'replaceContent': other_author['authorRole'], },
-            ])
-            author = self.content_replace_by_setting(author)
-            other_authors.append(author)
-        replace_hash['{otherAuthors}'] = ''
-        if len(other_authors) > 0:
-            replace_hash['{otherAuthors}'] = '\n'.join(other_authors)
+            if not Utility.is_empty(other_author['authorName']):
+                other_author_count += 1
+                dc_other_author = ET.SubElement(xml_opf_metadata, 'dc:creator', {'id': 'creator{0}'.format(other_author_count)})
+                dc_other_author.text = other_author['authorName']
+                meta_other_author = ET.SubElement(xml_opf_metadata, 'meta', {'refines': '#creator{0}'.format(other_author_count), 'property': 'role', 'scheme': 'marc:relators', 'id': 'role{0}'.format(other_author_count)})
+                meta_other_author.text = other_author['authorName']
 
-        # ------------------------------
-        # マニフェスト・スパイン設定
-        # ------------------------------
-        manifests = []
-        spines = []
+        # コピーライト
+        if not Utility.is_empty(replace_hash['authorCopyRight']):
+            dc_author_copyright = ET.SubElement(xml_opf_metadata, 'dc:rights')
+            dc_author_copyright.text = replace_hash['authorCopyRight']
+            meta_author_copyright = ET.SubElement(xml_opf_metadata, 'meta', {'property': 'dcterms:rights', 'id': 'rights'})
+            meta_author_copyright.text = replace_hash['authorCopyRight']
+
+        # カバー
+        for image in self.settings['resources']['images']:
+            if image['isCover']:
+                meta_cover = ET.SubElement(xml_opf_metadata, 'meta', {'name': 'cover', 'content': 'cover-image'})
+                break
+
+        # マニフェスト／スパイン
+        xml_manifest = ET.SubElement(xml_opf, 'manifest')
+        xml_spine_attributes = {}
+        if not Utility.is_empty(replace_hash['pageProgressionDirection']):
+            xml_spine_attributes['page-progression-direction'] = replace_hash['pageProgressionDirection']
+        xml_spine = ET.SubElement(xml_opf, 'spine', xml_spine_attributes)
 
         # リソース（スタイルシート）からマニフェスト作成
         stylesheet_count = 0
         for stylesheet in self.settings['resources']['styleSheets']:
             stylesheet_count += 1
-            manifests.append('<item id="css_{0}" href="{1}" media-type="{2}" />'.format(stylesheet_count, stylesheet['filePath'], mimetypes.guess_type(stylesheet['filePath'])[0]))
+            xml_manifest_stylesheet = ET.SubElement(xml_manifest, 'item', {'id': 'css_{0}'.format(stylesheet_count), 'href': stylesheet['filePath'], 'media-type': mimetypes.guess_type(stylesheet['filePath'])[0]})
 
         # リソース（画像）からマニフェスト作成
         image_count = 0
+        setted_cover = False
         for image in self.settings['resources']['images']:
             image_count += 1
 
             # 表紙がある場合は属性をセット
-            properties = ''
-            if image['isCover']:
-                properties = 'properties="cover-image"'
+            properties = {}
+            if image['isCover'] and not setted_cover:
+                properties['properties'] = 'cover-image'
+                setted_cover = True
+            properties['id'] = 'image_{0}'.format(image_count)
+            properties['href'] = image['filePath']
+            properties['media-type'] = mimetypes.guess_type(image['filePath'])[0]
 
-            manifests.append('<item id="image_{0}" href="{1}" media-type="{2}" {3} />'.format(image_count, image['filePath'], mimetypes.guess_type(image['filePath'])[0], properties))
+            xml_manifest_image = ET.SubElement(xml_manifest, 'item', properties)
 
         # コンテンツからマニフェスト・スパイン作成
         content_count = 0
@@ -1252,73 +1270,27 @@ class Batch(BatchBase):
             content_count += 1
 
             # 目次がある場合は属性をセット
-            properties = ''
+            properties = {}
             if content['isNavigationContent']:
-                properties = 'properties="nav"'
+                properties['properties'] = 'nav'
+            properties['id'] = 'content_{0}'.format(content_count)
+            properties['href'] = content['filePath']
+            properties['media-type'] = mimetypes.guess_type(content['filePath'])[0]
 
-            manifests.append('<item id="content_{0}" href="{1}" media-type="{2}" {3} />'.format(content_count, content['filePath'], mimetypes.guess_type(content['filePath'])[0], properties))
-            spines.append('<itemref idref="content_{0}" />'.format(content_count))
+            xml_manifest_content = ET.SubElement(xml_manifest, 'item', properties)
+            xml_spine_content = ET.SubElement(xml_spine, 'itemref', {'idref': 'content_{0}'.format(content_count)})
 
-        replace_hash['{spines}'] = '\n'.join(spines)
-        replace_hash['{manifests}'] = '\n'.join(manifests)
-
-
+        # book.opfファイル作成
         oebps_book_opf_filepath = os.path.join(self.oebps_dirpath, 'book.opf')
         if FileSystem.exists_file(oebps_book_opf_filepath):
             FileSystem.remove_file(oebps_book_opf_filepath)
 
-        # ------------------------------
-        # book.opfファイル作成
-        # ------------------------------
-        book_opf_data = '''
-<?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookID" version="3.0" xml:lang="ja">
-	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-		<!-- BookID -->
-		<dc:identifier id="BookID">urn:uuid:{$setting.bookId}</dc:identifier>
-		<meta property="dcterms:identifier" id="uuid">urn:uuid:{$setting.bookId}</meta>
-		<!-- Language -->
-		<dc:language>{$setting.language}</dc:language>
-		<meta property="dcterms:language" id="pub-lang">ja</meta>
-		<!-- Modified -->
-		<dc:date>{$setting.modified}</dc:date>
-		<meta property="dcterms:modified">{$setting.modified}</meta>
-		<!-- Title -->
-		<dc:title>{$setting.title}</dc:title>
-		<meta property="dcterms:title" id="dcterm-title">{$setting.title}</meta>
-		<!-- Creator -->
-		<dc:creator id="creatorMain">{$setting.authorName}</dc:creator>
-		<meta refines="#creatorMain" property="role" scheme="marc:relators" id="roleMain">{$setting.authorRole}</meta>
-        {otherAuthors}
-		<!-- Rights -->
-		<dc:rights>{$setting.authorCopyRight}</dc:rights>
-		<meta property="dcterms:rights" id="rights">{$setting.authorCopyRight}</meta>
-		<!-- Cover -->
-		<meta name="cover" content="cover-image" />
-	</metadata>
-	<manifest>
-        {manifests}
-	</manifest>
-	<spine page-progression-direction="{$setting.pageProgressionDirection}">
-        {spines}
-	</spine>
-</package>
-        '''
-
-        # その他著者・マニフェスト・スパイン置換
-        book_opf_data = self.content_replace(book_opf_data, [
-            {'type': 'simple', 'placeHolder': '{otherAuthors}', 'replaceContent': replace_hash['{otherAuthors}'], },
-            {'type': 'simple', 'placeHolder': '{manifests}', 'replaceContent': replace_hash['{manifests}'], },
-            {'type': 'simple', 'placeHolder': '{spines}', 'replaceContent': replace_hash['{spines}'], },
-        ])
-
-        # 設定データで置換
-        book_opf_data = self.content_replace_by_setting(book_opf_data)
-
-        # ファイル作成
         try:
+            # with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
+            #     f.write(Convert.get_pretty_xml(ElementTree.write(xml, 'utf-8')))
             with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
-                f.write(Convert.get_pretty_xml(book_opf_data))
+                tree = ET.ElementTree(xml)
+                f.write(Convert.get_pretty_xml(ET.tostring(tree, encoding='utf-8')))
         except Exception as e:
             raise BatchBase.BatchException('/OEBPS/book.opfファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
