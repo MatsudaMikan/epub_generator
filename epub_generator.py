@@ -1286,11 +1286,8 @@ class Batch(BatchBase):
             FileSystem.remove_file(oebps_book_opf_filepath)
 
         try:
-            # with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
-            #     f.write(Convert.get_pretty_xml(ElementTree.write(xml, 'utf-8')))
             with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
-                tree = ET.ElementTree(xml)
-                f.write(Convert.get_pretty_xml(ET.tostring(tree, encoding='utf-8')))
+                f.write(Convert.get_pretty_xml(ET.tostring(xml, encoding='utf-8')))
         except Exception as e:
             raise BatchBase.BatchException('/OEBPS/book.opfファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
