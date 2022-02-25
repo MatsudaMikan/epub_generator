@@ -20,14 +20,11 @@ resources:
     - filePath: .\template\style.css
   # 画像
   images:
-    - filePath: .\resource\image\cover.png
+    - filePath: .\resource\content\0001_illust_hyoshi-1.png
       isCover: true
   # チャプター
   chapters:
     files:
-      - title: 
-        fileType: image
-        filePath: .\resource\content\0001_illust_hyoshi-1.png
       - title: 
         fileType: image
         filePath: .\resource\content\0002_cut25.png
@@ -61,7 +58,6 @@ contents:
       - chapterIndex: 2
       - chapterIndex: 3
       - chapterIndex: 4
-      - chapterIndex: 5
   # 著作権
   - filePath: .\template\rights.xhtml
     isNavigationContent: false

@@ -415,11 +415,6 @@ class BatchBase(object):
         '''
         バッチ実行
         '''
-        if Utility.is_empty(argv):
-            argv = []
-        else:
-            del argv[0]
-
         self.info_log('-' * 50)
         self.info_log('{0} 処理開始'.format(self.batch_name))
 
@@ -722,6 +717,7 @@ class Batch(BatchBase):
                         # /OEBPS/resourcesへファイルをコピーした後、コンテンツから参照させるためパスを補正する
                         image['absoluteFilePath'] = image['filePath']
                         image['filePath'] = './resources/' + os.path.basename(image['absoluteFilePath'])
+                    images.append(image)
         settings['resources']['images'] = images
 
         # チャプター
@@ -814,6 +810,10 @@ class Batch(BatchBase):
                         if type(file['useChapters']) is list:
                             for use_chapter in file['useChapters']:
                                 if 'chapterIndex' in use_chapter and not Utility.is_empty(use_chapter['chapterIndex']):
+                                    try:
+                                        chapters['files'][use_chapter['chapterIndex'] - 1]
+                                    except IndexError:
+                                        raise BatchBase.BatchException('コンテンツのuseChaptersに無効なチャプターが指定されています。コンテンツ: {0}／チャプター: {1}'.format(filepath, use_chapter['chapterIndex']))
                                     use_chapters.append({
                                         'chapterIndex': use_chapter['chapterIndex']
                                     })
@@ -1167,8 +1167,7 @@ class Batch(BatchBase):
         '''
         ファイル作成 - /OEBPS/book.opf
         '''
-        xml = ET.Element('data', {'version':'1.0' ,'encoding':'utf-8'})
-        xml_opf = ET.SubElement(xml, 'package', {'xmlns': 'http://www.idpf.org/2007/opf', 'unique-identifier': 'BookID', 'version': '3.0', 'xml': 'lang="ja"'})
+        xml_opf = ET.Element('package', {'xmlns': 'http://www.idpf.org/2007/opf', 'unique-identifier': 'BookID', 'version': '3.0', 'xml:lang': 'ja'})
         xml_opf_metadata = ET.SubElement(xml_opf, 'metadata', {'xmlns:dc': 'http://purl.org/dc/elements/1.1/'})
 
         replace_hash = self.settings
@@ -1287,7 +1286,7 @@ class Batch(BatchBase):
 
         try:
             with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
-                f.write(Convert.get_pretty_xml(ET.tostring(xml, encoding='utf-8')))
+                f.write(Convert.get_pretty_xml(ET.tostring(xml_opf, encoding='utf-8')))
         except Exception as e:
             raise BatchBase.BatchException('/OEBPS/book.opfファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1411,4 +1410,6 @@ class Batch(BatchBase):
 
 
 if __name__ == '__main__':
-    exit(Batch().execute(sys.argv))
+    argv = sys.argv
+    del argv[0]
+    exit(Batch().execute(argv))
