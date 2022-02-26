@@ -247,6 +247,10 @@ class DateTimeHelper(datetime):
     # def to_yyyymmddhhmissfffff(self, datesep='-', timesep=':', datetimesep=' ', microsecondsep='.'):
     #     return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S' + microsecondsep + '%f')
 
+    def to_yyyymmddhhmiss_iso8601(self):
+        # TODO: ユニットテスト
+        return self.strftime('%Y-%m-%dT%H:%M:%SZ')
+
     def add_years(self, num):
         if type(num) != int:
             raise Exception('parameter is not "int" type.')
@@ -488,10 +492,12 @@ class BatchBase(object):
             return 'Exception in unknown'
 
     def __del__(self):
-        self.sh.close()
-        self.log0.removeHandler(self.sh)
-        self.fh.close()
-        self.log0.removeHandler(self.fh)
+        if 'sh' in vars(self):
+            self.sh.close()
+            self.log0.removeHandler(self.sh)
+        if 'fh' in vars(self):
+            self.fh.close()
+            self.log0.removeHandler(self.fh)
 
 class Batch(BatchBase):
     '''
@@ -581,6 +587,14 @@ class Batch(BatchBase):
             # opfファイル作成
             self.create_oebps_book_opf()
 
+            # 不要なディレクトリ削除
+            paths = [self.oebps_resources_dirpath, self.oebps_contents_dirpath]
+            for path in paths:
+                files = []
+                FileSystem.collect_filepaths(path, files)
+                if len(files) == 1:
+                    FileSystem.remove_directory(path)
+
             # epubファイル作成
             self.create_epub()
         except Exception as e:
@@ -661,13 +675,21 @@ class Batch(BatchBase):
         # ルート設定値補正
         # ------------------------------
         if not 'bookId' in settings or Utility.is_empty(settings['bookId']):
-            settings['bookId'] = ''
+            book_id = uuid4()
+            self.warning_log('bookId未指定のためランダムな値を設定します。{0}'.format(book_id))
+            settings['bookId'] = book_id
         if not 'language' in settings or Utility.is_empty(settings['language']):
-            settings['language'] = ''
+            language = 'ja'
+            self.warning_log('language未指定のためデフォルト値を設定します。{0}'.format(language))
+            settings['language'] = language
         if not 'modified' in settings or Utility.is_empty(settings['modified']):
-            settings['modified'] = ''
+            modified = DateTimeHelper.now().to_yyyymmddhhmiss_iso8601()
+            self.warning_log('modified未指定のため現在日時を設定します。{0}'.format(modified))
+            settings['modified'] = modified
         if not 'title' in settings or Utility.is_empty(settings['title']):
-            settings['title'] = ''
+            title = '無題'
+            self.warning_log('title未指定のためデフォルト値を設定します。{0}'.format(title))
+            settings['title'] = title
         if not 'authorName' in settings or Utility.is_empty(settings['authorName']):
             settings['authorName'] = ''
         if not 'authorRole' in settings or Utility.is_empty(settings['authorRole']):
@@ -702,7 +724,6 @@ class Batch(BatchBase):
             if type(settings['resources']['styleSheets']) is list:
                 for stylesheet in settings['resources']['styleSheets']:
                     if 'filePath' in stylesheet and not Utility.is_empty(stylesheet['filePath']):
-                        # /OEBPS/resourcesへファイルをコピーした後、コンテンツから参照させるためパスを補正する
                         stylesheet['absoluteFilePath'] = stylesheet['filePath']
                         stylesheet['filePath'] = './resources/' + os.path.basename(stylesheet['absoluteFilePath'])
                     stylesheets.append(stylesheet)
@@ -714,7 +735,6 @@ class Batch(BatchBase):
             if type(settings['resources']['images']) is list:
                 for image in settings['resources']['images']:
                     if 'filePath' in image and not Utility.is_empty(image['filePath']):
-                        # /OEBPS/resourcesへファイルをコピーした後、コンテンツから参照させるためパスを補正する
                         image['absoluteFilePath'] = image['filePath']
                         image['filePath'] = './resources/' + os.path.basename(image['absoluteFilePath'])
                     images.append(image)
@@ -775,13 +795,17 @@ class Batch(BatchBase):
             files = []
             if type(settings['contents']) is list:
                 for file in settings['contents']:
-                    filepath = ''
+                    absolute_file_path = ''
                     if 'filePath' in file and not Utility.is_empty(file['filePath']):
-                        filepath = file['filePath']
+                        absolute_file_path = file['filePath']
                     is_navigation_content = False
                     if 'isNavigationContent' in file and not Utility.is_empty(file['isNavigationContent']):
                         if type(file['isNavigationContent']) is bool:
                             is_navigation_content = file['isNavigationContent']
+                    use_navigation_content = True
+                    if 'useNavigationContent' in file and not Utility.is_empty(file['useNavigationContent']):
+                        if type(file['useNavigationContent']) is bool:
+                            use_navigation_content = file['useNavigationContent']
                     create_by_chapters_count = False
                     if 'createByChaptersCount' in file and not Utility.is_empty(file['createByChaptersCount']):
                         if type(file['createByChaptersCount']) is bool:
@@ -819,19 +843,66 @@ class Batch(BatchBase):
                                     })
 
                     contents.append({
-                        'filePath': filepath,
+                        'filePath': '',     # コンテンツのファイルパスは後で補正
+                        'absoluteFilePath': absolute_file_path,
                         'isNavigationContent': is_navigation_content,
+                        'useNavigationContent': use_navigation_content,
                         'createByChaptersCount': create_by_chapters_count,
                         'useChapters': use_chapters,
                         'replaces': replaces,
                     })
-        settings['contents'] = contents
 
         # ------------------------------
         # 設定ファイルのチェック
         # ------------------------------
-        if len(settings['contents']) == 0:
+        if len(contents) == 0:
             raise BatchBase.BatchException('コンテンツがありません。{0}'.format(self.args.input_setting_file))
+
+        # 目次コンテンツがない場合はダミーの目次コンテンツを自動生成するもmanifestに追記しないようにし、エラーチェックを回避する
+        has_navigation_content = False
+        for content in contents:
+            if content['isNavigationContent']:
+                has_navigation_content = True
+                break
+        if not has_navigation_content:
+            self.warning_log('目次コンテンツ未指定のためダミーの目次コンテンツを作成します。')
+            navigation_content_file = os.path.join(self.work_dir, str(uuid4().int))
+            data = '''
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2011/epub">
+<head>
+	<title>Table of contents</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<nav xmlns:epub="http://www.idpf.org/2007/ops" epub:type="toc">
+        <ol>
+            <li><a href="{$setting.contents.1.filePath}">First conetnt</a></li>
+        </ol>
+	</nav>
+</body>
+</html>
+            '''
+            try:
+                if FileSystem.exists_file(navigation_content_file):
+                    FileSystem.remove_file(navigation_content_file)
+                with open(navigation_content_file, 'w', encoding='utf-8') as f:
+                    f.write(Convert.get_pretty_xml(data))
+            except Exception as e:
+                raise BatchBase.BatchException('目次コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
+
+            contents.append({
+                'filePath': '',
+                'absoluteFilePath': navigation_content_file,
+                'isNavigationContent': True,
+                'useNavigationContent': True,
+                'createByChaptersCount': False,
+                'useChapters': [],
+                'replaces': [],
+            })
+
+        settings['contents'] = contents
 
         # ------------------------------
         # データ変換
@@ -852,6 +923,13 @@ class Batch(BatchBase):
                     file['filePath'] = './' + 'contents_{0}.xhtml'.format(self.contents_bind_chapter_indexes[chapter_count])
                 else:
                     file['filePath'] = './' + 'contents/{0}'.format(os.path.basename(file['absoluteFilePath']))
+
+        # コンテンツのファイルパスを補正
+        content_count = 0
+        for content in self.settings['contents']:
+            content_count += 1
+            if len(content['useChapters']) > 0:
+                content['filePath'] = './' + 'contents_{0}.xhtml'.format(content_count)
 
         # 設定ファイルの内容を一次元配列で持つ
         self.convert_yaml_to_list('setting', self.settings, self.replaces)
@@ -1083,7 +1161,7 @@ class Batch(BatchBase):
 
         content_count = 0
         for content in self.settings['contents']:
-            filepath = content['filePath']
+            filepath = content['absoluteFilePath']
             create_by_chapters_count = content['createByChaptersCount']
             use_chapters = content['useChapters']
 
@@ -1172,10 +1250,7 @@ class Batch(BatchBase):
 
         replace_hash = self.settings
 
-        # UUIDがない場合は作成
-        if Utility.is_empty(replace_hash['bookId']):
-            replace_hash['bookId'] = uuid4()
-            # TODO: setting.yamlに反映
+        # ID
         if not Utility.is_empty(replace_hash['bookId']):
             dc_identifier = ET.SubElement(xml_opf_metadata, 'dc:identifier', {'id': 'BookID'})
             dc_identifier.text = 'urn:uuid:{0}'.format(replace_hash['bookId'])

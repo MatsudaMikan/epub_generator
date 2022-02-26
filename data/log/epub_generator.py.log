@@ -4481,3 +4481,1874 @@ IndexError: list index out of range
 2022-02-25 12:56:54,611- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\66919400676002542947282959870445236243\test.epub
 2022-02-25 12:56:54,613- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
 2022-02-25 12:56:59,617- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:17:41,843- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:17:41,843- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:17:41,846- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\74464520873511893180266232409031865930\test.yaml
+2022-02-27 07:17:41,847- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\74464520873511893180266232409031865930\test.epub
+2022-02-27 07:17:41,853- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:17:41,854- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。3844afb8-1dea-41e2-a0ee-9cea99012f98
+2022-02-27 07:17:41,855- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:17:41,856- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:17:41Z
+2022-02-27 07:17:41,857- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:17:41,860- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:17:41,868- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:17:41,869- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:17:41,870- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:17:41,871- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:17:41,874- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:17:41,935- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:17:41,944- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\74464520873511893180266232409031865930\test.epub
+2022-02-27 07:17:41,949- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:17:46,964- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:17:51,608- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:17:51,609- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:17:51,610- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\69522967604233672218343720947836835136\test.yaml
+2022-02-27 07:17:51,610- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\69522967604233672218343720947836835136\test.epub
+2022-02-27 07:17:51,611- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 07:17:51,611- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 07:17:51,628- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:17:51,628- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:17:51,629- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\259100362538042173268417471158392249838\test.yaml
+2022-02-27 07:17:51,630- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\259100362538042173268417471158392249838\test.epub
+2022-02-27 07:17:51,632- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\259100362538042173268417471158392249838\test.yaml
+2022-02-27 07:17:51,633- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 07:17:51,652- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:17:51,652- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:17:51,653- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\293445747067471982681921670790499384346\test.yaml
+2022-02-27 07:17:51,653- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\293445747067471982681921670790499384346\test.epub
+2022-02-27 07:17:51,658- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 649 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\293445747067471982681921670790499384346\test.yaml", line 3, column 1
+2022-02-27 07:17:51,659- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 07:17:51,675- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:17:51,676- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:17:51,676- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\124446342383514472640864685373955645786\test.yaml
+2022-02-27 07:17:51,677- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\124446342383514472640864685373955645786\test.epub
+2022-02-27 07:17:51,680- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:17:51,680- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。a03e198a-84df-4ab7-a18d-e4469dede172
+2022-02-27 07:17:51,681- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:17:51,682- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:17:51Z
+2022-02-27 07:17:51,682- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:17:51,684- test_epub_generator.py - ERROR - join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+2022-02-27 07:17:51,685- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 07:17:51,688- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 853, in load_setting_file
+    navigation_content_file = os.path.join(self.work_dir, uuid4())
+  File "C:\Python\Python310\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+
+2022-02-27 07:18:34,762- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:18:34,762- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:18:34,768- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\308689709874515674311929295054221885970\test.yaml
+2022-02-27 07:18:34,769- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\308689709874515674311929295054221885970\test.epub
+2022-02-27 07:18:34,776- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:18:34,777- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。e49c61be-75ae-4fe6-a80d-d6f55b30ca0a
+2022-02-27 07:18:34,777- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:18:34,777- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:18:34Z
+2022-02-27 07:18:34,780- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:18:34,781- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:18:34,787- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:18:34,789- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:18:34,790- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:18:34,791- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:18:34,795- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:18:34,851- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:18:34,861- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\308689709874515674311929295054221885970\test.epub
+2022-02-27 07:18:34,863- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:18:39,880- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:19:06,261- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:19:06,262- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:19:06,263- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250241077832652361071166612985065981228\test.yaml
+2022-02-27 07:19:06,264- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250241077832652361071166612985065981228\test.epub
+2022-02-27 07:19:06,271- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:19:06,272- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。80e99047-5fff-462e-9cff-24ab4afa3991
+2022-02-27 07:19:06,273- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:19:06,273- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:19:06Z
+2022-02-27 07:19:18,249- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:19:18,250- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:19:18,257- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:19:18,258- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:19:18,259- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:19:18,260- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:19:18,264- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:19:18,328- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:19:18,337- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250241077832652361071166612985065981228\test.epub
+2022-02-27 07:19:18,341- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:19:23,353- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:19:33,195- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:19:33,197- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:19:33,198- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250935227461587476261599831490521467621\test.yaml
+2022-02-27 07:19:33,199- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250935227461587476261599831490521467621\test.epub
+2022-02-27 07:19:33,206- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:19:33,207- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。7e3294ab-b35d-4a98-af70-8cbbc3d8e00f
+2022-02-27 07:19:33,207- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:19:33,208- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:19:33Z
+2022-02-27 07:20:08,418- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:20:08,419- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:20:08,427- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:20:08,429- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:20:08,429- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:20:08,431- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:20:08,434- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:20:08,492- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:20:08,499- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\250935227461587476261599831490521467621\test.epub
+2022-02-27 07:20:08,503- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:20:13,514- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:20:23,798- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:20:23,799- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:20:23,800- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\30303829606744228448502228884473097790\test.yaml
+2022-02-27 07:20:23,801- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\30303829606744228448502228884473097790\test.epub
+2022-02-27 07:20:23,810- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:20:23,810- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。ec343b0b-bc85-4f57-9a25-3104f96e796a
+2022-02-27 07:20:23,811- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:20:23,812- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:20:23Z
+2022-02-27 07:20:36,001- test_epub_generator.py - ERROR - join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+2022-02-27 07:20:36,004- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 07:20:36,006- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 853, in load_setting_file
+    navigation_content_file = os.path.join(self.work_dir, uuid4())
+  File "C:\Python\Python310\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+
+2022-02-27 07:20:57,397- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:20:57,399- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:20:57,400- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\171750872986677681028140811255322401305\test.yaml
+2022-02-27 07:20:57,400- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\171750872986677681028140811255322401305\test.epub
+2022-02-27 07:20:57,408- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:20:57,409- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。68f0eee1-0440-4e6b-bf2b-7238b2425729
+2022-02-27 07:20:57,409- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:20:57,410- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:20:57Z
+2022-02-27 07:21:19,941- test_epub_generator.py - ERROR - join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+2022-02-27 07:21:19,942- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 07:21:19,945- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 853, in load_setting_file
+    navigation_content_file = os.path.join(self.work_dir, uuid4())
+  File "C:\Python\Python310\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+
+2022-02-27 07:21:24,398- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:21:24,399- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:21:24,400- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\154397833970620233510089687094193487736\test.yaml
+2022-02-27 07:21:24,401- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\154397833970620233510089687094193487736\test.epub
+2022-02-27 07:21:24,410- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:21:24,411- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。ed91eb06-7776-4337-b31b-b0c4b617edc8
+2022-02-27 07:21:24,411- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:21:24,412- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:21:24Z
+2022-02-27 07:22:24,218- test_epub_generator.py - ERROR - join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+2022-02-27 07:22:24,220- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 07:22:24,222- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 853, in load_setting_file
+    navigation_content_file = os.path.join(self.work_dir, str(uuid4().int))
+  File "C:\Python\Python310\lib\ntpath.py", line 117, in join
+    genericpath._check_arg_types('join', path, *paths)
+  File "C:\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'UUID'
+
+2022-02-27 07:22:29,320- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:22:29,321- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:22:29,322- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159649291684424580117836376089900234172\test.yaml
+2022-02-27 07:22:29,323- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159649291684424580117836376089900234172\test.epub
+2022-02-27 07:22:29,330- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:22:29,332- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。77c3af4e-ccef-4d96-af4f-2833c6709ec9
+2022-02-27 07:22:29,332- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:22:29,333- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:22:29Z
+2022-02-27 07:22:31,696- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:22:31,698- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:22:31,700- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:22:31,702- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:22:31,703- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:22:31,704- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:22:31,707- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:22:31,711- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:22:31,766- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:22:31,776- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159649291684424580117836376089900234172\test.epub
+2022-02-27 07:22:31,780- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:22:36,784- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:24:58,310- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:24:58,311- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:24:58,312- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\37885042952952842799933889994522912623\test.yaml
+2022-02-27 07:24:58,313- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\37885042952952842799933889994522912623\test.epub
+2022-02-27 07:24:58,320- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:24:58,321- test_epub_generator.py - WARNING - bookId未指定のためデフォルト値を設定します。024085be-f94d-4362-8770-a24ce925c7d8
+2022-02-27 07:24:58,321- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:24:58,322- test_epub_generator.py - WARNING - modified未指定のためデフォルト値を設定します。2022-02-27T07:24:58Z
+2022-02-27 07:24:58,322- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:24:58,331- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:24:58,333- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:24:58,335- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:24:58,337- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:24:58,338- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:24:58,339- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:24:58,342- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:24:58,346- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:24:58,403- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:24:58,412- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\37885042952952842799933889994522912623\test.epub
+2022-02-27 07:24:58,417- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:25:03,421- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:26:52,357- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:26:52,357- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:26:52,369- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\245359466195777673326345160796364074062\test.yaml
+2022-02-27 07:26:52,370- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\245359466195777673326345160796364074062\test.epub
+2022-02-27 07:26:52,377- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:26:52,378- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。bb849ea2-e8ff-4521-9120-b616445fef2a
+2022-02-27 07:26:52,379- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:26:52,379- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:26:52Z
+2022-02-27 07:26:52,379- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:26:52,379- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:26:52,388- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:26:52,390- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:26:52,392- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:26:52,394- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:26:52,395- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:26:52,397- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:26:52,400- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:26:52,403- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:26:52,465- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:26:52,473- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\245359466195777673326345160796364074062\test.epub
+2022-02-27 07:26:52,474- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:26:57,488- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:28:31,438- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:28:31,438- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:28:31,441- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\174769753896208031970110652201788906177\test.yaml
+2022-02-27 07:28:31,442- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\174769753896208031970110652201788906177\test.epub
+2022-02-27 07:28:31,449- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:28:31,450- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。401e4b91-1e3a-4927-9e42-4e5c0872d090
+2022-02-27 07:28:31,450- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:28:31,451- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:28:31Z
+2022-02-27 07:28:31,451- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:28:31,452- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:28:31,460- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:28:31,461- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:28:31,464- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:28:31,466- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:28:31,467- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:28:31,468- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:28:31,470- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:28:31,473- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:28:31,533- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:28:31,542- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\174769753896208031970110652201788906177\test.epub
+2022-02-27 07:28:31,546- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:28:36,553- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:35:30,359- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:35:30,360- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:35:30,361- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\303943336302112440622013413845593623443\test.yaml
+2022-02-27 07:35:30,362- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\303943336302112440622013413845593623443\test.epub
+2022-02-27 07:35:30,368- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:35:30,369- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。904df1de-d0a9-4baf-8b43-b48e7c95d1dd
+2022-02-27 07:35:30,370- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:35:30,371- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:35:30Z
+2022-02-27 07:35:30,371- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:35:30,372- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:35:30,380- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:35:30,382- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:35:30,384- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:35:30,386- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:35:30,386- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:35:30,388- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:35:30,391- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:35:30,393- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:35:30,455- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:35:30,462- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\303943336302112440622013413845593623443\test.epub
+2022-02-27 07:35:30,464- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 07:35:35,474- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:40:44,059- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:40:44,060- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:40:44,061- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100924607697068686794522526216157526429\test.yaml
+2022-02-27 07:40:44,062- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100924607697068686794522526216157526429\test.epub
+2022-02-27 07:40:44,062- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:40:44,069- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:40:44,070- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。85099449-cce3-4a6c-b941-9510c8855af7
+2022-02-27 07:40:44,072- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:40:44,072- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:40:44Z
+2022-02-27 07:40:44,072- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:40:44,072- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:40:44,082- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:40:44,083- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:40:44,086- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:40:44,088- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:40:44,089- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:40:44,090- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:40:44,093- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:40:44,094- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:40:44,156- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:40:44,165- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100924607697068686794522526216157526429\test.epub
+2022-02-27 07:40:44,166- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:43:17,165- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:43:17,167- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:43:17,168- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\84122900026924208788405824495628305828\test.yaml
+2022-02-27 07:43:17,169- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\84122900026924208788405824495628305828\test.epub
+2022-02-27 07:43:17,169- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:43:17,176- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:43:17,177- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。40ea07f6-8f31-48a3-9bb3-5d74a20246fc
+2022-02-27 07:43:17,177- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:43:17,178- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:43:17Z
+2022-02-27 07:43:17,178- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:43:17,179- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:43:17,190- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:43:17,191- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:43:17,194- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:43:17,195- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:43:17,196- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:43:17,197- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:43:17,200- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:43:17,203- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:43:17,265- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:43:17,274- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\84122900026924208788405824495628305828\test.epub
+2022-02-27 07:43:17,275- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:45:17,795- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:45:17,797- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:45:17,798- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\189774547830853571727590980937692277895\test.yaml
+2022-02-27 07:45:17,798- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\189774547830853571727590980937692277895\test.epub
+2022-02-27 07:45:17,799- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:45:17,805- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:45:17,806- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。5b89950f-af43-44ee-9e94-0a6895f93090
+2022-02-27 07:45:17,807- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:45:17,807- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:45:17Z
+2022-02-27 07:45:17,807- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:45:17,808- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:45:17,817- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:45:17,819- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:45:17,821- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:45:17,822- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:45:17,823- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:45:17,824- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:45:17,827- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:45:17,831- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:45:17,887- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:45:17,898- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\189774547830853571727590980937692277895\test.epub
+2022-02-27 07:45:17,899- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:47:41,837- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:47:41,839- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:47:41,840- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\68805405973503361869804074090396037874\test.yaml
+2022-02-27 07:47:41,840- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\68805405973503361869804074090396037874\test.epub
+2022-02-27 07:47:41,841- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:47:41,850- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:47:41,851- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。cf8f936d-1520-4a92-b858-8c0003e0888c
+2022-02-27 07:47:41,851- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:47:41,852- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:47:41Z
+2022-02-27 07:47:41,852- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:47:41,853- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:47:46,215- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:47:46,217- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:47:46,220- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:47:46,221- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:47:46,223- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:47:46,224- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:47:46,227- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:47:46,230- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:47:46,295- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:47:46,305- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\68805405973503361869804074090396037874\test.epub
+2022-02-27 07:47:46,305- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:48:02,435- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:48:02,436- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:48:02,438- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\335453709053023744471021158264469442485\test.yaml
+2022-02-27 07:48:02,438- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\335453709053023744471021158264469442485\test.epub
+2022-02-27 07:48:02,439- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:48:02,447- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:48:02,448- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。2b77c278-ffbc-4052-b63a-e0ded6fffd3e
+2022-02-27 07:48:02,449- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:48:02,450- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:48:02Z
+2022-02-27 07:48:02,451- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:48:02,452- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:48:59,719- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:48:59,720- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:48:59,723- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:48:59,724- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:48:59,726- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:48:59,727- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:48:59,730- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:48:59,733- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:48:59,792- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:48:59,802- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\335453709053023744471021158264469442485\test.epub
+2022-02-27 07:48:59,802- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:49:10,254- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:49:10,256- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:49:10,257- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\150538644233799151981063073558590788856\test.yaml
+2022-02-27 07:49:10,257- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\150538644233799151981063073558590788856\test.epub
+2022-02-27 07:49:10,258- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:49:10,267- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:49:10,268- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。1e0a07ad-ecbc-427d-a033-764984dac925
+2022-02-27 07:49:10,269- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:49:10,269- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:49:10Z
+2022-02-27 07:49:10,270- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:49:10,271- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:49:10,281- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 07:49:10,282- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 07:49:10,285- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 07:49:10,286- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 07:49:10,287- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 07:49:10,288- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 07:49:10,291- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 07:49:10,293- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 07:49:10,353- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 07:49:10,364- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\150538644233799151981063073558590788856\test.epub
+2022-02-27 07:49:10,365- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 07:59:04,096- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:59:04,097- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:59:04,098- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\24589486464394570080634996193194288198\test.yaml
+2022-02-27 07:59:04,099- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\24589486464394570080634996193194288198\test.epub
+2022-02-27 07:59:04,099- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:59:04,106- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:59:04,107- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。b37b9e22-8acb-4ece-95dc-e3168c8cc6f6
+2022-02-27 07:59:04,107- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:59:04,108- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:59:04Z
+2022-02-27 07:59:04,108- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:59:04,109- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 07:59:04,118- test_epub_generator.py - ERROR - 'useChapters'
+2022-02-27 07:59:04,119- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 07:59:04,121- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 922, in load_setting_file
+    if not file['useChapters']:
+KeyError: 'useChapters'
+
+2022-02-27 07:59:34,969- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 07:59:34,970- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 07:59:34,971- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\9774894664499825305084658782696981507\test.yaml
+2022-02-27 07:59:34,971- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\9774894664499825305084658782696981507\test.epub
+2022-02-27 07:59:34,972- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 07:59:34,979- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 07:59:34,980- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。760a311a-468f-4617-97d2-0cf67b02221c
+2022-02-27 07:59:34,981- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 07:59:34,982- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T07:59:34Z
+2022-02-27 07:59:34,982- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 07:59:34,983- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:00:11,588- test_epub_generator.py - ERROR - 'useChapters'
+2022-02-27 08:00:11,589- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 08:00:11,590- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 922, in load_setting_file
+    if not file['useChapters']:
+KeyError: 'useChapters'
+
+2022-02-27 08:00:18,710- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:00:18,711- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:00:18,712- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\286522751949572118195804650066873029488\test.yaml
+2022-02-27 08:00:18,713- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\286522751949572118195804650066873029488\test.epub
+2022-02-27 08:00:18,713- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:00:18,720- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:00:18,721- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。7116743a-3e6c-441e-9282-179bac7d2e09
+2022-02-27 08:00:18,722- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:00:18,722- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:00:18Z
+2022-02-27 08:00:18,722- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:00:18,724- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:00:18,732- test_epub_generator.py - ERROR - object of type 'bool' has no len()
+2022-02-27 08:00:18,733- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 08:00:18,736- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 922, in load_setting_file
+    if len(content['useChapters']) > 0:
+TypeError: object of type 'bool' has no len()
+
+2022-02-27 08:01:03,020- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:01:03,022- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:01:03,023- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\65275187507799448337719604369442227958\test.yaml
+2022-02-27 08:01:03,023- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\65275187507799448337719604369442227958\test.epub
+2022-02-27 08:01:03,024- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:01:03,031- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:01:03,032- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。dce5dd93-f1f9-4675-b474-859bd54f21a0
+2022-02-27 08:01:03,032- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:01:03,033- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:01:03Z
+2022-02-27 08:01:03,033- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:01:03,034- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:01:27,406- test_epub_generator.py - ERROR - object of type 'bool' has no len()
+2022-02-27 08:01:27,407- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 08:01:27,409- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 922, in load_setting_file
+    if len(content['useChapters']) > 0:
+TypeError: object of type 'bool' has no len()
+
+2022-02-27 08:02:03,555- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:02:03,557- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:02:03,558- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\334759545884497851973241746079376288025\test.yaml
+2022-02-27 08:02:03,558- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\334759545884497851973241746079376288025\test.epub
+2022-02-27 08:02:03,558- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:02:03,565- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:02:03,567- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。8377021f-ad84-43d3-8cea-1e488911acea
+2022-02-27 08:02:03,567- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:02:03,568- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:02:03Z
+2022-02-27 08:02:03,568- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:02:03,569- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:02:58,820- test_epub_generator.py - ERROR - object of type 'bool' has no len()
+2022-02-27 08:02:58,820- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 08:02:58,821- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 592, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 558, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 922, in load_setting_file
+    if len(content['useChapters']) > 0:
+TypeError: object of type 'bool' has no len()
+
+2022-02-27 08:03:05,482- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:03:05,483- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:03:05,484- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\235060715313351922529999811598814555195\test.yaml
+2022-02-27 08:03:05,484- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\235060715313351922529999811598814555195\test.epub
+2022-02-27 08:03:05,485- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:03:05,492- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:03:05,494- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。17379b23-e65f-4265-bb68-66cd0e7e3f14
+2022-02-27 08:03:05,494- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:03:05,495- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:03:05Z
+2022-02-27 08:03:05,496- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:03:05,496- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:03:11,348- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:03:11,349- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:03:11,353- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:03:11,355- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:03:11,356- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:03:11,357- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:03:11,358- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:03:11,359- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:04:45,783- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:04:45,785- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:04:45,786- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\143583287078292547441380119253843177465\test.yaml
+2022-02-27 08:04:45,786- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\143583287078292547441380119253843177465\test.epub
+2022-02-27 08:04:45,787- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:04:45,793- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:04:45,794- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。b570a178-96aa-472e-ba3a-0978206617d5
+2022-02-27 08:04:45,794- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:04:45,795- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:04:45Z
+2022-02-27 08:04:45,795- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:04:45,796- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:04:45,806- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:04:45,807- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:04:45,810- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:04:45,813- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:04:45,814- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:04:45,815- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:04:45,818- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:04:45,821- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:04:45,882- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:04:45,890- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\143583287078292547441380119253843177465\test.epub
+2022-02-27 08:04:45,891- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:13:06,789- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:13:06,791- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:13:06,792- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\284492874040948698396134953474459305446\test.yaml
+2022-02-27 08:13:06,793- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\284492874040948698396134953474459305446\test.epub
+2022-02-27 08:13:06,793- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:13:06,801- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:13:06,802- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。76bdf66b-e7f2-45ef-a71b-8e98601e2f4c
+2022-02-27 08:13:06,802- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:13:06,803- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:13:06Z
+2022-02-27 08:13:06,803- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:13:06,804- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:13:06,814- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:13:06,816- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:13:06,818- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:13:06,819- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:13:06,821- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:13:06,822- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:13:06,824- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:13:06,827- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:13:06,892- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:13:28,654- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\284492874040948698396134953474459305446\test.epub
+2022-02-27 08:13:28,656- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:13:37,616- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:13:37,617- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:13:37,618- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53171567459513833281864433379611709099\test.yaml
+2022-02-27 08:13:37,619- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53171567459513833281864433379611709099\test.epub
+2022-02-27 08:13:37,619- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:13:37,626- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:13:37,627- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。34f37f30-0f65-44f3-9007-fdbc1fcb8c9c
+2022-02-27 08:13:37,628- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:13:37,628- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:13:37Z
+2022-02-27 08:13:37,629- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:13:37,630- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:13:37,638- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:13:37,639- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:13:37,642- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:13:37,643- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:13:37,645- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:13:37,646- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:13:37,649- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:13:37,652- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:13:37,715- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:13:37,724- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53171567459513833281864433379611709099\test.epub
+2022-02-27 08:13:37,724- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:16:53,872- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:16:53,874- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:16:53,875- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\297296928666310268273028930805368899699\test.yaml
+2022-02-27 08:16:53,875- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\297296928666310268273028930805368899699\test.epub
+2022-02-27 08:16:53,876- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:16:53,883- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:16:53,884- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。a8387640-4380-4820-be29-146918ca9ffb
+2022-02-27 08:16:53,884- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:16:53,885- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:16:53Z
+2022-02-27 08:16:53,885- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:16:53,885- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:16:53,894- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:16:53,895- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:16:53,898- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:16:53,900- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:16:53,901- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:16:53,903- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:16:53,905- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:16:53,908- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:16:53,970- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:16:53,979- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\297296928666310268273028930805368899699\test.epub
+2022-02-27 08:16:53,981- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:17:31,033- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:17:31,035- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:17:31,036- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\23297038989352413160399934533357054730\test.yaml
+2022-02-27 08:17:31,037- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\23297038989352413160399934533357054730\test.epub
+2022-02-27 08:17:31,037- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:17:31,045- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:17:31,046- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。666b3e39-79f9-4531-9d4e-e4d36e23d522
+2022-02-27 08:17:31,046- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:17:31,046- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:17:31Z
+2022-02-27 08:17:31,047- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:17:31,048- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:17:31,056- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:17:31,058- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:17:31,061- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:17:31,062- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:17:31,062- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:17:31,064- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:17:31,066- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:17:31,070- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:17:31,129- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:17:31,139- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\23297038989352413160399934533357054730\test.epub
+2022-02-27 08:17:31,140- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:17:35,349- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:17:35,350- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:17:35,351- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\7848223595755674263041263118979167214\test.yaml
+2022-02-27 08:17:35,352- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\7848223595755674263041263118979167214\test.epub
+2022-02-27 08:17:35,353- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:17:35,353- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:17:35,370- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:17:35,370- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:17:35,370- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\25120775252987647436948569362469661455\test.yaml
+2022-02-27 08:17:35,371- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\25120775252987647436948569362469661455\test.epub
+2022-02-27 08:17:35,373- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\25120775252987647436948569362469661455\test.yaml
+2022-02-27 08:17:35,373- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:17:35,394- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:17:35,394- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:17:35,395- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\24464024136639252645306563540207249782\test.yaml
+2022-02-27 08:17:35,396- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\24464024136639252645306563540207249782\test.epub
+2022-02-27 08:17:35,400- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\24464024136639252645306563540207249782\test.yaml", line 3, column 1
+2022-02-27 08:17:35,401- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:17:35,421- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:17:35,421- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:17:35,422- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\48563169371571884283221119906400004641\test.yaml
+2022-02-27 08:17:35,422- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\48563169371571884283221119906400004641\test.epub
+2022-02-27 08:17:35,427- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:17:35,427- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。0a4105ac-15d4-4178-8834-2c17485df247
+2022-02-27 08:17:35,428- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:17:35,429- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:17:35Z
+2022-02-27 08:17:35,429- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:17:35,430- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:17:35,435- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:17:35,436- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:17:35,440- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:17:35,441- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:17:35,442- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:17:35,444- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:17:35,447- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:17:35,451- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:17:35,462- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\48563169371571884283221119906400004641\test.epub
+2022-02-27 08:17:35,465- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:17:40,479- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:23:02,881- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:23:02,881- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:23:02,883- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\65664119150961432060636015905000316037\test.yaml
+2022-02-27 08:23:02,884- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\65664119150961432060636015905000316037\test.epub
+2022-02-27 08:23:02,884- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:23:02,891- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:23:02,892- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。3d853a12-3bed-499e-9036-8ebb48618105
+2022-02-27 08:23:02,893- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:23:02,893- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:23:02Z
+2022-02-27 08:23:02,894- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:23:02,894- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:23:02,904- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:23:02,906- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:23:02,908- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:23:02,909- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:23:02,910- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:23:02,911- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:23:02,913- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:23:02,916- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:23:02,980- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:23:02,990- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\65664119150961432060636015905000316037\test.epub
+2022-02-27 08:23:02,990- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:23:07,168- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:23:07,168- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:23:07,169- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\337325886341426623880632598528755098910\test.yaml
+2022-02-27 08:23:07,170- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\337325886341426623880632598528755098910\test.epub
+2022-02-27 08:23:07,171- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:23:07,171- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:23:07,187- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:23:07,188- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:23:07,189- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\31614917821291209613553388722565410753\test.yaml
+2022-02-27 08:23:07,189- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\31614917821291209613553388722565410753\test.epub
+2022-02-27 08:23:07,191- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\31614917821291209613553388722565410753\test.yaml
+2022-02-27 08:23:07,192- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:23:07,208- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:23:07,209- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:23:07,209- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313686187591169157195617629384019854658\test.yaml
+2022-02-27 08:23:07,210- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313686187591169157195617629384019854658\test.epub
+2022-02-27 08:23:07,215- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313686187591169157195617629384019854658\test.yaml", line 3, column 1
+2022-02-27 08:23:07,216- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:23:08,254- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:23:08,254- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:23:08,255- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\36581601156061275101501987587523270094\test.yaml
+2022-02-27 08:23:08,256- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\36581601156061275101501987587523270094\test.epub
+2022-02-27 08:23:08,258- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:23:08,259- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。4da8627d-b57d-4db6-9c55-0710bca84474
+2022-02-27 08:23:08,260- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:23:08,261- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:23:08Z
+2022-02-27 08:23:08,261- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:23:08,262- test_epub_generator.py - ERROR - 'contents'
+2022-02-27 08:23:08,264- test_epub_generator.py - INFO - Epub generator 異常終了
+2022-02-27 08:23:08,264- test_epub_generator.py - INFO - Traceback (most recent call last):
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 428, in execute
+    self.main(args)
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 602, in main
+    raise e
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 560, in main
+    self.load_setting_file()
+  File "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py", line 858, in load_setting_file
+    if len(settings['contents']) == 0:
+KeyError: 'contents'
+
+2022-02-27 08:24:09,825- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:09,825- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:09,828- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\240624140857199515457244636804469248411\test.yaml
+2022-02-27 08:24:09,829- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\240624140857199515457244636804469248411\test.epub
+2022-02-27 08:24:09,829- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:24:09,837- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:24:09,838- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。ec970ad7-f603-456e-b4dd-dfcae27971e5
+2022-02-27 08:24:09,838- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:24:09,839- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:24:09Z
+2022-02-27 08:24:09,839- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:24:09,840- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:24:09,849- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:24:09,850- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:24:09,853- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:24:09,854- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:24:09,855- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:24:09,857- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:24:09,860- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:24:09,862- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:24:09,923- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:24:09,933- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\240624140857199515457244636804469248411\test.epub
+2022-02-27 08:24:09,933- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:24:14,123- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:14,123- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:14,125- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\291855488964001616860125207549634932717\test.yaml
+2022-02-27 08:24:14,125- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\291855488964001616860125207549634932717\test.epub
+2022-02-27 08:24:14,126- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:24:14,126- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:14,143- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:14,144- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:14,145- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\107453598256819941503216704529871209328\test.yaml
+2022-02-27 08:24:14,145- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\107453598256819941503216704529871209328\test.epub
+2022-02-27 08:24:14,148- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\107453598256819941503216704529871209328\test.yaml
+2022-02-27 08:24:14,148- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:14,166- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:14,167- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:14,168- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\33550538112556636858313734343532176576\test.yaml
+2022-02-27 08:24:14,168- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\33550538112556636858313734343532176576\test.epub
+2022-02-27 08:24:14,172- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\33550538112556636858313734343532176576\test.yaml", line 3, column 1
+2022-02-27 08:24:14,174- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:14,192- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:14,193- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:14,194- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\128786671361825493214035124019919114552\test.yaml
+2022-02-27 08:24:14,194- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\128786671361825493214035124019919114552\test.epub
+2022-02-27 08:24:14,198- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:24:14,198- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。0ae8e1e9-e2b9-40ea-b271-59b4ac5643a5
+2022-02-27 08:24:14,199- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:24:14,199- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:24:14Z
+2022-02-27 08:24:14,200- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:24:14,201- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\128786671361825493214035124019919114552\test.yaml
+2022-02-27 08:24:14,201- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:50,250- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:50,251- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:50,252- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\139025164637215295084479390462354301676\test.yaml
+2022-02-27 08:24:50,253- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\139025164637215295084479390462354301676\test.epub
+2022-02-27 08:24:50,253- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:24:50,261- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:24:50,262- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。f4369c17-12c8-4eb7-8bf6-cdf973113ec6
+2022-02-27 08:24:50,263- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:24:50,263- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:24:50Z
+2022-02-27 08:24:50,264- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:24:50,264- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:24:50,272- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:24:50,275- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:24:50,277- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:24:50,278- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:24:50,280- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:24:50,281- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:24:50,283- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:24:50,286- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:24:50,341- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:24:50,351- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\139025164637215295084479390462354301676\test.epub
+2022-02-27 08:24:50,351- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:24:54,496- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:54,497- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:54,497- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\242690355796703294523119890100746373273\test.yaml
+2022-02-27 08:24:54,498- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\242690355796703294523119890100746373273\test.epub
+2022-02-27 08:24:54,499- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:24:54,500- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:54,517- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:54,517- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:54,518- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\111898389207360145222025110211880923392\test.yaml
+2022-02-27 08:24:54,518- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\111898389207360145222025110211880923392\test.epub
+2022-02-27 08:24:54,521- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\111898389207360145222025110211880923392\test.yaml
+2022-02-27 08:24:54,522- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:54,542- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:54,543- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:54,544- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313520014147682979751463627547255518742\test.yaml
+2022-02-27 08:24:54,544- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313520014147682979751463627547255518742\test.epub
+2022-02-27 08:24:54,549- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\313520014147682979751463627547255518742\test.yaml", line 3, column 1
+2022-02-27 08:24:54,550- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:54,566- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:54,567- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:54,567- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\233566593033620901472332228264129831877\test.yaml
+2022-02-27 08:24:54,569- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\233566593033620901472332228264129831877\test.epub
+2022-02-27 08:24:54,572- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:24:54,573- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。8eab4684-3342-45c1-a4b7-61e4a513aef9
+2022-02-27 08:24:54,573- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:24:54,574- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:24:54Z
+2022-02-27 08:24:54,574- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:24:54,576- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\233566593033620901472332228264129831877\test.yaml
+2022-02-27 08:24:54,576- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:24:58,634- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:24:58,635- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:24:58,636- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\104683113581967818344283538534783352460\test.yaml
+2022-02-27 08:24:58,637- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\104683113581967818344283538534783352460\test.epub
+2022-02-27 08:24:58,640- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:24:58,640- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。9155fe90-2142-4d64-908f-b02f28946cbc
+2022-02-27 08:24:58,644- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:24:58,644- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:24:58Z
+2022-02-27 08:24:58,645- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:24:58,651- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:24:58,652- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:24:58,655- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:24:58,656- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:24:58,657- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:24:58,659- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:24:58,663- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:24:58,663- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:02,701- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:02,701- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:02,705- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\15083108972595066233130562202299688140\test.yaml
+2022-02-27 08:25:02,705- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\15083108972595066233130562202299688140\test.epub
+2022-02-27 08:25:02,714- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:02,715- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。abf8f700-7661-4a81-a26a-4201275cfebd
+2022-02-27 08:25:02,716- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:02,717- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:02Z
+2022-02-27 08:25:02,717- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:02,722- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:02,724- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:02,726- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:02,728- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:02,729- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:02,729- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:02,734- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\15083108972595066233130562202299688140\.xhtml
+2022-02-27 08:25:02,734- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:06,781- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:06,781- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:06,786- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.yaml
+2022-02-27 08:25:06,786- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:06,799- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:06,799- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。5969d786-3020-4312-ab9d-be6eccf287f1
+2022-02-27 08:25:06,800- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:06,801- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:06Z
+2022-02-27 08:25:06,801- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:06,808- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:06,809- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:06,811- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:06,813- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:06,814- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:06,815- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:06,819- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.css
+2022-02-27 08:25:06,819- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:06,836- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:06,836- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:06,837- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.yaml
+2022-02-27 08:25:06,837- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:06,849- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:06,851- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。50777d82-ddb1-48c4-a5f5-f82745dee2aa
+2022-02-27 08:25:06,851- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:06,852- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:06Z
+2022-02-27 08:25:06,853- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:06,858- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:06,859- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:06,862- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:06,863- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:06,864- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:06,865- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:06,868- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:06,873- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.png
+2022-02-27 08:25:06,873- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:06,889- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:06,889- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:06,890- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.yaml
+2022-02-27 08:25:06,891- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:06,903- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:06,904- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。4d4000e3-b279-4737-8625-2e792ed94ec5
+2022-02-27 08:25:06,905- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:06,905- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:06Z
+2022-02-27 08:25:06,905- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:06,913- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:06,914- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:06,917- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:06,918- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:06,919- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:06,920- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:06,923- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:06,924- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:06,929- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test1.png
+2022-02-27 08:25:06,929- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:06,947- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:06,947- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:06,948- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.yaml
+2022-02-27 08:25:06,948- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:06,963- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:06,965- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。cbb58239-80ef-4569-bb9c-da8301e54eea
+2022-02-27 08:25:06,965- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:06,965- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:06Z
+2022-02-27 08:25:06,966- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:06,972- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:06,973- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:06,977- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:06,978- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:06,980- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:06,981- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:06,983- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:06,985- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:06,987- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:25:06,992- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.xhtml
+2022-02-27 08:25:06,992- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:07,008- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:07,008- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:07,009- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.yaml
+2022-02-27 08:25:07,010- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:07,026- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:07,026- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。e2a25fd9-fe92-487b-a72b-9b0fb9f5bae0
+2022-02-27 08:25:07,027- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:07,027- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:07Z
+2022-02-27 08:25:07,028- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:07,033- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:07,034- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:07,037- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:07,039- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:07,040- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:07,041- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:07,044- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:07,046- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:07,048- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:25:07,049- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:25:07,052- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:25:07,057- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:25:07,067- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\231092034546987164598729678939272319299\test.epub
+2022-02-27 08:25:07,072- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:25:31,509- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:31,509- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:31,511- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\51581514329772821478253250492139603832\test.yaml
+2022-02-27 08:25:31,512- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\51581514329772821478253250492139603832\test.epub
+2022-02-27 08:25:31,513- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:25:31,519- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:31,520- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。41e13b80-8d74-4d74-b6a2-f487ee476605
+2022-02-27 08:25:31,521- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:31,521- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:31Z
+2022-02-27 08:25:31,521- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:25:31,521- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:31,531- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:31,532- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:31,535- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:31,537- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:31,537- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:31,539- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:31,542- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:25:31,544- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:25:31,606- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:25:31,615- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\51581514329772821478253250492139603832\test.epub
+2022-02-27 08:25:31,617- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:25:35,802- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:35,803- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:35,804- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\224174494342615955132352634196759087393\test.yaml
+2022-02-27 08:25:35,804- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\224174494342615955132352634196759087393\test.epub
+2022-02-27 08:25:35,806- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:25:35,807- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:35,825- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:35,826- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:35,826- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\102499035518123890318854903523644624448\test.yaml
+2022-02-27 08:25:35,827- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\102499035518123890318854903523644624448\test.epub
+2022-02-27 08:25:35,829- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\102499035518123890318854903523644624448\test.yaml
+2022-02-27 08:25:35,830- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:35,848- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:35,850- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:35,850- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\317182680392273824564675249019731629380\test.yaml
+2022-02-27 08:25:35,851- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\317182680392273824564675249019731629380\test.epub
+2022-02-27 08:25:35,855- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\317182680392273824564675249019731629380\test.yaml", line 3, column 1
+2022-02-27 08:25:35,856- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:35,874- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:35,874- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:35,875- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\162620957723630035944409806527583486495\test.yaml
+2022-02-27 08:25:35,875- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\162620957723630035944409806527583486495\test.epub
+2022-02-27 08:25:35,879- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:35,880- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。2eae7b76-a127-4a86-a292-8aeecf8d1935
+2022-02-27 08:25:35,881- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:35,881- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:35Z
+2022-02-27 08:25:35,881- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:25:35,883- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\162620957723630035944409806527583486495\test.yaml
+2022-02-27 08:25:35,883- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:39,943- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:39,945- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:39,946- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\12095521782066499215316871230107599577\test.yaml
+2022-02-27 08:25:39,946- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\12095521782066499215316871230107599577\test.epub
+2022-02-27 08:25:39,952- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:39,953- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。cb6f116d-fb02-42d5-bb63-5c0938ae8ce9
+2022-02-27 08:25:39,953- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:39,954- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:39Z
+2022-02-27 08:25:39,955- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:39,960- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:39,962- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:39,965- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:39,966- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:39,967- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:39,968- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:39,972- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:25:39,973- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:44,041- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:44,044- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:44,045- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\286337512422191224764909102928942615562\test.yaml
+2022-02-27 08:25:44,045- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\286337512422191224764909102928942615562\test.epub
+2022-02-27 08:25:44,050- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:44,051- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。5b5b4831-efb0-4b92-8086-7e71b4957da9
+2022-02-27 08:25:44,052- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:44,052- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:44Z
+2022-02-27 08:25:44,053- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:44,058- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:44,059- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:44,062- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:44,065- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:44,066- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:44,067- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:44,071- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:25:49,089- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\286337512422191224764909102928942615562\.xhtml
+2022-02-27 08:25:49,091- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:53,149- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:53,150- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:53,150- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.yaml
+2022-02-27 08:25:53,151- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:53,163- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:53,164- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。d6375625-5807-4876-8120-affd85ad5206
+2022-02-27 08:25:53,164- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:53,165- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:53Z
+2022-02-27 08:25:53,166- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:53,173- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:53,174- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:53,176- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:53,177- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:53,178- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:53,179- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:53,183- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:25:58,188- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.css
+2022-02-27 08:25:58,189- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:58,205- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:58,206- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:58,207- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.yaml
+2022-02-27 08:25:58,207- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:58,219- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:58,221- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。3d29b9ac-c90f-48ee-b262-b14b93b77f01
+2022-02-27 08:25:58,221- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:58,222- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:58Z
+2022-02-27 08:25:58,223- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:58,228- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:58,229- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:58,231- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:58,234- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:58,235- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:58,237- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:58,239- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:58,243- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.png
+2022-02-27 08:25:58,244- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:58,258- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:58,258- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:58,259- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.yaml
+2022-02-27 08:25:58,260- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:58,272- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:58,273- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。8c1bfc5b-cf16-4ae4-a97c-208cebb03784
+2022-02-27 08:25:58,274- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:58,274- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:58Z
+2022-02-27 08:25:58,275- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:58,281- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:58,282- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:58,284- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:58,286- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:58,287- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:58,288- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:58,291- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:58,293- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:58,297- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test1.png
+2022-02-27 08:25:58,298- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:58,313- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:58,314- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:58,315- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.yaml
+2022-02-27 08:25:58,315- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:58,330- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:58,330- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。18ea5a14-1069-49c3-b538-1e7b8d2039d6
+2022-02-27 08:25:58,331- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:58,332- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:58Z
+2022-02-27 08:25:58,332- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:58,338- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:58,339- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:58,342- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:58,343- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:58,345- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:58,346- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:58,349- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:58,351- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:58,353- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:25:58,358- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.xhtml
+2022-02-27 08:25:58,358- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:25:58,375- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:25:58,375- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:25:58,376- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.yaml
+2022-02-27 08:25:58,376- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:58,388- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:25:58,389- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。fc8185ba-f3c9-463d-bfa5-7d448c4c4600
+2022-02-27 08:25:58,389- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:25:58,390- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:25:58Z
+2022-02-27 08:25:58,390- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:25:58,396- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:25:58,397- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:25:58,400- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:25:58,401- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:25:58,403- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:25:58,403- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:25:58,406- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:25:58,409- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:25:58,411- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:25:58,412- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:25:58,415- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:25:58,420- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:25:58,430- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\100042066311646390365805226500076179342\test.epub
+2022-02-27 08:25:58,436- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:29:21,925- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:21,927- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:21,927- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\4181011451588601792252549255029145450\test.yaml
+2022-02-27 08:29:21,928- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\4181011451588601792252549255029145450\test.epub
+2022-02-27 08:29:21,929- test_epub_generator.py - INFO - デバッグ: ON
+2022-02-27 08:29:21,936- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:21,937- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。a5055363-6b33-450c-a50d-9a796dfdbb56
+2022-02-27 08:29:21,938- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:21,939- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:21Z
+2022-02-27 08:29:21,939- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:29:21,940- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:29:21,950- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:29:21,952- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:29:21,954- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:29:21,955- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:29:21,956- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:29:21,957- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:29:21,960- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:29:21,963- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:29:22,026- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:29:22,036- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\4181011451588601792252549255029145450\test.epub
+2022-02-27 08:29:22,036- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:29:26,213- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:26,214- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:26,215- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\293840141641590542372644504220654075716\test.yaml
+2022-02-27 08:29:26,215- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\293840141641590542372644504220654075716\test.epub
+2022-02-27 08:29:26,216- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:29:26,217- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:26,232- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:26,233- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:26,234- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\116749766892723591460976981819518667671\test.yaml
+2022-02-27 08:29:26,234- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\116749766892723591460976981819518667671\test.epub
+2022-02-27 08:29:45,698- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\116749766892723591460976981819518667671\test.yaml
+2022-02-27 08:29:45,698- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:45,707- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:45,707- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:45,715- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:45,715- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:45,716- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.yaml
+2022-02-27 08:29:45,716- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.yaml
+2022-02-27 08:29:45,717- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.epub
+2022-02-27 08:29:45,717- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.epub
+2022-02-27 08:29:45,722- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.yaml", line 3, column 1
+2022-02-27 08:29:45,722- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\277138919749307161522972686202140065779\test.yaml", line 3, column 1
+2022-02-27 08:29:45,722- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:45,722- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:45,741- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:45,741- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:45,742- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:45,742- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:45,743- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.yaml
+2022-02-27 08:29:45,743- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.yaml
+2022-02-27 08:29:45,744- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.epub
+2022-02-27 08:29:45,744- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.epub
+2022-02-27 08:29:45,748- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:45,748- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:45,749- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。708b6623-238f-4166-ba8c-cee6f84b2b73
+2022-02-27 08:29:45,749- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。708b6623-238f-4166-ba8c-cee6f84b2b73
+2022-02-27 08:29:45,750- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:45,750- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:45,751- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:45Z
+2022-02-27 08:29:45,751- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:45Z
+2022-02-27 08:29:45,752- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:29:45,752- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:29:45,754- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.yaml
+2022-02-27 08:29:45,754- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\108648547728436884595733826788797834735\test.yaml
+2022-02-27 08:29:45,755- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:45,755- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:49,811- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:49,811- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:49,813- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:49,813- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:49,813- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\90823282805081590020632595847290585825\test.yaml
+2022-02-27 08:29:49,813- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\90823282805081590020632595847290585825\test.yaml
+2022-02-27 08:29:49,815- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\90823282805081590020632595847290585825\test.epub
+2022-02-27 08:29:49,815- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\90823282805081590020632595847290585825\test.epub
+2022-02-27 08:29:49,821- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:49,821- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:49,822- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。dee1c17a-0a83-456b-996a-030c1bd5f9db
+2022-02-27 08:29:49,822- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。dee1c17a-0a83-456b-996a-030c1bd5f9db
+2022-02-27 08:29:49,824- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:49,824- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:49,825- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:49Z
+2022-02-27 08:29:49,825- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:49Z
+2022-02-27 08:29:49,826- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:29:49,826- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:29:49,832- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:29:49,832- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:29:49,833- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:29:49,833- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:29:49,837- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:29:49,837- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:29:49,839- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:29:49,839- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:29:49,841- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:29:49,841- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:29:49,843- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:29:49,843- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:29:49,847- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:29:49,847- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:29:49,848- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:49,848- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:53,873- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:53,873- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:29:53,877- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:53,877- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:29:53,878- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\test.yaml
+2022-02-27 08:29:53,878- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\test.yaml
+2022-02-27 08:29:53,879- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\test.epub
+2022-02-27 08:29:53,879- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\test.epub
+2022-02-27 08:29:53,885- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:53,885- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:29:53,887- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。2953397a-5bdd-401c-b6b1-99f648280557
+2022-02-27 08:29:53,887- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。2953397a-5bdd-401c-b6b1-99f648280557
+2022-02-27 08:29:53,888- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:53,888- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:29:53,888- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:53Z
+2022-02-27 08:29:53,888- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:29:53Z
+2022-02-27 08:29:53,889- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:29:53,889- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:29:53,894- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:29:53,894- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:29:53,896- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:29:53,896- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:29:53,900- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:29:53,900- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:29:53,902- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:29:53,902- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:29:53,904- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:29:53,904- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:29:53,906- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:29:53,906- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:29:53,911- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:29:53,911- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:29:58,928- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\.xhtml
+2022-02-27 08:29:58,928- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\325444499576122160473328820433775782267\.xhtml
+2022-02-27 08:29:58,929- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:29:58,929- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:02,989- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:02,989- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:02,991- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:02,991- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:02,992- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:02,992- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:02,994- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:02,994- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:03,011- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:03,011- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:03,012- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。032fd1cd-b94f-4f1e-a1ac-d13d445133d5
+2022-02-27 08:30:03,012- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。032fd1cd-b94f-4f1e-a1ac-d13d445133d5
+2022-02-27 08:30:03,014- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:03,014- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:03,015- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:03Z
+2022-02-27 08:30:03,015- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:03Z
+2022-02-27 08:30:03,016- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:03,016- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:03,023- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:03,023- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:03,025- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:03,025- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:03,028- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:03,028- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:03,030- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:03,030- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:03,032- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:03,032- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:03,033- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:03,033- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:03,037- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:03,037- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:08,048- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.css
+2022-02-27 08:30:08,048- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.css
+2022-02-27 08:30:08,049- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:08,049- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:08,065- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:08,065- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:08,066- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:08,066- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:08,067- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:08,067- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:08,069- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:08,069- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:08,082- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:08,082- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:08,083- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。35b53daa-345d-42ef-b030-aaef2f3c6b4f
+2022-02-27 08:30:08,083- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。35b53daa-345d-42ef-b030-aaef2f3c6b4f
+2022-02-27 08:30:08,084- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:08,084- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:08,085- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:08Z
+2022-02-27 08:30:08,085- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:08Z
+2022-02-27 08:30:08,086- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:08,086- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:08,092- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:08,092- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:08,094- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:08,094- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:08,097- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:08,097- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:08,100- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:08,100- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:08,102- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:08,102- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:08,103- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:08,103- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:08,106- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:08,106- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:08,111- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.png
+2022-02-27 08:30:08,111- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.png
+2022-02-27 08:30:08,113- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:08,113- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:08,129- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:08,129- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:08,130- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:08,130- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:08,131- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:08,131- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:08,132- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:08,132- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:08,146- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:08,146- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:08,147- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。c568b077-c4d5-426c-977d-5e642d849dc7
+2022-02-27 08:30:08,147- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。c568b077-c4d5-426c-977d-5e642d849dc7
+2022-02-27 08:30:08,148- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:08,148- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:08,149- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:08Z
+2022-02-27 08:30:08,149- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:08Z
+2022-02-27 08:30:08,150- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:08,150- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:08,156- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:08,156- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:08,158- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:08,158- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:08,161- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:08,161- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:08,163- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:08,163- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:08,164- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:08,164- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:08,166- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:08,166- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:08,169- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:08,169- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:08,172- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:08,172- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:08,176- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:08,176- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:13,188- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test1.png
+2022-02-27 08:30:13,188- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test1.png
+2022-02-27 08:30:13,190- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:13,190- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:13,205- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:13,205- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:13,206- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:13,206- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:13,207- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:13,207- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:13,208- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:13,208- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:13,223- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:13,223- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:13,225- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。6e198356-7d8c-473d-89c0-b5085021ed00
+2022-02-27 08:30:13,225- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。6e198356-7d8c-473d-89c0-b5085021ed00
+2022-02-27 08:30:13,226- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:13,226- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:13,226- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:13Z
+2022-02-27 08:30:13,226- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:13Z
+2022-02-27 08:30:13,227- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:13,227- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:13,233- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:13,233- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:13,235- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:13,235- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:13,239- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:13,239- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:13,241- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:13,241- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:13,243- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:13,243- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:13,244- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:13,244- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:13,248- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:13,248- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:13,250- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:13,250- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:13,252- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:30:13,252- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:30:13,258- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:13,258- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:18,266- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.xhtml
+2022-02-27 08:30:18,266- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.xhtml
+2022-02-27 08:30:18,267- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:18,267- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:30:18,282- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:18,282- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:18,284- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:18,284- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:18,285- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:18,285- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.yaml
+2022-02-27 08:30:18,287- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:18,287- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:18,300- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:18,300- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:18,301- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。cc6a7352-fda7-42fa-9b31-732f10f23803
+2022-02-27 08:30:18,301- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。cc6a7352-fda7-42fa-9b31-732f10f23803
+2022-02-27 08:30:18,302- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:18,302- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:18,303- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:18Z
+2022-02-27 08:30:18,303- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:18Z
+2022-02-27 08:30:18,304- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:18,304- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:18,311- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:18,311- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:18,312- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:18,312- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:18,316- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:18,316- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:18,320- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:18,320- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:18,321- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:18,321- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:18,323- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:18,323- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:18,326- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:18,326- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:30:18,329- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:18,329- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:30:18,332- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:30:18,332- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:30:18,333- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:30:18,333- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:30:18,336- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:30:18,336- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:30:18,344- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:30:18,344- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:30:18,355- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:18,355- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\89445485080660297243363564174585473522\test.epub
+2022-02-27 08:30:18,357- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:18,357- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:23,380- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:30:23,380- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:30:38,902- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:30:38,904- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:30:38,905- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\132212055299517058241281251165089970191\test.yaml
+2022-02-27 08:30:38,905- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\132212055299517058241281251165089970191\test.epub
+2022-02-27 08:30:38,913- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:30:38,913- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。bd82fe63-8604-4793-8073-d6f9e3a29477
+2022-02-27 08:30:38,914- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:30:38,914- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:30:38Z
+2022-02-27 08:30:38,915- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:30:38,915- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:30:38,924- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:30:38,925- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:30:38,928- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:30:38,929- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:30:38,930- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:30:38,931- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:30:38,934- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:30:38,936- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:30:38,999- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:30:39,010- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\132212055299517058241281251165089970191\test.epub
+2022-02-27 08:30:39,011- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:30:44,029- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:31:18,044- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:18,045- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:18,046- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\296691925084958855616829670422407160076\test.yaml
+2022-02-27 08:31:18,046- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\296691925084958855616829670422407160076\test.epub
+2022-02-27 08:31:18,047- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:31:18,047- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:26,221- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:26,222- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:26,224- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\95231119328100052802364415794149581007\test.yaml
+2022-02-27 08:31:26,225- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\95231119328100052802364415794149581007\test.epub
+2022-02-27 08:31:26,226- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\95231119328100052802364415794149581007\test.yaml
+2022-02-27 08:31:26,227- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:27,275- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:27,276- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:27,277- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\281430597682601843406970472270938125627\test.yaml
+2022-02-27 08:31:27,278- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\281430597682601843406970472270938125627\test.epub
+2022-02-27 08:31:27,283- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\281430597682601843406970472270938125627\test.yaml", line 3, column 1
+2022-02-27 08:31:27,284- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:27,813- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:27,814- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:27,815- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\205609574036560572360930924700309191107\test.yaml
+2022-02-27 08:31:27,815- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\205609574036560572360930924700309191107\test.epub
+2022-02-27 08:31:27,820- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:27,820- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。8af3a992-07ff-431d-b88f-66c060bd3d6b
+2022-02-27 08:31:27,821- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:27,822- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:27Z
+2022-02-27 08:31:27,823- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:31:27,824- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\205609574036560572360930924700309191107\test.yaml
+2022-02-27 08:31:27,825- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:31,879- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:31,879- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:31,880- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:31,880- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:31,881- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\336352220726550591639246557761346172572\test.yaml
+2022-02-27 08:31:31,881- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\336352220726550591639246557761346172572\test.yaml
+2022-02-27 08:31:31,882- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\336352220726550591639246557761346172572\test.epub
+2022-02-27 08:31:31,882- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\336352220726550591639246557761346172572\test.epub
+2022-02-27 08:31:31,892- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:31,892- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:31,893- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。3bac8bc1-65b3-453d-944a-9ca35beab844
+2022-02-27 08:31:31,893- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。3bac8bc1-65b3-453d-944a-9ca35beab844
+2022-02-27 08:31:31,894- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:31,894- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:31,895- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:31Z
+2022-02-27 08:31:31,895- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:31Z
+2022-02-27 08:31:31,896- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:31,896- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:31,901- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:31,901- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:31,904- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:31,904- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:31,907- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:31,907- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:31,908- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:31,908- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:31,909- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:31,909- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:31,911- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:31,911- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:31,915- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:31:31,915- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:31:36,926- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:31:36,926- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: 
+2022-02-27 08:31:36,927- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:36,927- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:40,995- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:40,995- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:40,996- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:40,996- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:40,998- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\267524353718184019758817183271287374726\test.yaml
+2022-02-27 08:31:40,998- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\267524353718184019758817183271287374726\test.yaml
+2022-02-27 08:31:40,999- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\267524353718184019758817183271287374726\test.epub
+2022-02-27 08:31:40,999- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\267524353718184019758817183271287374726\test.epub
+2022-02-27 08:31:41,008- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:41,009- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。0928d55d-865a-4268-972b-cda3fa95d59a
+2022-02-27 08:31:41,009- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:41,010- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:41Z
+2022-02-27 08:31:41,011- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:41,017- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:41,019- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:41,021- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:41,023- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:41,024- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:41,025- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:41,029- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\267524353718184019758817183271287374726\.xhtml
+2022-02-27 08:31:41,029- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:45,103- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:45,106- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:45,107- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.yaml
+2022-02-27 08:31:45,107- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:31:45,122- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:45,123- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。16934ece-65e6-4d49-ac98-39b38ec8a02d
+2022-02-27 08:31:45,123- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:45,124- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:45Z
+2022-02-27 08:31:45,124- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:45,130- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:45,131- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:45,134- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:45,135- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:45,137- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:45,139- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:45,142- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:31:50,147- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.css
+2022-02-27 08:31:50,147- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:50,156- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:50,156- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:50,163- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.yaml
+2022-02-27 08:31:50,164- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:31:50,177- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:50,179- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。5c9de89a-e67a-4300-91a6-07fbc2d4d0ad
+2022-02-27 08:31:50,179- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:50,180- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:50Z
+2022-02-27 08:31:50,181- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:50,186- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:50,188- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:50,189- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:50,193- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:50,194- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:50,195- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:50,198- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:31:50,202- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:31:55,227- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.png
+2022-02-27 08:31:55,227- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:31:55,243- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:31:55,244- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:31:55,245- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.yaml
+2022-02-27 08:31:55,246- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:31:55,260- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:31:55,261- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。6e2d9155-7650-4af5-b485-a95a723e21f9
+2022-02-27 08:31:55,262- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:31:55,262- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:31:55Z
+2022-02-27 08:31:55,263- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:31:55,268- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:31:55,269- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:31:55,272- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:31:55,273- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:31:55,275- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:31:55,276- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:31:55,279- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:31:55,281- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:31:55,286- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:32:00,303- test_epub_generator.py - ERROR - 指定されたファイルが見つかりません。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test1.png
+2022-02-27 08:32:00,303- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:32:00,319- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:32:00,320- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:32:00,320- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.yaml
+2022-02-27 08:32:00,321- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:32:00,337- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:32:00,337- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。bfbcb65f-f53a-40c6-84bb-158864e1eb3b
+2022-02-27 08:32:00,338- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:32:00,339- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:32:00Z
+2022-02-27 08:32:00,339- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:32:00,346- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:32:00,347- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:32:00,349- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:32:00,350- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:32:00,352- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:32:00,353- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:32:00,356- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:32:00,359- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:32:00,361- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:32:00,365- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:32:05,376- test_epub_generator.py - ERROR - コンテンツファイルが見つかりません。: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.xhtml
+2022-02-27 08:32:05,377- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:32:05,393- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:32:05,394- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:32:05,394- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.yaml
+2022-02-27 08:32:05,394- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:32:05,412- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:32:05,413- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。a77a1469-f81b-46d3-bb5f-f7624f4ec2ea
+2022-02-27 08:32:05,413- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:32:05,413- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:32:05Z
+2022-02-27 08:32:05,414- test_epub_generator.py - WARNING - 目次コンテンツ未指定のためダミーの目次コンテンツを作成します。
+2022-02-27 08:32:05,420- test_epub_generator.py - INFO - ファイル作成 - /mimetype
+2022-02-27 08:32:05,421- test_epub_generator.py - INFO - ディレクトリ作成 - /META-INF
+2022-02-27 08:32:05,424- test_epub_generator.py - INFO - ファイル作成 - /META-INF/container.xml
+2022-02-27 08:32:05,427- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS
+2022-02-27 08:32:05,428- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/resources
+2022-02-27 08:32:05,429- test_epub_generator.py - INFO - ディレクトリ作成 - /OEBPS/contents
+2022-02-27 08:32:05,431- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.css
+2022-02-27 08:32:05,433- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/resources/test.png
+2022-02-27 08:32:05,435- test_epub_generator.py - INFO - リソースファイルのコピー - /OEBPS/contents/test1.png
+2022-02-27 08:32:05,436- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_1.xhtml
+2022-02-27 08:32:05,439- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/contents_2.xhtml
+2022-02-27 08:32:05,445- test_epub_generator.py - INFO - ファイル作成 - /OEBPS/book.opf
+2022-02-27 08:32:05,457- test_epub_generator.py - INFO - ファイル作成 - c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\252508987821110636696204727513525103860\test.epub
+2022-02-27 08:32:05,461- test_epub_generator.py - INFO - 一時ファイル／ディレクトリ削除中にエラーが発生しました。リトライします。
+2022-02-27 08:32:10,467- test_epub_generator.py - INFO - Epub generator 正常終了
+2022-02-27 08:33:16,355- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:16,356- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:16,357- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\248559455131931962601688479694882136426\test.yaml
+2022-02-27 08:33:16,358- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\248559455131931962601688479694882136426\test.epub
+2022-02-27 08:33:16,358- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:33:16,359- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:31,359- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:31,360- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:31,361- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\101972090913195778721193771980689159600\test.yaml
+2022-02-27 08:33:31,362- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\101972090913195778721193771980689159600\test.epub
+2022-02-27 08:33:31,363- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:33:31,363- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:31,381- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:31,382- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:31,382- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53305875342348602115153437550306437315\test.yaml
+2022-02-27 08:33:31,383- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53305875342348602115153437550306437315\test.epub
+2022-02-27 08:33:31,386- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\53305875342348602115153437550306437315\test.yaml
+2022-02-27 08:33:31,386- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:46,049- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:46,050- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:46,052- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\257110206703588934251018224765199773778\test.yaml
+2022-02-27 08:33:46,052- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\257110206703588934251018224765199773778\test.epub
+2022-02-27 08:33:46,053- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:33:46,053- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:46,069- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:46,070- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:46,071- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\104597018950658410256118468682801235101\test.yaml
+2022-02-27 08:33:46,071- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\104597018950658410256118468682801235101\test.epub
+2022-02-27 08:33:46,073- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\104597018950658410256118468682801235101\test.yaml
+2022-02-27 08:33:46,074- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:46,095- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:46,096- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:46,097- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\8449714524833825389294034078275444978\test.yaml
+2022-02-27 08:33:46,098- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\8449714524833825389294034078275444978\test.epub
+2022-02-27 08:33:46,104- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\8449714524833825389294034078275444978\test.yaml", line 3, column 1
+2022-02-27 08:33:46,104- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:57,881- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:57,882- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:57,884- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\324897676282616820582157439779106231354\test.yaml
+2022-02-27 08:33:57,884- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\324897676282616820582157439779106231354\test.epub
+2022-02-27 08:33:57,885- test_epub_generator.py - ERROR - 設定ファイルが見つかりません。
+2022-02-27 08:33:57,885- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:57,901- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:57,902- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:57,903- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\312691438776773757071315119213548033152\test.yaml
+2022-02-27 08:33:57,903- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\312691438776773757071315119213548033152\test.epub
+2022-02-27 08:33:57,905- test_epub_generator.py - ERROR - 設定ファイルが空です。 c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\312691438776773757071315119213548033152\test.yaml
+2022-02-27 08:33:57,906- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:57,923- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:57,925- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:57,925- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\63486827115018616719656906230587952812\test.yaml
+2022-02-27 08:33:57,926- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\63486827115018616719656906230587952812\test.epub
+2022-02-27 08:33:57,931- test_epub_generator.py - ERROR - 設定ファイル読み込み中にエラーが発生しました。 Exception in (c:\Users\kenic\Dropbox\Novels\tools\epub_generator\epub_generator.py, line 659 "settings = yaml.load(f, Loader=yaml.SafeLoader)"): expected '<document start>', but found '<scalar>'
+  in "c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\63486827115018616719656906230587952812\test.yaml", line 3, column 1
+2022-02-27 08:33:57,932- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:33:57,950- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:33:57,951- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:33:57,951- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\237062386707017304214479501429749617980\test.yaml
+2022-02-27 08:33:57,952- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\237062386707017304214479501429749617980\test.epub
+2022-02-27 08:33:57,955- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:33:57,956- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。462e4ba2-903a-4b5e-8126-2e6d40cb026e
+2022-02-27 08:33:57,956- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:33:57,957- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:33:57Z
+2022-02-27 08:33:57,957- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:33:57,959- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\237062386707017304214479501429749617980\test.yaml
+2022-02-27 08:33:57,959- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:34:24,076- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:34:24,077- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:34:24,079- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\213111178805583420086171769994220823735\test.yaml
+2022-02-27 08:34:24,079- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\213111178805583420086171769994220823735\test.epub
+2022-02-27 08:34:24,085- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:34:24,086- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。db7b6f11-178f-444f-9407-1e9f44efac90
+2022-02-27 08:34:24,087- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:34:24,087- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:34:24Z
+2022-02-27 08:34:24,087- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:34:24,089- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\213111178805583420086171769994220823735\test.yaml
+2022-02-27 08:34:24,089- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:35:01,609- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:35:01,610- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:35:01,611- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\300560596998423070896728815444568255285\test.yaml
+2022-02-27 08:35:01,612- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\300560596998423070896728815444568255285\test.epub
+2022-02-27 08:35:01,619- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:35:01,620- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。f8b32d2e-bcf3-4ed0-95c2-9d80f9b6d438
+2022-02-27 08:35:01,620- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:35:01,621- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:35:01Z
+2022-02-27 08:35:01,621- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:35:01,623- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\300560596998423070896728815444568255285\test.yaml
+2022-02-27 08:35:01,624- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:35:37,796- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:35:37,797- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:35:37,799- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159738158597187540604470771366910641622\test.yaml
+2022-02-27 08:35:37,800- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159738158597187540604470771366910641622\test.epub
+2022-02-27 08:35:37,804- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:35:37,805- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。d5ec4c6a-55bc-4513-a1a0-cdff7a84754c
+2022-02-27 08:35:37,805- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:35:37,806- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:35:37Z
+2022-02-27 08:35:37,807- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:35:37,808- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\159738158597187540604470771366910641622\test.yaml
+2022-02-27 08:35:37,808- test_epub_generator.py - INFO - Epub generator 警告終了
+2022-02-27 08:35:59,294- test_epub_generator.py - INFO - --------------------------------------------------
+2022-02-27 08:35:59,295- test_epub_generator.py - INFO - Epub generator 処理開始
+2022-02-27 08:35:59,296- test_epub_generator.py - INFO - 設定ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\332844829765427193135099623611354678531\test.yaml
+2022-02-27 08:35:59,297- test_epub_generator.py - INFO - 出力ファイル: c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\332844829765427193135099623611354678531\test.epub
+2022-02-27 08:35:59,304- test_epub_generator.py - INFO - 設定ファイル読み込み
+2022-02-27 08:35:59,305- test_epub_generator.py - WARNING - bookId未指定のためランダムな値を設定します。0c41d6df-918b-4a1a-83f0-2537a4c685c7
+2022-02-27 08:35:59,306- test_epub_generator.py - WARNING - language未指定のためデフォルト値を設定します。ja
+2022-02-27 08:35:59,306- test_epub_generator.py - WARNING - modified未指定のため現在日時を設定します。2022-02-27T08:35:59Z
+2022-02-27 08:35:59,307- test_epub_generator.py - WARNING - title未指定のためデフォルト値を設定します。無題
+2022-02-27 08:35:59,308- test_epub_generator.py - ERROR - コンテンツがありません。c:\Users\kenic\Dropbox\Novels\tools\epub_generator\data\332844829765427193135099623611354678531\test.yaml
+2022-02-27 08:35:59,309- test_epub_generator.py - INFO - Epub generator 警告終了

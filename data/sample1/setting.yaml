@@ -98,6 +98,7 @@ contents:
   # 目次
   - filePath: .\template\navigation.xhtml
     isNavigationContent: true
+    useNavigationContent: true
     createByChaptersCount: false
     replaces:
       - type: simple
