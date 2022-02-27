@@ -81,8 +81,10 @@ def remove_temp_directory(dir):
         try:
             shutil.rmtree(dir)
         except Exception as e:
+            print('ディレクトリ削除に失敗しました。リトライします。{0}/{1}回目'.format(dir, retry_count))
             has_error = True
             if retry_count >= 5:
+                print('ディレクトリを削除できませんでした。{0}'.format(dir))
                 break
             time.sleep(3)
         if not has_error:
@@ -419,46 +421,46 @@ class TestBatch(unittest.TestCase):
         pass
 
     def test_invalid_setting_file(self):
-#         # 設定ファイルがない
-#         temp_dir = create_temp_directory()
+        # 設定ファイルがない
+        temp_dir = create_temp_directory()
         
-#         return_code = -1
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         remove_temp_directory(temp_dir)
+        return_code = -1
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        remove_temp_directory(temp_dir)
 
-#         self.assertEqual(1, return_code)
+        self.assertEqual(1, return_code)
 
-#         # 設定ファイルはあるけど空
-#         temp_dir = create_temp_directory()
+        # 設定ファイルはあるけど空
+        temp_dir = create_temp_directory()
         
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''''')
-#         return_code = -1
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         remove_temp_directory(temp_dir)
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''''')
+        return_code = -1
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        remove_temp_directory(temp_dir)
         
-#         self.assertEqual(1, return_code)
+        self.assertEqual(1, return_code)
 
-#         # 設定ファイルはあるけどYAMLフォーマットじゃない
-#         temp_dir = create_temp_directory()
+        # 設定ファイルはあるけどYAMLフォーマットじゃない
+        temp_dir = create_temp_directory()
         
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''
-# [xxxx]
-# yyyy = zzzz
-#         ''')
-#         return_code = -1
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         remove_temp_directory(temp_dir)
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+[xxxx]
+yyyy = zzzz
+        ''')
+        return_code = -1
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        remove_temp_directory(temp_dir)
         
-#         self.assertEqual(1, return_code)
+        self.assertEqual(1, return_code)
 
         # 設定ファイルがYAMLフォーマットだけど設定なし
         temp_dir = create_temp_directory()
@@ -475,159 +477,160 @@ xxxx: yyyy
         
         self.assertEqual(1, return_code)
 
-#         # 設定ファイル中のパスが空
-#         temp_dir = create_temp_directory()
+        # 設定ファイル中のパスが空
+        temp_dir = create_temp_directory()
         
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''
-# title: サンプル
-# resources:
-# contents:
-#   - filePath: 
-#     isNavigationContent: false
-#     createByChaptersCount: false
-#         ''')
-#         return_code = -1
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+title: サンプル
+resources:
+contents:
+  - filePath: 
+    isNavigationContent: false
+    createByChaptersCount: false
+        ''')
+        return_code = -1
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         remove_temp_directory(temp_dir)
+        remove_temp_directory(temp_dir)
         
-#         # 設定ファイル中のパスが無効
-#         temp_dir = create_temp_directory()
+        # 設定ファイル中のパスが無効
+        temp_dir = create_temp_directory()
         
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''
-# title: サンプル
-# resources:
-# contents:
-#   - filePath: .\/////.xhtml
-#     isNavigationContent: false
-#     createByChaptersCount: false
-#         ''')
-#         return_code = -1
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+title: サンプル
+resources:
+contents:
+  - filePath: .\/////.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+        ''')
+        return_code = -1
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         remove_temp_directory(temp_dir)
+        remove_temp_directory(temp_dir)
 
 
-#         # 設定ファイル中のパスのファイルが存在しない
-#         temp_dir = create_temp_directory()
+        # 設定ファイル中のパスのファイルが存在しない
+        temp_dir = create_temp_directory()
         
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''
-# title: サンプル
-# resources:
-#   styleSheets:
-#     - filePath: .\test.css
-#   images:
-#     - filePath: .\test.png
-#       isCover: true
-#   chapters:
-#     files:
-#       - title: 
-#         fileType: image
-#         filePath: .\test1.png
-# contents:
-#   - filePath: .\test.xhtml
-#     isNavigationContent: false
-#     createByChaptersCount: false
-#         ''')
-#         return_code = -1
-#         try:
-#             # 全てのファイルがない
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+title: サンプル
+resources:
+  styleSheets:
+    - filePath: .\test.css
+  images:
+    - filePath: .\test.png
+      isCover: true
+  chapters:
+    files:
+      - title: 
+        fileType: image
+        filePath: .\test1.png
+contents:
+  - filePath: .\test.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+        ''')
+        return_code = -1
+        try:
+            # 全てのファイルがない
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         return_code = -1
-#         try:
-#             # test.css作成
-#             pathlib.Path(os.path.join(temp_dir, 'test.css')).touch()
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        return_code = -1
+        try:
+            # test.css作成
+            pathlib.Path(os.path.join(temp_dir, 'test.css')).touch()
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         return_code = -1
-#         try:
-#             # test.png作成
-#             pathlib.Path(os.path.join(temp_dir, 'test.png')).touch()
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        return_code = -1
+        try:
+            # test.png作成
+            pathlib.Path(os.path.join(temp_dir, 'test.png')).touch()
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         return_code = -1
-#         try:
-#             # test1.png作成
-#             pathlib.Path(os.path.join(temp_dir, 'test1.png')).touch()
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(1, return_code)
+        return_code = -1
+        try:
+            # test1.png作成
+            pathlib.Path(os.path.join(temp_dir, 'test1.png')).touch()
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(1, return_code)
 
-#         return_code = -1
-#         try:
-#             # test1.xhtml作成
-#             pathlib.Path(os.path.join(temp_dir, 'test.xhtml')).touch()
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
-#         except Exception as e:
-#             print(e)
-#         self.assertEqual(0, return_code)
+        return_code = -1
+        try:
+            # test1.xhtml作成
+            pathlib.Path(os.path.join(temp_dir, 'test.xhtml')).touch()
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
+        except Exception as e:
+            print(e)
+        self.assertEqual(0, return_code)
 
-#         remove_temp_directory(temp_dir)
+        remove_temp_directory(temp_dir)
 
-#     def test_create_epub(self):
+    def test_create_epub(self):
 
-#         temp_dir = create_temp_directory()
+        temp_dir = create_temp_directory()
         
-#         # TODO: 最小限のepubファイルを作成、epub_checkerでのチェックも行う
-#         create_file(os.path.join(temp_dir, 'test.yaml'), r'''
-# contents:
-#   - filePath: .\test.xhtml
-#     isNavigationContent: false
-#     createByChaptersCount: false
-#         ''')
-#         create_file(os.path.join(temp_dir, 'test.xhtml'), r'''
-# <?xml version="1.0" encoding="UTF-8"?>
-# <!DOCTYPE html>
-# <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
-# <head>
-# 	<title>サンプル</title>
-# 	<meta charset="UTF-8" />
-# </head>
-# <body>
-#     サンプルコンテンツ
-# </body>
-# </html>
-#         '''.strip())
-#         return_code = -1
-#         epub_filepath = os.path.join(temp_dir, 'test.epub')
-#         try:
-#             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + epub_filepath])
-#         except Exception as e:
-#             print(e)
+        # TODO: 最小限のepubファイルを作成、epub_checkerでのチェックも行う
+        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+contents:
+  - filePath: .\test.xhtml
+    isNavigationContent: false
+    createByChaptersCount: false
+        ''')
+        create_file(os.path.join(temp_dir, 'test.xhtml'), r'''
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<title>サンプル</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+    サンプルコンテンツ
+</body>
+</html>
+        '''.strip())
+        return_code = -1
+        epub_filepath = os.path.join(temp_dir, 'test.epub')
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + epub_filepath])
+        except Exception as e:
+            print(e)
 
-#         self.assertEqual(0, return_code)
+        self.assertEqual(0, return_code)
 
-#         result = exist_epub_errors(epub_filepath)
+        result = exist_epub_errors(epub_filepath)
+        # TODO: epubエラー／ワーニングチェック
+
+        remove_temp_directory(temp_dir)
 
 
 
+        # TODO: 
+        # TODO: 
+        # TODO: 
+        # TODO: 
+        # TODO: ユニットテストの一時ファイルが残る件の調査
 
-#         # TODO: 
-#         # TODO: 
-#         # TODO: 
-#         # TODO: 
-#         # TODO: 
-
-#         remove_temp_directory(temp_dir)
 
 
 
