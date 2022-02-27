@@ -837,7 +837,7 @@ class Batch(BatchBase):
                                     try:
                                         chapters['files'][use_chapter['chapterIndex'] - 1]
                                     except IndexError:
-                                        raise BatchBase.BatchException('コンテンツのuseChaptersに無効なチャプターが指定されています。コンテンツ: {0}／チャプター: {1}'.format(filepath, use_chapter['chapterIndex']))
+                                        raise BatchBase.BatchException('コンテンツのuseChaptersに無効なチャプターが指定されています。コンテンツ: {0}／チャプター: {1}'.format(absolute_file_path, use_chapter['chapterIndex']))
                                     use_chapters.append({
                                         'chapterIndex': use_chapter['chapterIndex']
                                     })

@@ -63,7 +63,9 @@ def exist_epub_errors(epub_filepath):
 
 def create_file(filepath, data):
     with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(data)
+        f.write(data)
+        # TODO: いるか？
+        f.close()
 
 def create_temp_directory():
     dir = os.path.join(os.path.dirname(__file__), 'data', str(uuid.uuid4().int))
