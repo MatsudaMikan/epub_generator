@@ -768,7 +768,7 @@ class Batch(BatchBase):
                         if type != '' and place_holder != '' and replace_content != '':
                             replaces.append({
                                 'type': replace_type,
-                                'placeHolder': replace_content,
+                                'placeHolder': place_holder,
                                 'replaceContent': replace_content,
                             })
             chapters['replaces'] = replaces
@@ -782,7 +782,7 @@ class Batch(BatchBase):
                             title = file['title']
                         filetype = ''
                         if 'fileType' in file:
-                            fileType = file['fileType']
+                            filetype = file['fileType']
                         absolute_file_path = ''
                         if 'filePath' in file:
                             absolute_file_path = file['filePath']
@@ -912,7 +912,7 @@ class Batch(BatchBase):
         settings['contents'] = contents
 
         # ------------------------------
-        # データ変換
+        # データ補正
         # ------------------------------
         self.settings = settings
 

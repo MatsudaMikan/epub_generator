@@ -368,6 +368,9 @@ class TestBatch(TestBase):
 
     @classmethod
     def exist_epub_errors(cls, epub_filepath):
+        '''
+        電子書籍チェックツールでepub3をチェックさせる
+        '''
 
         result = {'check_skipped': False, 'status': False}
 
@@ -413,12 +416,17 @@ class TestBatch(TestBase):
         return result
 
     def test_invalid_parameter(self):
-        # TODO: パラメータがない
+        '''
+        パラメータがない
+        '''
         # argv = None
         # Batch().execute(argv)
         pass
 
     def test_invalid_setting_file(self):
+        '''
+        設定ファイル不正
+        '''
         # 設定ファイルがない
         temp_dir = self.create_temp_directory()
         
@@ -571,11 +579,12 @@ contents:
             print(e)
         self.assertEqual(0, return_code)
 
-    def test_create_epub(self):
-
+    def test_create_minimum_epub(self):
+        '''
+        最小限のepubファイル作成
+        '''
         temp_dir = self.create_temp_directory()
         
-        # 最小限のepubファイルを作成、epub_checkerでのチェックも行う
         self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 contents:
   - filePath: .\test.xhtml
@@ -606,6 +615,32 @@ contents:
 
         epub_result = TestBatch.exist_epub_errors(epub_filepath)
         self.assertEqual(True, epub_result)
+
+    def test_create_novel_epub(self):
+        '''
+        小説タイプのepubファイルを作成
+        '''
+        temp_dir = self.create_temp_directory()
+        
+        return_code = -1
+        epub_filepath = os.path.join(temp_dir, 'test.epub')
+        try:
+            return_code = Batch().execute(['-i=' + os.path.join(os.path.dirname(__file__), 'data', 'sample1', 'setting.yaml'), '-o=' + epub_filepath])
+        except Exception as e:
+            print(e)
+
+        self.assertEqual(0, return_code)
+
+        epub_result = TestBatch.exist_epub_errors(epub_filepath)
+        self.assertEqual(True, epub_result)
+
+    def test_create_comix_epub(self):
+        '''
+        コミックスタイプのepubファイルを作成
+        '''
+        pass
+
+
 
 
 if __name__ == '__main__':
