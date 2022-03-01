@@ -126,6 +126,7 @@ class FileSystem(object):
         pathlib.Path(temp_dir).mkdir(parents=True, exist_ok=True)
         return temp_dir
 
+
 class Convert(object):
     '''
     変換クラス
@@ -499,6 +500,7 @@ class BatchBase(object):
             self.fh.close()
             self.log0.removeHandler(self.fh)
 
+
 class Batch(BatchBase):
     '''
     バッチクラス
@@ -599,8 +601,11 @@ class Batch(BatchBase):
             self.create_epub()
         except Exception as e:
             self.delete_work_dir()
+            # NOTE: chdirしたディレクトリはpythonプロセスが掴んでいるため削除できないので、最後にスクリプトのディレクトリに戻す
+            os.chdir(os.path.dirname(__file__))
             raise e
         finally:
+            os.chdir(os.path.dirname(__file__))
             self.delete_work_dir()
 
     def delete_work_dir(self):
@@ -657,6 +662,7 @@ class Batch(BatchBase):
         try:
             with open(self.args.input_setting_file, 'r', encoding='utf-8') as f:
                 settings = yaml.load(f, Loader=yaml.SafeLoader)
+                f.close()
         except Exception as e:
             raise BatchBase.BatchException('設定ファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -889,6 +895,7 @@ class Batch(BatchBase):
                     FileSystem.remove_file(navigation_content_file)
                 with open(navigation_content_file, 'w', encoding='utf-8') as f:
                     f.write(Convert.get_pretty_xml(data))
+                    f.close()
             except Exception as e:
                 raise BatchBase.BatchException('目次コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1011,6 +1018,7 @@ class Batch(BatchBase):
                                     line = self.content_replace(line, file['replaces'])
                                 line = self.content_replace_by_setting(line)
                                 body = body + line
+                            f.close()
                     except Exception as e:
                         raise BatchBase.BatchException('チャプターファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1059,6 +1067,7 @@ class Batch(BatchBase):
         try:
             with open(self.mimetype_filepath, 'w', encoding='utf-8') as f:
                 f.write('application/epub+zip')
+                f.close()
         except Exception as e:
             raise BatchBase.BatchException('mimetypeファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1100,6 +1109,7 @@ class Batch(BatchBase):
                 FileSystem.remove_file(container_xml_filepath)
             with open(container_xml_filepath, 'w', encoding='utf-8') as f:
                 f.write(Convert.get_pretty_xml(data))
+                f.close()
         except Exception as e:
             raise BatchBase.BatchException('/META-INF/container.xmlファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1180,6 +1190,7 @@ class Batch(BatchBase):
                     try:
                         with open(filepath, 'r', encoding='utf-8') as f:
                             content_data = f.read()
+                            f.close()
                     except Exception as e:
                         raise BatchBase.BatchException('コンテンツファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1197,6 +1208,7 @@ class Batch(BatchBase):
                     try:
                         with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:
                             f.write(content_data)
+                            f.close()
                     except Exception as e:
                         raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1218,6 +1230,7 @@ class Batch(BatchBase):
                 try:
                     with open(filepath, 'r', encoding='utf-8') as f:
                         content_data = f.read()
+                        f.close()
                 except Exception as e:
                     raise BatchBase.BatchException('コンテンツファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1230,6 +1243,7 @@ class Batch(BatchBase):
                 try:
                     with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:
                         f.write(content_data)
+                        f.close()
                 except Exception as e:
                     raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1362,6 +1376,7 @@ class Batch(BatchBase):
         try:
             with open(oebps_book_opf_filepath, 'w', encoding='utf-8') as f:
                 f.write(Convert.get_pretty_xml(ET.tostring(xml_opf, encoding='utf-8')))
+                f.close()
         except Exception as e:
             raise BatchBase.BatchException('/OEBPS/book.opfファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
@@ -1393,6 +1408,8 @@ class Batch(BatchBase):
                 FileSystem.collect_filepaths(self.oebps_dirpath, filepaths)
                 for filepath in filepaths:
                     f.write(filepath, filepath.replace(self.work_dir, ''), zipfile.ZIP_DEFLATED)
+
+                f.close()
         except Exception as e:
             raise BatchBase.BatchException('epubファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 

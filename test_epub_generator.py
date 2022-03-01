@@ -16,81 +16,47 @@ from epub_generator import Utility, FileSystem, Convert, DateTimeHelper, BatchBa
 
 EPUB_CHECKER_PATH = r'..\epub-checker\epubcheck.jar'
 
-def exist_epub_errors(epub_filepath):
+class TestBase(unittest.TestCase):
+    temp_dirs = []
 
-    result = {'check_skipped': False, 'status': False}
+    @classmethod
+    def setUp(self):
+        self.temp_dirs = []
 
-    os.chdir(os.path.dirname(__file__))
-    path = os.path.abspath(EPUB_CHECKER_PATH)
-    if not os.path.exists(path):
-        print('電子書籍チェックツールが見つからないためスキップします')
-        result['check_skipped'] = True
-        return result
+    @classmethod
+    def tearDown(self):
+        for temp_dir in self.temp_dirs:
+            retry_count = 0
+            while (True):
+                retry_count += 1
+                has_error = False
+                try:
+                    if os.path.exists(temp_dir):
+                        shutil.rmtree(temp_dir)
+                except Exception as e:
+                    print('ディレクトリ削除に失敗しました。リトライします。{0}/{1}回目'.format(temp_dir, retry_count))
+                    has_error = True
+                    if retry_count >= 5:
+                        print('ディレクトリを削除できませんでした。{0}'.format(temp_dir))
+                        break
+                    time.sleep(5)
+                if not has_error:
+                    break
+        self.temp_dirs = []
 
-    command = 'java -Xss1024k -jar {0} {1}'.format(path, epub_filepath)
-    proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    def create_temp_directory(self):
+        dir = os.path.join(os.path.dirname(__file__), 'data', 'test', str(uuid.uuid4().int))
+        pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
+        self.temp_dirs.append(dir)
+        return dir
 
-    find_message = 'メッセージ'
-    status = True
-    while True:
-        line = proc.stdout.readline()
-        if not line and proc.poll() is not None:
-            break
-        needs_check = False
-        if platform.system() == 'Windows':
-            print(line.decode('sjis'))
-            if re.match('^メッセージ:', line.decode('sjis')):
-                needs_check = True
-        else:
-            print(line.decode('utf8'))
-            if re.match('^メッセージ:', line.decode('utf8')):
-                needs_check = True
-        if needs_check:
-            # メッセージ: 0 件の致命的エラー / 0 件のエラー / 0 件の警告 / 0 件の情報
-            matched = None
-            if platform.system() == 'Windows':
-                matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('sjis'))
-            else:
-                matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('utf8'))
-            if matched and len(matched.groups()) == 2:
-                if int(matched.group(1)) > 0 or int(matched.group(2)) > 0:
-                    status = False
-            status = False
+    def create_file(self, filepath, data):
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(data)
+            f.close()
 
-    result['status'] = status
 
-    return result
-
-def create_file(filepath, data):
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(data)
-        # TODO: いるか？
-        f.close()
-
-def create_temp_directory():
-    dir = os.path.join(os.path.dirname(__file__), 'data', str(uuid.uuid4().int))
-    pathlib.Path(dir).mkdir(parents=True, exist_ok=True)
-    return dir
-
-def remove_temp_directory(dir):
-
-    retry_count = 0
-    while (True):
-        retry_count += 1
-        has_error = False
-        try:
-            shutil.rmtree(dir)
-        except Exception as e:
-            print('ディレクトリ削除に失敗しました。リトライします。{0}/{1}回目'.format(dir, retry_count))
-            has_error = True
-            if retry_count >= 5:
-                print('ディレクトリを削除できませんでした。{0}'.format(dir))
-                break
-            time.sleep(3)
-        if not has_error:
-            break
-
-class TestUtility(unittest.TestCase):
+class TestUtility(TestBase):
     def test_is_empty(self):
         # 空文字
         value = ''
@@ -106,10 +72,10 @@ class TestUtility(unittest.TestCase):
         self.assertEqual(False, Utility.is_empty(value))
 
 
-class TestFileSystem(unittest.TestCase):
+class TestFileSystem(TestBase):
 
     def test_collect_filepaths(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -142,10 +108,8 @@ class TestFileSystem(unittest.TestCase):
             print(e)
         self.assertEqual(4, len(file_list))
 
-        remove_temp_directory(temp_dir)
-
     def test_create_directory(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
         # ディレクトリツリーを作成できるか
         try:
@@ -154,10 +118,8 @@ class TestFileSystem(unittest.TestCase):
             print(e)
         self.assertEqual(True, os.path.exists(os.path.join(temp_dir, 'dir1', 'dir2')))
 
-        remove_temp_directory(temp_dir)
-
     def test_create_directory(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
 
         # ディレクトリツリーを削除できるか
         try:
@@ -176,10 +138,8 @@ class TestFileSystem(unittest.TestCase):
             occuerred_exception = True
         self.assertEqual(False, occuerred_exception)        
 
-        remove_temp_directory(temp_dir)
-        
     def test_move_file(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -192,10 +152,8 @@ class TestFileSystem(unittest.TestCase):
         self.assertEqual(False, os.path.exists(os.path.join(temp_dir, 'dir1', 'temp1.txt')))
         self.assertEqual(True, os.path.exists(os.path.join(temp_dir, 'dir2', 'temp1.txt')))
 
-        remove_temp_directory(temp_dir)
-        
     def test_copy_file(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir2')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
@@ -208,10 +166,8 @@ class TestFileSystem(unittest.TestCase):
         self.assertEqual(True, os.path.exists(os.path.join(temp_dir, 'dir1', 'temp1.txt')))
         self.assertEqual(True, os.path.exists(os.path.join(temp_dir, 'dir2', 'temp1.txt')))
 
-        remove_temp_directory(temp_dir)
-        
     def test_remove_file(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
 
@@ -222,10 +178,8 @@ class TestFileSystem(unittest.TestCase):
             print(e)
         self.assertEqual(False, os.path.exists(os.path.join(temp_dir, 'dir1', 'temp1.txt')))
 
-        remove_temp_directory(temp_dir)
-        
     def test_remove_file(self):
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         pathlib.Path(os.path.join(temp_dir, 'dir1')).mkdir(parents=True, exist_ok=True)
         pathlib.Path(os.path.join(temp_dir, 'dir1', 'temp1.txt')).touch()
 
@@ -236,10 +190,8 @@ class TestFileSystem(unittest.TestCase):
         self.assertEqual(False, FileSystem.exists_file(os.path.join(temp_dir, 'dir1', 'temp2.txt')))
         self.assertEqual(False, FileSystem.exists_file(os.path.join(temp_dir, 'dir2', 'temp1.txt')))
 
-        remove_temp_directory(temp_dir)
-        
 
-class TestConvert(unittest.TestCase):
+class TestConvert(TestBase):
     def test_format(self):
 
         # 文字列
@@ -303,7 +255,7 @@ class TestConvert(unittest.TestCase):
         self.assertEqual('20220228235859', Convert.parse(value, 'datetime'))
 
 
-class TestDateTimeHelper(unittest.TestCase):
+class TestDateTimeHelper(TestBase):
     def test_now(self):
 
         # エラーが起きないか
@@ -412,8 +364,54 @@ class TestDateTimeHelper(unittest.TestCase):
         self.assertEqual('20220228', d.add_days(-1).strftime('%Y%m%d'))
 
 
-class TestBatch(unittest.TestCase):
- 
+class TestBatch(TestBase):
+
+    @classmethod
+    def exist_epub_errors(cls, epub_filepath):
+
+        result = {'check_skipped': False, 'status': False}
+
+        os.chdir(os.path.dirname(__file__))
+        path = os.path.abspath(EPUB_CHECKER_PATH)
+        if not os.path.exists(path):
+            print('電子書籍チェックツールが見つからないためスキップします')
+            result['check_skipped'] = True
+            return result
+
+        command = 'java -Xss1024k -jar {0} {1}'.format(path, epub_filepath)
+        with subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT) as process:
+            find_message = 'メッセージ'
+            status = True
+            while True:
+                line = process.stdout.readline()
+                if not line and process.poll() is not None:
+                    break
+                needs_check = False
+                if platform.system() == 'Windows':
+                    print(line.decode('sjis'))
+                    if re.match('^メッセージ:', line.decode('sjis')):
+                        needs_check = True
+                else:
+                    print(line.decode('utf8'))
+                    if re.match('^メッセージ:', line.decode('utf8')):
+                        needs_check = True
+                if needs_check:
+                    # メッセージ: 0 件の致命的エラー / 0 件のエラー / 0 件の警告 / 0 件の情報
+                    matched = None
+                    if platform.system() == 'Windows':
+                        matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('sjis'))
+                    else:
+                        matched = re.match('メッセージ: ([0-9]+) 件の致命的エラー \/ ([0-9]+) 件のエラー', line.decode('utf8'))
+                    if matched and len(matched.groups()) == 2:
+                        if int(matched.group(1)) > 0 or int(matched.group(2)) > 0:
+                            status = False
+                    status = False
+            process.kill()
+
+        result['status'] = status
+
+        return result
+
     def test_invalid_parameter(self):
         # TODO: パラメータがない
         # argv = None
@@ -422,34 +420,31 @@ class TestBatch(unittest.TestCase):
 
     def test_invalid_setting_file(self):
         # 設定ファイルがない
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
         return_code = -1
         try:
             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
-        remove_temp_directory(temp_dir)
-
         self.assertEqual(1, return_code)
 
         # 設定ファイルはあるけど空
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''''')
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''''')
         return_code = -1
         try:
             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
-        remove_temp_directory(temp_dir)
         
         self.assertEqual(1, return_code)
 
         # 設定ファイルはあるけどYAMLフォーマットじゃない
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 [xxxx]
 yyyy = zzzz
         ''')
@@ -458,14 +453,13 @@ yyyy = zzzz
             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
-        remove_temp_directory(temp_dir)
         
         self.assertEqual(1, return_code)
 
         # 設定ファイルがYAMLフォーマットだけど設定なし
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 xxxx: yyyy
         ''')
         return_code = -1
@@ -473,14 +467,13 @@ xxxx: yyyy
             return_code = Batch().execute(['-i=' + os.path.join(temp_dir, 'test.yaml'), '-o=' + os.path.join(temp_dir, 'test.epub')])
         except Exception as e:
             print(e)
-        remove_temp_directory(temp_dir)
         
         self.assertEqual(1, return_code)
 
         # 設定ファイル中のパスが空
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
 contents:
@@ -495,12 +488,10 @@ contents:
             print(e)
         self.assertEqual(1, return_code)
 
-        remove_temp_directory(temp_dir)
-        
         # 設定ファイル中のパスが無効
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
 contents:
@@ -515,13 +506,10 @@ contents:
             print(e)
         self.assertEqual(1, return_code)
 
-        remove_temp_directory(temp_dir)
-
-
         # 設定ファイル中のパスのファイルが存在しない
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 title: サンプル
 resources:
   styleSheets:
@@ -583,20 +571,18 @@ contents:
             print(e)
         self.assertEqual(0, return_code)
 
-        remove_temp_directory(temp_dir)
-
     def test_create_epub(self):
 
-        temp_dir = create_temp_directory()
+        temp_dir = self.create_temp_directory()
         
-        # TODO: 最小限のepubファイルを作成、epub_checkerでのチェックも行う
-        create_file(os.path.join(temp_dir, 'test.yaml'), r'''
+        # 最小限のepubファイルを作成、epub_checkerでのチェックも行う
+        self.create_file(os.path.join(temp_dir, 'test.yaml'), r'''
 contents:
   - filePath: .\test.xhtml
     isNavigationContent: false
     createByChaptersCount: false
         ''')
-        create_file(os.path.join(temp_dir, 'test.xhtml'), r'''
+        self.create_file(os.path.join(temp_dir, 'test.xhtml'), r'''
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
@@ -618,20 +604,8 @@ contents:
 
         self.assertEqual(0, return_code)
 
-        result = exist_epub_errors(epub_filepath)
-        # TODO: epubエラー／ワーニングチェック
-
-        remove_temp_directory(temp_dir)
-
-
-
-        # TODO: 
-        # TODO: 
-        # TODO: 
-        # TODO: 
-        # TODO: ユニットテストの一時ファイルが残る件の調査
-
-
+        epub_result = TestBatch.exist_epub_errors(epub_filepath)
+        self.assertEqual(True, epub_result)
 
 
 if __name__ == '__main__':
