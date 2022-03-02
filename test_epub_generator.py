@@ -366,8 +366,7 @@ class TestDateTimeHelper(TestBase):
 
 class TestBatch(TestBase):
 
-    @classmethod
-    def exist_epub_errors(cls, epub_filepath):
+    def exist_epub_errors(self, epub_filepath):
         '''
         電子書籍チェックツールでepub3をチェックさせる
         '''
@@ -613,8 +612,9 @@ contents:
 
         self.assertEqual(0, return_code)
 
-        epub_result = TestBatch.exist_epub_errors(epub_filepath)
-        self.assertEqual(True, epub_result)
+        epub_result = self.exist_epub_errors(epub_filepath)
+        if epub_result['check_skipped']:
+            self.assertEqual(True, epub_result['status'])
 
     def test_create_novel_epub(self):
         '''
@@ -631,8 +631,9 @@ contents:
 
         self.assertEqual(0, return_code)
 
-        epub_result = TestBatch.exist_epub_errors(epub_filepath)
-        self.assertEqual(True, epub_result)
+        epub_result = self.exist_epub_errors(epub_filepath)
+        if epub_result['check_skipped']:
+            self.assertEqual(True, epub_result['status'])
 
     def test_create_comix_epub(self):
         '''
