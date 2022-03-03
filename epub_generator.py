@@ -320,6 +320,7 @@ class BatchBase(object):
     '''
 
     debug = False
+    stdout_silent = False
 
     class BatchException(Exception):
         '''
@@ -335,7 +336,7 @@ class BatchBase(object):
         WarningEnd = 1
         AbnormalEnd = 2
 
-    def __init__(self, batch_name, description, argument_settings, log_file_name='', debug=False):
+    def __init__(self, batch_name, description, argument_settings, log_file_name='', debug=False, stdout_silent=False):
         '''
         コンストラクタ
         '''
@@ -344,7 +345,6 @@ class BatchBase(object):
             batch_name = 'Unknown batch'
         if Utility.is_empty(description):
             description = 'Nothing'
-        self.debug = debug
 
         keys = [
             'short_name',
@@ -362,7 +362,6 @@ class BatchBase(object):
         self.batch_name = batch_name
 
         # パラメータ
-        # self.parser = ArgumentParser(description=description, exit_on_error=False)
         self.parser = ArgumentParser(description=description)
         for argument_setting in argument_settings:
             short_name = None
@@ -385,6 +384,9 @@ class BatchBase(object):
                 help = argument_setting['help']
             self.parser.add_argument(short_name, long_name, dest=destination, required=required, default=default_value, help=help)
 
+        self.parser.add_argument('-d', '--debug', dest='debug', required=False, default='0', help='デバッグ')
+        self.parser.add_argument('-s', '--silent', dest='silent', required=False, default='0', help='標準出力にログを出力するか')
+
         # ログファイル名決定
         if Utility.is_empty(log_file_name):
             frame = inspect.stack()[1]
@@ -400,10 +402,11 @@ class BatchBase(object):
         log_format = '%(asctime)s- %(name)s - %(levelname)s - %(message)s'
         self.log0 = logging.getLogger(self.parser.prog)
         self.log0.setLevel(log_level)
-        self.sh = logging.StreamHandler()
-        self.sh.setLevel(log_level)
-        self.sh.setFormatter(logging.Formatter(log_format))
-        self.log0.addHandler(self.sh)
+        if not self.stdout_silent:
+            self.sh = logging.StreamHandler()
+            self.sh.setLevel(log_level)
+            self.sh.setFormatter(logging.Formatter(log_format))
+            self.log0.addHandler(self.sh)
         self.fh = logging.FileHandler(filename=log_file_path, encoding='utf-8')
         self.fh.setLevel(log_level)
         self.fh.setFormatter(logging.Formatter(log_format))
@@ -420,12 +423,21 @@ class BatchBase(object):
         '''
         バッチ実行
         '''
-        self.info_log('-' * 50)
-        self.info_log('{0} 処理開始'.format(self.batch_name))
-
         try:
-            # メイン処理呼び出し
+            # パラメータ取得
             args = self.parser.parse_args(args=argv)
+            self.debug = args.debug == '1'
+            self.stdout_silent = args.silent == '1'
+
+            if self.stdout_silent:
+                if 'sh' in vars(self):
+                    self.sh.close()
+                    self.log0.removeHandler(self.sh)
+
+            # メイン処理呼び出し
+            self.info_log('-' * 50)
+            self.info_log('{0} 処理開始'.format(self.batch_name))
+
             self.main(args)
             self.info_log('{0} 正常終了'.format(self.batch_name))
 
@@ -493,9 +505,10 @@ class BatchBase(object):
             return 'Exception in unknown'
 
     def __del__(self):
-        if 'sh' in vars(self):
-            self.sh.close()
-            self.log0.removeHandler(self.sh)
+        if not self.stdout_silent:
+            if 'sh' in vars(self):
+                self.sh.close()
+                self.log0.removeHandler(self.sh)
         if 'fh' in vars(self):
             self.fh.close()
             self.log0.removeHandler(self.fh)
@@ -511,7 +524,6 @@ class Batch(BatchBase):
     settings = {}
     replaces = {}
     chapters = []
-    contents_bind_chapter_indexes = {}
     contents = []
     work_dir_obj = None
     work_dir = ''
@@ -529,7 +541,6 @@ class Batch(BatchBase):
         set_argument_settings = []
         set_argument_settings.append({'short_name': '-i', 'long_name': '--input_setting_file', 'destination': 'input_setting_file', 'required': True, 'default_value': '', 'help': '設定ファイルのパス'})
         set_argument_settings.append({'short_name': '-o', 'long_name': '--output_file', 'destination': 'output_file', 'required': True, 'default_value': '', 'help': '出力ファイルのパス'})
-        set_argument_settings.append({'short_name': '-d', 'long_name': '--debug', 'destination': 'debug', 'default_value': '0', 'help': 'デバッグ'})
         super(Batch, self).__init__(batch_name, description, set_argument_settings)
 
     def main(self, args):
@@ -600,9 +611,9 @@ class Batch(BatchBase):
             # epubファイル作成
             self.create_epub()
         except Exception as e:
-            self.delete_work_dir()
             # NOTE: chdirしたディレクトリはpythonプロセスが掴んでいるため削除できないので、最後にスクリプトのディレクトリに戻す
             os.chdir(os.path.dirname(__file__))
+            self.delete_work_dir()
             raise e
         finally:
             os.chdir(os.path.dirname(__file__))
@@ -625,28 +636,6 @@ class Batch(BatchBase):
                     time.sleep(5)
                 if not has_error:
                     break
-
-
-    def set_chapter_index_in_contents(self):
-        '''
-        コンテンツを考慮したチャプターのインデックスをセット
-        '''
-        self.contents_bind_chapter_indexes = {}
-
-        # OEPBS以下に作成するコンテンツファイルはcontents_1.xhtmlのように1から始まる連番で作成する
-        # チャプター分生成するコンテンツを考慮して、生成するコンテンツ×チャプターでの連番をcontents_bind_chapter_indexesにセットしている
-        content_count = 0
-        for content in self.settings['contents']:
-
-            create_by_chapters_count = content['createByChaptersCount']
-            use_chapters = content['useChapters']
-
-            if create_by_chapters_count and len(use_chapters) > 0:
-                for use_chapter in use_chapters:
-                    content_count += 1
-                    self.contents_bind_chapter_indexes[int(use_chapter['chapterIndex'])] = content_count
-            else:
-                content_count += 1
 
     def load_setting_file(self):
         '''
@@ -675,7 +664,7 @@ class Batch(BatchBase):
         self.info_log('設定ファイル読み込み')
 
         # ファイルパス補正（相対パス→絶対パス）
-        self.reclusive_setting_callback(settings, self.convert_absolute_filepath)
+        self.reclusive_setting_callback(settings, self.convert_setting_filepath)
 
         # ------------------------------
         # ルート設定値補正
@@ -730,8 +719,9 @@ class Batch(BatchBase):
             if type(settings['resources']['styleSheets']) is list:
                 for stylesheet in settings['resources']['styleSheets']:
                     if 'filePath' in stylesheet and not Utility.is_empty(stylesheet['filePath']):
-                        stylesheet['absoluteFilePath'] = stylesheet['filePath']
-                        stylesheet['filePath'] = './resources/' + os.path.basename(stylesheet['absoluteFilePath'])
+                        stylesheet['settingFilePath'] = stylesheet['filePath']
+                        stylesheet['filePath'] = './resources/' + os.path.basename(stylesheet['settingFilePath'])
+                        stylesheet['manifestFilePath'] = './resources/' + os.path.basename(stylesheet['settingFilePath'])
                     stylesheets.append(stylesheet)
         settings['resources']['styleSheets'] = stylesheets
 
@@ -741,8 +731,9 @@ class Batch(BatchBase):
             if type(settings['resources']['images']) is list:
                 for image in settings['resources']['images']:
                     if 'filePath' in image and not Utility.is_empty(image['filePath']):
-                        image['absoluteFilePath'] = image['filePath']
-                        image['filePath'] = './resources/' + os.path.basename(image['absoluteFilePath'])
+                        image['settingFilePath'] = image['filePath']
+                        image['filePath'] = './resources/' + os.path.basename(image['settingFilePath'])
+                        image['manifestFilePath'] = './resources/' + os.path.basename(image['settingFilePath'])
                     images.append(image)
         settings['resources']['images'] = images
 
@@ -783,15 +774,39 @@ class Batch(BatchBase):
                         filetype = ''
                         if 'fileType' in file:
                             filetype = file['fileType']
-                        absolute_file_path = ''
+                        setting_filepath = ''
                         if 'filePath' in file:
-                            absolute_file_path = file['filePath']
+                            setting_filepath = file['filePath']
                         files.append({
                             'title': title,
                             'fileType': filetype,
                             'filePath': '',     # チャプターのファイルパスは後で補正
-                            'absoluteFilePath': absolute_file_path,
+                            'manifestFilePath': '', # 〃
+                            'settingFilePath': setting_filepath,
+                            'bindContent': False,
                         })
+                        replaces = []
+                        if 'replaces' in file:
+                            if type(file['replaces']) is list:
+                                for replace in file['replaces']:
+                                    replace_type = ''
+                                    if 'type' in replace and not Utility.is_empty(replace['type']):
+                                        replace_type = replace['type']
+                                    place_holder = ''
+                                    if 'placeHolder' in replace and not Utility.is_empty(replace['placeHolder']):
+                                        place_holder = replace['placeHolder']
+                                    replace_content = ''
+                                    if 'replaceContent' in replace and not Utility.is_empty(replace['replaceContent']):
+                                        replace_content = replace['replaceContent']
+                                    if type != '' and place_holder != '' and replace_content != '':
+                                        replaces.append({
+                                            'type': replace_type,
+                                            'placeHolder': place_holder,
+                                            'replaceContent': replace_content,
+                                        })
+                        chapters['replaces'] = replaces
+
+
             chapters['files'] = files
         settings['resources']['chapters'] = chapters
 
@@ -801,9 +816,9 @@ class Batch(BatchBase):
             files = []
             if type(settings['contents']) is list:
                 for file in settings['contents']:
-                    absolute_file_path = ''
+                    setting_filepath = ''
                     if 'filePath' in file and not Utility.is_empty(file['filePath']):
-                        absolute_file_path = file['filePath']
+                        setting_filepath = file['filePath']
                     is_navigation_content = False
                     if 'isNavigationContent' in file and not Utility.is_empty(file['isNavigationContent']):
                         if type(file['isNavigationContent']) is bool:
@@ -832,7 +847,7 @@ class Batch(BatchBase):
                                 if type != '' and place_holder != '' and replace_content != '':
                                     replaces.append({
                                         'type': replace_type,
-                                        'placeHolder': replace_content,
+                                        'placeHolder': place_holder,
                                         'replaceContent': replace_content,
                                     })
                     use_chapters = []
@@ -843,20 +858,47 @@ class Batch(BatchBase):
                                     try:
                                         chapters['files'][use_chapter['chapterIndex'] - 1]
                                     except IndexError:
-                                        raise BatchBase.BatchException('コンテンツのuseChaptersに無効なチャプターが指定されています。コンテンツ: {0}／チャプター: {1}'.format(absolute_file_path, use_chapter['chapterIndex']))
+                                        raise BatchBase.BatchException('コンテンツのuseChaptersに無効なチャプターが指定されています。コンテンツ: {0}／チャプター: {1}'.format(setting_filepath, use_chapter['chapterIndex']))
                                     use_chapters.append({
                                         'chapterIndex': use_chapter['chapterIndex']
                                     })
+                                # チャプター分作成する場合は、コンテンツ配列も追加する
+                                contents.append({
+                                    'filePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                                    'manifestFilePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                                    'settingFilePath': setting_filepath,
+                                    'isNavigationContent': is_navigation_content,
+                                    'useNavigationContent': use_navigation_content,
+                                    'createByChaptersCount': create_by_chapters_count,
+                                    'useChapters': use_chapters,
+                                    'replaces': replaces,
+                                    'bindChapter': True,
+                                    'bindChapterIndex': use_chapter['chapterIndex'] - 1,
+                                })
+                                # チャプターのファイルパスを補正する
+                                chapter = settings['resources']['chapters']['files'][use_chapter['chapterIndex'] - 1]
+                                if chapter['fileType'] == 'text':
+                                    chapter['filePath'] = './contents_{0}.xhtml'.format(len(contents) + 1)
+                                    chapter['manifestFilePath'] = './contents_{0}.xhtml'.format(len(contents) + 1)
+                                else:
+                                    chapter['filePath'] = './contents/{0}'.format(os.path.basename(chapter['settingFilePath']))
+                                    chapter['manifestFilePath'] = './contents/{0}'.format(os.path.basename(chapter['settingFilePath']))
+                                # チャプターの紐づけ先コンテンツを更新する
+                                chapter['bindContent'] = True
 
-                    contents.append({
-                        'filePath': '',     # コンテンツのファイルパスは後で補正
-                        'absoluteFilePath': absolute_file_path,
-                        'isNavigationContent': is_navigation_content,
-                        'useNavigationContent': use_navigation_content,
-                        'createByChaptersCount': create_by_chapters_count,
-                        'useChapters': use_chapters,
-                        'replaces': replaces,
-                    })
+                    else:
+                        contents.append({
+                            'filePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                            'manifestFilePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                            'settingFilePath': setting_filepath,
+                            'isNavigationContent': is_navigation_content,
+                            'useNavigationContent': use_navigation_content,
+                            'createByChaptersCount': create_by_chapters_count,
+                            'useChapters': use_chapters,
+                            'replaces': replaces,
+                            'bindChapter': False,
+                            'bindChapterIndex': None,
+                        })
 
         # ------------------------------
         # 設定ファイルのチェック
@@ -900,43 +942,21 @@ class Batch(BatchBase):
                 raise BatchBase.BatchException('目次コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
             contents.append({
-                'filePath': '',
-                'absoluteFilePath': navigation_content_file,
+                'filePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                'manifestFilePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                'settingFilePath': navigation_content_file,
                 'isNavigationContent': True,
                 'useNavigationContent': True,
                 'createByChaptersCount': False,
                 'useChapters': [],
                 'replaces': [],
+                'bindChapter': False,
+                'bindChapterIndex': None,
             })
 
         settings['contents'] = contents
 
-        # ------------------------------
-        # データ補正
-        # ------------------------------
         self.settings = settings
-
-        # コンテンツを考慮したチャプターのインデックスをセット
-        self.set_chapter_index_in_contents()
-
-        # チャプターのファイルパスは以下のルールで補正
-        # - text: ./contents_xxx.xhtmlの相対ファイルパス（コンテンツ数×チャプター数を考慮した連番ファイル）
-        # - text以外: ./contentsへの相対ファイルパス
-        chapter_count = 0
-        for file in self.settings['resources']['chapters']['files']:
-            chapter_count += 1
-            if chapter_count in self.contents_bind_chapter_indexes:
-                if file['fileType'] == 'text':
-                    file['filePath'] = './' + 'contents_{0}.xhtml'.format(self.contents_bind_chapter_indexes[chapter_count])
-                else:
-                    file['filePath'] = './' + 'contents/{0}'.format(os.path.basename(file['absoluteFilePath']))
-
-        # コンテンツのファイルパスを補正
-        content_count = 0
-        for content in self.settings['contents']:
-            content_count += 1
-            if len(content['useChapters']) > 0:
-                content['filePath'] = './' + 'contents_{0}.xhtml'.format(content_count)
 
         # 設定ファイルの内容を一次元配列で持つ
         self.convert_yaml_to_list('setting', self.settings, self.replaces)
@@ -950,36 +970,36 @@ class Batch(BatchBase):
 
         # スタイルシート: /OEBPS/resources
         for stylesheet in self.settings['resources']['styleSheets']:
-            if stylesheet['absoluteFilePath'] != '':
-                if not FileSystem.exists_file(stylesheet['absoluteFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(stylesheet['absoluteFilePath']))
+            if stylesheet['settingFilePath'] != '':
+                if not FileSystem.exists_file(stylesheet['settingFilePath']):
+                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(stylesheet['settingFilePath']))
                 try:
-                    FileSystem.copy_file(stylesheet['absoluteFilePath'], self.oebps_resources_dirpath)
+                    FileSystem.copy_file(stylesheet['settingFilePath'], self.oebps_resources_dirpath)
                 except Exception as e:
                     raise BatchBase.BatchException('チャプターファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
-                self.info_log('リソースファイルのコピー - /OEBPS/resources/{0}'.format(os.path.basename(stylesheet['absoluteFilePath'])))
+                self.info_log('リソースファイルのコピー - /OEBPS/resources/{0}'.format(os.path.basename(stylesheet['settingFilePath'])))
 
         # 画像: /OEBPS/resources
         for image in self.settings['resources']['images']:
-            if stylesheet['absoluteFilePath'] != '':
-                if not FileSystem.exists_file(image['absoluteFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(image['absoluteFilePath']))
+            if stylesheet['settingFilePath'] != '':
+                if not FileSystem.exists_file(image['settingFilePath']):
+                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(image['settingFilePath']))
                 try:
-                    FileSystem.copy_file(image['absoluteFilePath'], self.oebps_resources_dirpath)
+                    FileSystem.copy_file(image['settingFilePath'], self.oebps_resources_dirpath)
                 except Exception as e:
                     raise BatchBase.BatchException('リソースファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
-                self.info_log('リソースファイルのコピー - /OEBPS/resources/{0}'.format(os.path.basename(image['absoluteFilePath'])))
+                self.info_log('リソースファイルのコピー - /OEBPS/resources/{0}'.format(os.path.basename(image['settingFilePath'])))
 
         # コンテンツ（画像のみ）: /OEBPS/contents
         for file in self.settings['resources']['chapters']['files']:
-            if not file['fileType'] == 'text' and file['absoluteFilePath'] != '':
-                if not FileSystem.exists_file(file['absoluteFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(file['absoluteFilePath']))
+            if not file['fileType'] == 'text' and file['settingFilePath'] != '':
+                if not FileSystem.exists_file(file['settingFilePath']):
+                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(file['settingFilePath']))
                 try:
-                    FileSystem.copy_file(file['absoluteFilePath'], self.oebps_contents_dirpath)
+                    FileSystem.copy_file(file['settingFilePath'], self.oebps_contents_dirpath)
                 except Exception as e:
                     raise BatchBase.BatchException('リソースファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
-                self.info_log('リソースファイルのコピー - /OEBPS/contents/{0}'.format(os.path.basename(file['absoluteFilePath'])))
+                self.info_log('リソースファイルのコピー - /OEBPS/contents/{0}'.format(os.path.basename(file['settingFilePath'])))
 
     def load_chapter_files(self):
         '''
@@ -993,66 +1013,57 @@ class Batch(BatchBase):
         for file in self.settings['resources']['chapters']['files']:
             chapter_count += 1
 
-            if chapter_count in self.contents_bind_chapter_indexes:
-                title = file['title']
-                filetype = file['fileType']
-                filepath = ''
-                if filetype == 'text':
-                    filepath = file['absoluteFilePath']
-                    if not FileSystem.exists_file(filepath):
-                        raise BatchBase.BatchException('チャプターファイルが見つかりません。: {0}'.format(filepath))
-                else:
-                    filepath = file['filePath']
-                body = ''
-                if filetype == 'text':
-                    # テキストの場合は本文データの置換実行
-                    try:
-                        with open(filepath, 'r', encoding='utf-8') as f:
-                            lines = f.read().splitlines()
-                            for line in lines:
-                                line = line + '\n'
-                                if len(chapters_replaces) > 0:
-                                    # チャプター共通の置換
-                                    line = self.content_replace(line, chapters_replaces)
-                                    # 該当チャプターの置換
-                                    line = self.content_replace(line, file['replaces'])
-                                line = self.content_replace_by_setting(line)
-                                body = body + line
-                            f.close()
-                    except Exception as e:
-                        raise BatchBase.BatchException('チャプターファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
+            title = file['title']
+            filetype = file['fileType']
+            filepath = file['filePath']
+            setting_filepath = file['settingFilePath']
+            if not FileSystem.exists_file(setting_filepath):
+                raise BatchBase.BatchException('チャプターファイルが見つかりません。: {0}'.format(setting_filepath))
+            body = ''
+            if filetype == 'text':
+                # テキストの場合は本文データの置換実行
+                try:
+                    with open(setting_filepath, 'r', encoding='utf-8') as f:
+                        lines = f.read().splitlines()
+                        for line in lines:
+                            line = line + '\n'
+                            if len(chapters_replaces) > 0:
+                                # チャプター共通の置換
+                                line = self.content_replace(line, chapters_replaces)
+                                # 該当チャプターの置換
+                                line = self.content_replace(line, file['replaces'])
+                            line = self.content_replace_by_setting(line)
+                            body = body + line
+                        f.close()
+                except Exception as e:
+                    raise BatchBase.BatchException('チャプターファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
-                # チャプターデータを収集
-                replace_filepath = ''
-                if filetype == 'text':
-                    replace_filepath = os.path.join(self.oebps_dirpath, 'contents_{0}.xhtml'.format(self.contents_bind_chapter_indexes[chapter_count]))
-                else:
-                    replace_filepath = filepath
-                self.chapters.append({
-                    'title': title,
-                    'body': body,
-                    'fileType': filetype,
-                    'filePath': filepath,
-                    'replaces': [
-                        {
-                            'type': 'simple',
-                            'placeHolder': '{$chapter.title}',
-                            'replaceContent': title,
-                        },
-                        {
-                            'type': 'simple',
-                            'placeHolder': '{$chapter.body}',
-                            'replaceContent': body,
-                        },
-                        {
-                            'type': 'simple',
-                            'placeHolder': '{$chapter.filePath}',
-                            'replaceContent': replace_filepath
-                        },
-                    ]
-                })
+            # チャプターデータを収集
+            self.chapters.append({
+                'title': title,
+                'body': body,
+                'fileType': filetype,
+                'filePath': filepath,
+                'replaces': [
+                    {
+                        'type': 'simple',
+                        'placeHolder': '{$chapter.title}',
+                        'replaceContent': title,
+                    },
+                    {
+                        'type': 'simple',
+                        'placeHolder': '{$chapter.body}',
+                        'replaceContent': body,
+                    },
+                    {
+                        'type': 'simple',
+                        'placeHolder': '{$chapter.filePath}',
+                        'replaceContent': file['filePath']
+                    },
+                ]
+            })
 
-                self.debug_log('リソースファイルの読み込み - {0}'.format(filepath))
+            self.debug_log('リソースファイルの読み込み - {0}'.format(filepath))
 
     def create_mimetype(self):
         '''
@@ -1171,89 +1182,47 @@ class Batch(BatchBase):
 
         content_count = 0
         for content in self.settings['contents']:
-            filepath = content['absoluteFilePath']
+            filepath = content['settingFilePath']
             create_by_chapters_count = content['createByChaptersCount']
             use_chapters = content['useChapters']
 
             if not FileSystem.exists_file(filepath):
                 raise BatchBase.BatchException('コンテンツファイルが見つかりません。: {0}'.format(filepath))
 
-            if create_by_chapters_count and len(use_chapters) > 0:
-                # ------------------------------
-                # チャプター分のコンテンツファイル作成
-                # ------------------------------
-                for use_chapter in use_chapters:
-                    content_count += 1
+            content_count += 1
 
-                    # コンテンツファイル読み込み
-                    content_data = ''
-                    try:
-                        with open(filepath, 'r', encoding='utf-8') as f:
-                            content_data = f.read()
-                            f.close()
-                    except Exception as e:
-                        raise BatchBase.BatchException('コンテンツファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
+            # コンテンツファイル読み込み
+            content_data = ''
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content_data = f.read()
+                    f.close()
+            except Exception as e:
+                raise BatchBase.BatchException('コンテンツファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
-                    # 置換
-                    chapter_index = int(use_chapter['chapterIndex'])
-                    chapter = self.chapters[chapter_index - 1]
-                    if chapter_index <= len(self.chapters):
-                        content_data = self.content_replace(content_data, chapter['replaces'])
+            # 置換
+            content_data = self.content_replace(content_data, content['replaces'])
+            content_data = self.content_replace_by_setting(content_data)
+            if content['bindChapter']:
+                chapter = self.chapters[content['bindChapterIndex']]
+                content_data = self.content_replace(content_data, chapter['replaces'])
 
-                    content_data = self.content_replace(content_data, content['replaces'])
-                    content_data = self.content_replace_by_setting(content_data)
+            # コンテンツファイル作成
+            oebps_xhtml_filepath = os.path.join(self.oebps_dirpath, 'contents_{0}.xhtml'.format(content_count))
+            try:
+                with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:
+                    f.write(content_data)
+                    f.close()
+            except Exception as e:
+                raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
 
-                    # コンテンツファイル作成
-                    oebps_xhtml_filepath = os.path.join(self.oebps_dirpath, 'contents_{0}.xhtml'.format(content_count))
-                    try:
-                        with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:
-                            f.write(content_data)
-                            f.close()
-                    except Exception as e:
-                        raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
+            # コンテンツファイルデータ収集
+            self.contents.append({
+                'filePath': './{0}'.format(os.path.basename(oebps_xhtml_filepath)),
+                'isNavigationContent': content['isNavigationContent'],
+            })
 
-                    # コンテンツファイルデータ収集
-                    self.contents.append({
-                        'filePath': chapter['filePath'],
-                        'isNavigationContent': content['isNavigationContent'],
-                    })
-
-                    self.info_log('ファイル作成 - /OEBPS/{0}'.format(os.path.basename(oebps_xhtml_filepath)))
-            else:
-                # ------------------------------
-                # 単一のコンテンツファイル作成
-                # ------------------------------
-                content_count += 1
-
-                # コンテンツファイル読み込み
-                content_data = ''
-                try:
-                    with open(filepath, 'r', encoding='utf-8') as f:
-                        content_data = f.read()
-                        f.close()
-                except Exception as e:
-                    raise BatchBase.BatchException('コンテンツファイル読み込み中にエラーが発生しました。 {0}'.format(self.exception_info()))
-
-                # 置換
-                content_data = self.content_replace(content_data, content['replaces'])
-                content_data = self.content_replace_by_setting(content_data)
-
-                # コンテンツファイル作成
-                oebps_xhtml_filepath = os.path.join(self.oebps_dirpath, 'contents_{0}.xhtml'.format(content_count))
-                try:
-                    with open(oebps_xhtml_filepath, 'w', encoding='utf-8') as f:
-                        f.write(content_data)
-                        f.close()
-                except Exception as e:
-                    raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
-
-                # コンテンツファイルデータ収集
-                self.contents.append({
-                    'filePath': './{0}'.format(os.path.basename(oebps_xhtml_filepath)),
-                    'isNavigationContent': content['isNavigationContent'],
-                })
-
-                self.info_log('ファイル作成 - /OEBPS/{0}'.format(os.path.basename(oebps_xhtml_filepath)))
+            self.info_log('ファイル作成 - /OEBPS/{0}'.format(os.path.basename(oebps_xhtml_filepath)))
 
     def create_oebps_book_opf(self):
         '''
@@ -1333,7 +1302,12 @@ class Batch(BatchBase):
         stylesheet_count = 0
         for stylesheet in self.settings['resources']['styleSheets']:
             stylesheet_count += 1
-            xml_manifest_stylesheet = ET.SubElement(xml_manifest, 'item', {'id': 'css_{0}'.format(stylesheet_count), 'href': stylesheet['filePath'], 'media-type': mimetypes.guess_type(stylesheet['filePath'])[0]})
+            properties = {
+                'id': 'css_{0}'.format(stylesheet_count),
+                'href': stylesheet['manifestFilePath'],
+                'media-type': mimetypes.guess_type(stylesheet['manifestFilePath'])[0]
+            }
+            xml_manifest_stylesheet = ET.SubElement(xml_manifest, 'item', properties)
 
         # リソース（画像）からマニフェスト作成
         image_count = 0
@@ -1347,10 +1321,23 @@ class Batch(BatchBase):
                 properties['properties'] = 'cover-image'
                 setted_cover = True
             properties['id'] = 'image_{0}'.format(image_count)
-            properties['href'] = image['filePath']
-            properties['media-type'] = mimetypes.guess_type(image['filePath'])[0]
+            properties['href'] = image['manifestFilePath']
+            properties['media-type'] = mimetypes.guess_type(image['manifestFilePath'])[0]
 
             xml_manifest_image = ET.SubElement(xml_manifest, 'item', properties)
+
+        # チャプターからマニフェスト作成
+        chapter_count = 0
+        for chapter in self.settings['resources']['chapters']['files']:
+            if not chapter['fileType'] == 'text' and chapter['bindContent']:
+                chapter_count += 1
+
+                properties = {}
+                properties['id'] = 'chapter_{0}'.format(chapter_count)
+                properties['href'] = chapter['manifestFilePath']
+                properties['media-type'] = mimetypes.guess_type(chapter['manifestFilePath'])[0]
+
+                xml_manifest_chapter = ET.SubElement(xml_manifest, 'item', properties)
 
         # コンテンツからマニフェスト・スパイン作成
         content_count = 0
@@ -1428,7 +1415,7 @@ class Batch(BatchBase):
                     data[key] = callback(key, data[key])
                 self.reclusive_setting_callback(data[key], callback)
 
-    def convert_absolute_filepath(self, key, value):
+    def convert_setting_filepath(self, key, value):
         '''
         設定ファイル中の設定値filePathに指定された相対パスを絶対パスに補正する
         '''

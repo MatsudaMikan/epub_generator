@@ -25,16 +25,16 @@ resources:
   # チャプター
   chapters:
     files:
-      - title: 
+      - title: '1'
         fileType: image
         filePath: .\resource\content\0002_cut25.png
-      - title: 
+      - title: '2'
         fileType: image
         filePath: .\resource\content\0003_cut26.png
-      - title: 
+      - title: '3'
         fileType: image
         filePath: .\resource\content\0004_cut30.png
-      - title: 
+      - title: '4'
         fileType: image
         filePath: .\resource\content\0005_cut15A.png
 # ------------------------------
