@@ -1,5 +1,7 @@
 # 注意: このファイルは文字コードUTF-8、改行コードLFで保存してください。それ以外の場合、プログラムが動かない可能性があります。
 
+# このファイルは小説タイプのサンプル電子書籍を生成する設定ファイルです
+
 # ------------------------------
 # 基本情報
 # ------------------------------
@@ -26,18 +28,23 @@ resources:
   # チャプター
   chapters:
     replaces:
+      # テキストファイル中の「！？」を縦中横に変換しています
       - type: regex
         placeHolder: (！？)
         replaceContent: <span class="tcu">!?</span>
+      # テキストファイル中の「！！」を縦中横に変換しています
       - type: regex
         placeHolder: (！！)
         replaceContent: <span class="tcu">!!</span>
+      # テキストファイル中の「？？」を縦中横に変換しています
       - type: regex
         placeHolder: (？？)
         replaceContent: <span class="tcu">??</span>
+      # テキストファイル中の改行を「<br />」に変換しています
       - type: regex
         placeHolder: \n
         replaceContent: <br />\n
+      # テキストファイル中の「{ruby:xxxx{yyyy}}」をルビ付き文字に変換しています
       - type: regex
         placeHolder: \{ruby\:(\w+)\{(\w+)\}\}
         replaceContent: <ruby>\1<rt>\2</rt></ruby>
@@ -74,6 +81,7 @@ resources:
         fileType: text
         filePath: .\resource\content\04インヘリターズ_あとがき.txt
         replaces:
+          # このテキストファイル中の「n号」のnを縦中横に変換しています
           - type: regex
             placeHolder: ([0-9]{1,2})号
             replaceContent: <span class="tcu">\1</span>号
@@ -101,6 +109,7 @@ contents:
     isNavigationContent: true
     createByChaptersCount: false
     replaces:
+      # 目次として各チャプターを参照する変換を指定しています
       - type: simple
         placeHolder: "{navigation}"
         replaceContent: |-
@@ -120,6 +129,7 @@ contents:
   - filePath: .\template\chapter.xhtml
     isNavigationContent: false
     createByChaptersCount: true
+    # 同じテンプレートファイルを使って各チャプターのファイルを生成する設定です
     useChapters:
       - chapterIndex: 2
       - chapterIndex: 3

@@ -1,5 +1,7 @@
 # 注意: このファイルは文字コードUTF-8、改行コードLFで保存してください。それ以外の場合、プログラムが動かない可能性があります。
 
+# このファイルはコミックスタイプのサンプル電子書籍を生成する設定ファイルです
+
 # ------------------------------
 # 基本情報
 # ------------------------------
@@ -25,16 +27,16 @@ resources:
   # チャプター
   chapters:
     files:
-      - title: '1'
+      - title: 
         fileType: image
         filePath: .\resource\content\0002_cut25.png
-      - title: '2'
+      - title: 
         fileType: image
         filePath: .\resource\content\0003_cut26.png
-      - title: '3'
+      - title: 
         fileType: image
         filePath: .\resource\content\0004_cut30.png
-      - title: '4'
+      - title: 
         fileType: image
         filePath: .\resource\content\0005_cut15A.png
 # ------------------------------

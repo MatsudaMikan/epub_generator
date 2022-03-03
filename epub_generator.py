@@ -116,10 +116,16 @@ class FileSystem(object):
 
     @classmethod
     def get_file_size(cls, filepath):
+        '''
+        ファイルサイズ取得
+        '''
         return os.path.getsize(filepath)
 
     @classmethod
     def create_temp_directory(cls, base_dir=''):
+        '''
+        一時ディレクトリ作成（ディレクトリ名はUUIDのint値）
+        '''
         if Utility.is_empty(base_dir):
             base_dir = os.path.join(os.path.dirname(__file__), 'data')
         temp_dir = os.path.join(base_dir, str(uuid.uuid4().int))
@@ -219,6 +225,9 @@ class Convert(object):
 
     @classmethod
     def get_pretty_xml(cls, data):
+        '''
+        XML成形データ取得
+        '''
         return '\n'.join([line for line in xml.dom.minidom.parseString(data.strip()).toprettyxml().split('\n') if line.strip()])
 
 
@@ -229,30 +238,50 @@ class DateTimeHelper(datetime):
 
     @classmethod
     def now(cls):
-
+        '''
+        現在日時取得
+        '''
         now = datetime.now()
         return DateTimeHelper(now.year, now.month, now.day, now.hour, now.minute, now.second, now.microsecond, now.tzinfo)
 
     def to_yyyy(self):
+        '''
+        年フォーマット
+        '''
         return self.strftime('%Y')
 
     def to_yyyymm(self, monthsep='-'):
+        '''
+        年月フォーマット
+        '''
         return self.strftime('%Y' + monthsep + '%m')
 
     def to_yyyymmdd(self, datesep='-'):
+        '''
+        年月日フォーマット
+        '''
         return self.strftime('%Y' + datesep + '%m' + datesep + '%d')
 
     def to_yyyymmddhhmiss(self, datesep='-', timesep=':', datetimesep=' '):
+        '''
+        年月日時分秒フォーマット
+        '''
         return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S')
 
     # def to_yyyymmddhhmissfffff(self, datesep='-', timesep=':', datetimesep=' ', microsecondsep='.'):
     #     return self.strftime('%Y' + datesep + '%m' + datesep + '%d' + datetimesep + '%H' + timesep + '%M' + timesep + '%S' + microsecondsep + '%f')
 
     def to_yyyymmddhhmiss_iso8601(self):
+        '''
+        年月日時分秒（ISO8601）フォーマット
+        '''
         # TODO: ユニットテスト
         return self.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     def add_years(self, num):
+        '''
+        年追加
+        '''
         if type(num) != int:
             raise Exception('parameter is not "int" type.')
         if num == 0:
@@ -261,6 +290,9 @@ class DateTimeHelper(datetime):
         return self.add_months(num * 12)
 
     def add_months(self, num):
+        '''
+        月追加
+        '''
         if type(num) != int:
             raise Exception('parameter is not "int" type.')
         if num == 0:
@@ -297,6 +329,9 @@ class DateTimeHelper(datetime):
         return self.replace(year=year, month=month, day=daybuf)
 
     def add_days(self, num):
+        '''
+        日追加
+        '''
         if type(num) != int:
             raise Exception('parameter is not "int" type.')
         if num == 0:
@@ -307,6 +342,9 @@ class DateTimeHelper(datetime):
 
     @classmethod
     def is_validdate(cls, year, month, day):
+        '''
+        妥当な日付か
+        '''
         try:
             DateTimeHelper(year, month, day)
             return True
@@ -384,6 +422,7 @@ class BatchBase(object):
                 help = argument_setting['help']
             self.parser.add_argument(short_name, long_name, dest=destination, required=required, default=default_value, help=help)
 
+        # デフォルトのパラメータ設定
         self.parser.add_argument('-d', '--debug', dest='debug', required=False, default='0', help='デバッグ')
         self.parser.add_argument('-s', '--silent', dest='silent', required=False, default='0', help='標準出力にログを出力するか')
 
@@ -395,18 +434,24 @@ class BatchBase(object):
         FileSystem.create_directory(LOG_DIR)
         log_file_path = os.path.join(LOG_DIR, log_file_name)
 
+        # ------------------------------
         # ログ設定
+        # ------------------------------
         log_level = logging.INFO
         if self.debug:
             log_level = logging.DEBUG
         log_format = '%(asctime)s- %(name)s - %(levelname)s - %(message)s'
         self.log0 = logging.getLogger(self.parser.prog)
         self.log0.setLevel(log_level)
+
+        # 標準出力ログ（パラメータで非表示可能）
         if not self.stdout_silent:
             self.sh = logging.StreamHandler()
             self.sh.setLevel(log_level)
             self.sh.setFormatter(logging.Formatter(log_format))
             self.log0.addHandler(self.sh)
+
+        # ファイル出力ログ
         self.fh = logging.FileHandler(filename=log_file_path, encoding='utf-8')
         self.fh.setLevel(log_level)
         self.fh.setFormatter(logging.Formatter(log_format))
@@ -416,7 +461,6 @@ class BatchBase(object):
         '''
         メイン処理（継承クラスにて実装）
         '''
-
         raise NotImplementedError()
 
     def execute(self, argv=[]):
@@ -505,6 +549,9 @@ class BatchBase(object):
             return 'Exception in unknown'
 
     def __del__(self):
+        '''
+        デストラクタ
+        '''
         if not self.stdout_silent:
             if 'sh' in vars(self):
                 self.sh.close()
@@ -525,7 +572,6 @@ class Batch(BatchBase):
     replaces = {}
     chapters = []
     contents = []
-    work_dir_obj = None
     work_dir = ''
     mimetype_filepath = ''
     oebps_dirpath = ''
@@ -620,6 +666,9 @@ class Batch(BatchBase):
             self.delete_work_dir()
 
     def delete_work_dir(self):
+        '''
+        作業ディレクトリ削除
+        '''
         if not self.debug:
             retry_count = 0
             while (True):
