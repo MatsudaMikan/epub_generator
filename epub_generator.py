@@ -719,6 +719,8 @@ class Batch(BatchBase):
             if type(settings['resources']['styleSheets']) is list:
                 for stylesheet in settings['resources']['styleSheets']:
                     if 'filePath' in stylesheet and not Utility.is_empty(stylesheet['filePath']):
+                        if not FileSystem.exists_file(stylesheet['filePath']):
+                            raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(stylesheet['filePath']))
                         stylesheet['settingFilePath'] = stylesheet['filePath']
                         stylesheet['filePath'] = './resources/' + os.path.basename(stylesheet['settingFilePath'])
                         stylesheet['manifestFilePath'] = './resources/' + os.path.basename(stylesheet['settingFilePath'])
@@ -731,6 +733,8 @@ class Batch(BatchBase):
             if type(settings['resources']['images']) is list:
                 for image in settings['resources']['images']:
                     if 'filePath' in image and not Utility.is_empty(image['filePath']):
+                        if not FileSystem.exists_file(image['filePath']):
+                            raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(image['filePath']))
                         image['settingFilePath'] = image['filePath']
                         image['filePath'] = './resources/' + os.path.basename(image['settingFilePath'])
                         image['manifestFilePath'] = './resources/' + os.path.basename(image['settingFilePath'])
@@ -772,19 +776,21 @@ class Batch(BatchBase):
                         if 'title' in file:
                             title = file['title']
                         filetype = ''
-                        if 'fileType' in file:
-                            filetype = file['fileType']
                         setting_filepath = ''
                         if 'filePath' in file:
                             setting_filepath = file['filePath']
-                        files.append({
-                            'title': title,
-                            'fileType': filetype,
-                            'filePath': '',     # チャプターのファイルパスは後で補正
-                            'manifestFilePath': '', # 〃
-                            'settingFilePath': setting_filepath,
-                            'bindContent': False,
-                        })
+                        if not FileSystem.exists_file(setting_filepath):
+                            raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(setting_filepath))
+                        if 'fileType' in file:
+                            filetype = file['fileType']
+                        if Utility.is_empty(filetype) and not Utility.is_empty(setting_filepath):
+                            mimetype = mimetypes.guess_type(setting_filepath)[0]
+                            if mimetype == 'text/plain':
+                                filetype = 'text'
+                                self.warning_log('fileType未指定のためファイル拡張子から推測した値を設定します。{0}'.format(filetype))
+                            elif mimetype.find('image/') > -1:
+                                filetype = 'image'
+                                self.warning_log('fileType未指定のためファイル拡張子から推測した値を設定します。{0}'.format(filetype))
                         replaces = []
                         if 'replaces' in file:
                             if type(file['replaces']) is list:
@@ -804,10 +810,17 @@ class Batch(BatchBase):
                                             'placeHolder': place_holder,
                                             'replaceContent': replace_content,
                                         })
-                        chapters['replaces'] = replaces
-
-
+                        files.append({
+                            'title': title,
+                            'fileType': filetype,
+                            'filePath': '',     # チャプターのファイルパスは後で補正
+                            'manifestFilePath': '', # 〃
+                            'settingFilePath': setting_filepath,
+                            'bindContent': False,
+                            'replaces': replaces
+                        })
             chapters['files'] = files
+
         settings['resources']['chapters'] = chapters
 
         # コンテンツ
@@ -819,6 +832,8 @@ class Batch(BatchBase):
                     setting_filepath = ''
                     if 'filePath' in file and not Utility.is_empty(file['filePath']):
                         setting_filepath = file['filePath']
+                    if not FileSystem.exists_file(setting_filepath):
+                        raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(setting_filepath))
                     is_navigation_content = False
                     if 'isNavigationContent' in file and not Utility.is_empty(file['isNavigationContent']):
                         if type(file['isNavigationContent']) is bool:
@@ -863,9 +878,10 @@ class Batch(BatchBase):
                                         'chapterIndex': use_chapter['chapterIndex']
                                     })
                                 # チャプター分作成する場合は、コンテンツ配列も追加する
+                                content_index = len(contents) + 1
                                 contents.append({
-                                    'filePath': './contents_{0}.xhtml'.format(len(contents) + 1),
-                                    'manifestFilePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                                    'filePath': './contents_{0}.xhtml'.format(content_index),
+                                    'manifestFilePath': './contents_{0}.xhtml'.format(content_index),
                                     'settingFilePath': setting_filepath,
                                     'isNavigationContent': is_navigation_content,
                                     'useNavigationContent': use_navigation_content,
@@ -874,12 +890,13 @@ class Batch(BatchBase):
                                     'replaces': replaces,
                                     'bindChapter': True,
                                     'bindChapterIndex': use_chapter['chapterIndex'] - 1,
+                                    'spineHidden': False,
                                 })
                                 # チャプターのファイルパスを補正する
                                 chapter = settings['resources']['chapters']['files'][use_chapter['chapterIndex'] - 1]
                                 if chapter['fileType'] == 'text':
-                                    chapter['filePath'] = './contents_{0}.xhtml'.format(len(contents) + 1)
-                                    chapter['manifestFilePath'] = './contents_{0}.xhtml'.format(len(contents) + 1)
+                                    chapter['filePath'] = './contents_{0}.xhtml'.format(content_index)
+                                    chapter['manifestFilePath'] = './contents_{0}.xhtml'.format(content_index)
                                 else:
                                     chapter['filePath'] = './contents/{0}'.format(os.path.basename(chapter['settingFilePath']))
                                     chapter['manifestFilePath'] = './contents/{0}'.format(os.path.basename(chapter['settingFilePath']))
@@ -887,9 +904,10 @@ class Batch(BatchBase):
                                 chapter['bindContent'] = True
 
                     else:
+                        content_index = len(contents) + 1
                         contents.append({
-                            'filePath': './contents_{0}.xhtml'.format(len(contents) + 1),
-                            'manifestFilePath': './contents_{0}.xhtml'.format(len(contents) + 1),
+                            'filePath': './contents_{0}.xhtml'.format(content_index),
+                            'manifestFilePath': './contents_{0}.xhtml'.format(content_index),
                             'settingFilePath': setting_filepath,
                             'isNavigationContent': is_navigation_content,
                             'useNavigationContent': use_navigation_content,
@@ -898,6 +916,7 @@ class Batch(BatchBase):
                             'replaces': replaces,
                             'bindChapter': False,
                             'bindChapterIndex': None,
+                            'spineHidden': False,
                         })
 
         # ------------------------------
@@ -952,6 +971,7 @@ class Batch(BatchBase):
                 'replaces': [],
                 'bindChapter': False,
                 'bindChapterIndex': None,
+                'spineHidden': True,
             })
 
         settings['contents'] = contents
@@ -971,8 +991,6 @@ class Batch(BatchBase):
         # スタイルシート: /OEBPS/resources
         for stylesheet in self.settings['resources']['styleSheets']:
             if stylesheet['settingFilePath'] != '':
-                if not FileSystem.exists_file(stylesheet['settingFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(stylesheet['settingFilePath']))
                 try:
                     FileSystem.copy_file(stylesheet['settingFilePath'], self.oebps_resources_dirpath)
                 except Exception as e:
@@ -982,8 +1000,6 @@ class Batch(BatchBase):
         # 画像: /OEBPS/resources
         for image in self.settings['resources']['images']:
             if stylesheet['settingFilePath'] != '':
-                if not FileSystem.exists_file(image['settingFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(image['settingFilePath']))
                 try:
                     FileSystem.copy_file(image['settingFilePath'], self.oebps_resources_dirpath)
                 except Exception as e:
@@ -993,8 +1009,6 @@ class Batch(BatchBase):
         # コンテンツ（画像のみ）: /OEBPS/contents
         for file in self.settings['resources']['chapters']['files']:
             if not file['fileType'] == 'text' and file['settingFilePath'] != '':
-                if not FileSystem.exists_file(file['settingFilePath']):
-                    raise BatchBase.BatchException('指定されたファイルが見つかりません。 {0}'.format(file['settingFilePath']))
                 try:
                     FileSystem.copy_file(file['settingFilePath'], self.oebps_contents_dirpath)
                 except Exception as e:
@@ -1178,8 +1192,6 @@ class Batch(BatchBase):
         '''
         コンテンツファイル作成
         '''
-        self.contents = []
-
         content_count = 0
         for content in self.settings['contents']:
             filepath = content['settingFilePath']
@@ -1215,12 +1227,6 @@ class Batch(BatchBase):
                     f.close()
             except Exception as e:
                 raise BatchBase.BatchException('コンテンツファイル作成中にエラーが発生しました。 {0}'.format(self.exception_info()))
-
-            # コンテンツファイルデータ収集
-            self.contents.append({
-                'filePath': './{0}'.format(os.path.basename(oebps_xhtml_filepath)),
-                'isNavigationContent': content['isNavigationContent'],
-            })
 
             self.info_log('ファイル作成 - /OEBPS/{0}'.format(os.path.basename(oebps_xhtml_filepath)))
 
@@ -1341,19 +1347,23 @@ class Batch(BatchBase):
 
         # コンテンツからマニフェスト・スパイン作成
         content_count = 0
-        for content in self.contents:
+        for content in self.settings['contents']:
             content_count += 1
 
             # 目次がある場合は属性をセット
-            properties = {}
+            manifest_properties = {}
             if content['isNavigationContent']:
-                properties['properties'] = 'nav'
-            properties['id'] = 'content_{0}'.format(content_count)
-            properties['href'] = content['filePath']
-            properties['media-type'] = mimetypes.guess_type(content['filePath'])[0]
+                manifest_properties['properties'] = 'nav'
+            manifest_properties['id'] = 'content_{0}'.format(content_count)
+            manifest_properties['href'] = content['filePath']
+            manifest_properties['media-type'] = mimetypes.guess_type(content['filePath'])[0]
 
-            xml_manifest_content = ET.SubElement(xml_manifest, 'item', properties)
-            xml_spine_content = ET.SubElement(xml_spine, 'itemref', {'idref': 'content_{0}'.format(content_count)})
+            xml_manifest_content = ET.SubElement(xml_manifest, 'item', manifest_properties)
+
+            if not content['spineHidden']:
+                spine_properties = {}
+                spine_properties['idref'] = 'content_{0}'.format(content_count)
+                xml_spine_content = ET.SubElement(xml_spine, 'itemref', spine_properties)
 
         # book.opfファイル作成
         oebps_book_opf_filepath = os.path.join(self.oebps_dirpath, 'book.opf')
